@@ -13,8 +13,15 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    blocks.cpp \
+    character.cpp \
+    bomb.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    blocks.h \
+    character.h \
+    bomb.h \
+    allIncludes.h
 
 FORMS    += mainwindow.ui
