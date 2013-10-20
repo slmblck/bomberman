@@ -15,6 +15,7 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     blocks.cpp \
+<<<<<<< HEAD
     bomb.cpp \
     character.cpp \
     gamescreen.cpp
@@ -25,6 +26,16 @@ HEADERS  += mainwindow.h \
     character.h \
     allIncludes.h \
     gamescreen.h
+=======
+    character.cpp \
+    bomb.cpp
+
+HEADERS  += mainwindow.h \
+    blocks.h \
+    character.h \
+    bomb.h \
+    allIncludes.h
+>>>>>>> 8beba44991ebf8b3574db283d002b9b7660d5f70
 
 FORMS    += mainwindow.ui \
     gamescreen.ui
