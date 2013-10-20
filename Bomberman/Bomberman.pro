@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2013-10-02T17:24:16
+# Project created by QtCreator 2013-10-19T23:05:28
 #
 #-------------------------------------------------
 
@@ -13,8 +13,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    blocks.cpp \
+    bomb.cpp \
+    character.cpp \
+    gamescreen.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    blocks.h \
+    bomb.h \
+    character.h \
+    allIncludes.h \
+    gamescreen.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    gamescreen.ui
