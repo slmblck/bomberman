@@ -17,14 +17,17 @@ SOURCES += main.cpp\
     blocks.cpp \
     bomb.cpp \
     character.cpp \
-    gamescreen.cpp
+    gamescreen.cpp \
+    infoscreen.cpp
 
 HEADERS  += mainwindow.h \
     blocks.h \
     bomb.h \
     character.h \
     allIncludes.h \
-    gamescreen.h
+    gamescreen.h \
+    infoscreen.h
 
 FORMS    += mainwindow.ui \
-    gamescreen.ui
+    gamescreen.ui \
+    infoscreen.ui

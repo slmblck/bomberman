@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "gamescreen.h"
+#include "infoscreen.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,8 +20,14 @@ public:
 private slots:
     void on_gameButton_clicked();
 
+    void on_gameButton_released();
+
+    void on_pushButton_released();
+
 private:
     Ui::MainWindow *ui;
+    GameScreen *gameScreen;
+    InfoScreen *infoScreen;
 };
 
 #endif // MAINWINDOW_H
