@@ -1,14 +1,15 @@
 #ifndef WALLS_H
 #define WALLS_H
-#include "allIncludes.h"
-
+#include "blocks.h"
+#include <iostream>
 class Blocks;
-class Walls
+class Walls: Blocks
 {
 public:
     Walls(int x, int y);
     void onCreate(int x, int y);
     void update();
+
 };
 
 #endif // WALLS_H

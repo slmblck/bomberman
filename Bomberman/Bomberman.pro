@@ -25,7 +25,6 @@ HEADERS  += mainwindow.h \
     blocks.h \
     bomb.h \
     character.h \
-    allIncludes.h \
     gamescreen.h \
     infoscreen.h \
     walls.h
