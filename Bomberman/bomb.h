@@ -1,6 +1,6 @@
 #ifndef BOMB_H
 #define BOMB_H
-#include <iostream>
+#include "allIncludes.h"
 class Bomb
 {
 protected:
@@ -8,7 +8,6 @@ protected:
     int yPos;
     int explosionSize;
 public:
-    Bomb();
     Bomb(int x, int y, int explosionSize);
     ~Bomb();
     void onCreate(int x, int y);
