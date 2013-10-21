@@ -16,22 +16,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_gameButton_clicked()
 {
-    //GameScreen gameScreen;
-    //gameScreen.show();
-    //gameScreen = new GameScreen;
-    //gameScreen->setVisible(true);
-    //gameScreen->show();
-}
-
-void MainWindow::on_gameButton_released()
-{
     gameScreen = new GameScreen;
-    gameScreen->setFocus();
+    gameScreen->setVisible(true);
     gameScreen->show();
-    //gameScreen->setVisible(true);
 }
 
-void MainWindow::on_pushButton_released()
+void MainWindow::on_infoButton_clicked()
 {
     infoScreen = new InfoScreen;
     infoScreen->show();

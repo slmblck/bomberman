@@ -20,9 +20,7 @@ public:
 private slots:
     void on_gameButton_clicked();
 
-    void on_gameButton_released();
-
-    void on_pushButton_released();
+    void on_infoButton_clicked();
 
 private:
     Ui::MainWindow *ui;
