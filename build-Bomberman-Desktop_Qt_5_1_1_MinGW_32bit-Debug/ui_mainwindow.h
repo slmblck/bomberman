@@ -28,7 +28,7 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QPushButton *gameButton;
-    QPushButton *pushButton;
+    QPushButton *infoButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -43,9 +43,9 @@ public:
         gameButton = new QPushButton(centralWidget);
         gameButton->setObjectName(QStringLiteral("gameButton"));
         gameButton->setGeometry(QRect(160, 100, 75, 23));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(160, 140, 75, 23));
+        infoButton = new QPushButton(centralWidget);
+        infoButton->setObjectName(QStringLiteral("infoButton"));
+        infoButton->setGeometry(QRect(160, 140, 75, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -67,7 +67,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         gameButton->setText(QApplication::translate("MainWindow", "Play Game!", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "Info", 0));
+        infoButton->setText(QApplication::translate("MainWindow", "Info", 0));
     } // retranslateUi
 
 };

@@ -4,3 +4,4 @@
 #include "bomb.h"
 #include "character.h"
 #include <iostream>
+#include "walls.h"

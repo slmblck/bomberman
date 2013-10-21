@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     bomb.cpp \
     character.cpp \
     gamescreen.cpp \
-    infoscreen.cpp
+    infoscreen.cpp \
+    walls.cpp
 
 HEADERS  += mainwindow.h \
     blocks.h \
@@ -26,7 +27,8 @@ HEADERS  += mainwindow.h \
     character.h \
     allIncludes.h \
     gamescreen.h \
-    infoscreen.h
+    infoscreen.h \
+    walls.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \

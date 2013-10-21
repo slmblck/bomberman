@@ -27,7 +27,7 @@
      <string>Play Game!</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="infoButton">
     <property name="geometry">
      <rect>
       <x>160</x>

@@ -6,6 +6,7 @@ INPUT(
 ./debug\character.o
 ./debug\gamescreen.o
 ./debug\infoscreen.o
+./debug\walls.o
 ./debug\moc_mainwindow.o
 ./debug\moc_gamescreen.o
 ./debug\moc_infoscreen.o
