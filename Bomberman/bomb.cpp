@@ -1,5 +1,5 @@
 #include "bomb.h"
-
+#include <iostream>
 Bomb::Bomb(int x, int y, int explosionSize)
 {
     Bomb::xPos = x;

@@ -1,4 +1,12 @@
 #include "blocks.h"
+#include <iostream>
+
+Blocks::Blocks()
+{
+    Blocks::xPos = 0;
+    Blocks::yPos = 0;
+
+}
 
 Blocks::Blocks(int x, int y)
 {
@@ -15,4 +23,7 @@ void Blocks::onCreate(int x, int y){
 
 }
 
+void Blocks::update(int x, int y)
+{
 
+}
