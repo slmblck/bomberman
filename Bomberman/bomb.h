@@ -1,6 +1,5 @@
 #ifndef BOMB_H
 #define BOMB_H
-#include "allIncludes.h"
 class Bomb
 {
 protected:

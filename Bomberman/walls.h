@@ -1,9 +1,8 @@
 #ifndef WALLS_H
 #define WALLS_H
-#include "allIncludes.h"
+#include "blocks.h"
 
-class Blocks;
-class Walls
+class Walls: Blocks
 {
 public:
     Walls(int x, int y);
