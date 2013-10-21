@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButton_released();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     GameScreen *gameScreen;
