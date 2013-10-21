@@ -36,7 +36,8 @@ void Character::dropBomb(int key){
 
 }
 
-int getPlayerNumber(Character c){
+int Character::getPlayerNumber(Character c){
 
-    return c.Character::playerID;
+    //return c.Character::playerID;
+    return c.playerID;
 }

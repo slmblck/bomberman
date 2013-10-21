@@ -4,15 +4,18 @@
 class Character
 {
 protected:
+
+private:
     int xPos;
     int yPos;
     //movespeed is 2/3 of blocksize
     int numBombs;
+    int playerID;
 public:
     Character();
     Character(int x, int y, int numBombs, int player);
     ~Character();
-    int playerID;
+    //int playerID;
     void onCreate(int x, int y);
     void move(int x, int y, int key);
     void dropBomb(int key);
