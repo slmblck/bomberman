@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     character.cpp \
     gamescreen.cpp \
     infoscreen.cpp \
-    walls.cpp
+    walls.cpp \
+    world.cpp
 
 HEADERS  += mainwindow.h \
     blocks.h \
@@ -28,7 +29,8 @@ HEADERS  += mainwindow.h \
     allIncludes.h \
     gamescreen.h \
     infoscreen.h \
-    walls.h
+    walls.h \
+    world.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \
