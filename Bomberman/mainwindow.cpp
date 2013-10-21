@@ -21,7 +21,7 @@ void MainWindow::on_gameButton_clicked()
     gameScreen->show();
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_infoButton_clicked()
 {
     infoScreen = new InfoScreen;
     infoScreen->show();
