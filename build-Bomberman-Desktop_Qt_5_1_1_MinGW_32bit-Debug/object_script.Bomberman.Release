@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\blocks.o
+./release\bomb.o
+./release\character.o
+./release\gamescreen.o
+./release\infoscreen.o
+./release\moc_mainwindow.o
+./release\moc_gamescreen.o
+./release\moc_infoscreen.o
+);
