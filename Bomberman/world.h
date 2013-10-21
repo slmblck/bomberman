@@ -5,7 +5,8 @@
 class World
 {
 private:
-
+    //Just a placeholder for the world
+    Blocks worldArr[20][20];
 public:
     World();
 };
