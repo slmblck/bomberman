@@ -39,7 +39,8 @@ void Character::dropBomb(int key, Character *c)
 
 void Character::draw(QPainter *painter)
 {
-    painter->fillRect(400,300,100,100,Qt::red);
+    painter->setBrush(Qt::red);
+    painter->drawRect(400,300,100,100);
 }
 
 int Character::getPlayerID(Character *c)

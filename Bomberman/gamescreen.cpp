@@ -30,7 +30,8 @@ void GameScreen::paintEvent(QPaintEvent *event)
 {
     QPainter p;
     p.begin(this);
-    p.fillRect(0,0,800,600,Qt::blue);
-    p.fillRect(350,250,100,100,Qt::red);
+    w->drawWorld(&p);
+
+    //w->player->draw(&p);
     p.end();
 }

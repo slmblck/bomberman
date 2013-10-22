@@ -17,6 +17,7 @@ class World
 private:
     //Just a placeholder for the world
     Blocks worldArr[20][20];
+    Character *player;
 public:
     World();
     void keyHandler(QKeyEvent k);

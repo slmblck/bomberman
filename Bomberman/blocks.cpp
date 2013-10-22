@@ -25,5 +25,6 @@ void Blocks::update(int x, int y)
 
 void Blocks::draw(QPainter *painter)
 {
-    painter->fillRect(400,300,100,100,Qt::gray);
+    painter->setBrush(Qt::gray);
+    painter->drawRect(40,30,10,10);
 }

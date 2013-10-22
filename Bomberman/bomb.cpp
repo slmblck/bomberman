@@ -21,7 +21,8 @@ Bomb::~Bomb()
 
 void Bomb::draw(QPainter *painter)
 {
-    painter->fillRect(400,300,100,100,Qt::black);
+    painter->setBrush(Qt::black);
+    painter->drawRect(Bomb::xPos,Bomb::yPos,10,10);
 }
 
 void Bomb::explode()

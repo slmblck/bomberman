@@ -8,6 +8,7 @@ Walls::Walls(int x, int y)
 
 void Walls::draw(QPainter *painter)
 {
-    painter->fillRect(400,300,100,100,Qt::green);
+    painter->setBrush(Qt::green);
+    painter->drawRect(0,0,10,10);
 }
 
