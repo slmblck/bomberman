@@ -7,6 +7,7 @@ protected:
     int yPos;
     int explosionSize;
 public:
+    Bomb();
     Bomb(int x, int y, int explosionSize);
     ~Bomb();
     void onCreate(int x, int y);

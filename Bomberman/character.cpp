@@ -1,7 +1,8 @@
 #include "character.h"
 #include <iostream>
 
-Character::Character(){
+Character::Character()
+{
     Character::xPos = 0;
     Character::yPos = 0;
     Character::numBombs = 0;
@@ -14,30 +15,40 @@ Character::Character(int x, int y, int numBombs, int player)
     Character::yPos = y;
     Character::numBombs = numBombs;
     Character::playerID = player;
+    Character::explosionsize = 2;
     Character::onCreate(x,y);
 }
-Character::~Character(){
+Character::~Character()
+{
     std::cout<<"character is gone" << std::endl;
 }
 
-void Character::onCreate(int x, int y){
+void Character::onCreate(int x, int y)
+{
 
 }
 
-void Character::move(int x, int y, int key){
+void Character::move(int key, Character *c)
+{
 
 }
 
-void Character::pickedUp(int item){
+void Character::pickedUp(int item, Character *c)
+{
 
 }
 
-void Character::dropBomb(int key){
+void Character::dropBomb(int key, Character *c)
+{
 
 }
 
-int Character::getPlayerNumber(Character c){
+void Character::draw(QPainter *painter)
+{
+    painter->fillRect(400,300,100,100,Qt::red);
+}
 
-    //return c.Character::playerID;
-    return c.playerID;
+int Character::getPlayerID(Character *c)
+{
+    return c->playerID;
 }

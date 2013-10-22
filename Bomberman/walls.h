@@ -7,7 +7,7 @@ class Walls: Blocks
 public:
     Walls(int x, int y);
     void onCreate(int x, int y);
-    void update();
+
 };
 
 #endif // WALLS_H

@@ -1,6 +1,7 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 #include "bomb.h"
+#include <QPainter>
 class Character
 {
 protected:
@@ -11,16 +12,18 @@ private:
     //movespeed is 2/3 of blocksize
     int numBombs;
     int playerID;
+    int explosionsize;
 public:
     Character();
     Character(int x, int y, int numBombs, int player);
     ~Character();
     //int playerID;
     void onCreate(int x, int y);
-    void move(int x, int y, int key);
-    void dropBomb(int key);
-    void pickedUp(int item);
-    int getPlayerNumber(Character c);
+    void move(int key, Character *c);
+    void dropBomb(int key, Character *c);
+    void pickedUp(int item, Character *c);
+    void draw(QPainter *painter);
+    int getPlayerID(Character *c);
 };
 
 #endif // CHARACTER_H
