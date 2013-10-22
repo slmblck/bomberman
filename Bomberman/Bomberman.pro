@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     gamescreen.cpp \
     infoscreen.cpp \
     walls.cpp \
-    world.cpp
+    world.cpp \
+    ../../../../../../Qt/Qt5.1.1/Tools/QtCreator/bin/Bomberman/movement.cpp \
+    movement.cpp
 
 HEADERS  += mainwindow.h \
     blocks.h \
@@ -29,7 +31,9 @@ HEADERS  += mainwindow.h \
     gamescreen.h \
     infoscreen.h \
     walls.h \
-    world.h
+    world.h \
+    ../../../../../../Qt/Qt5.1.1/Tools/QtCreator/bin/Bomberman/movement.h \
+    movement.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \
