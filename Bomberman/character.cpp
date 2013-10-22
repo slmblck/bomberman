@@ -16,16 +16,10 @@ Character::Character(int x, int y, int numBombs, int player)
     Character::numBombs = numBombs;
     Character::playerID = player;
     Character::explosionsize = 2;
-    Character::onCreate(x,y);
 }
 Character::~Character()
 {
     std::cout<<"character is gone" << std::endl;
-}
-
-void Character::onCreate(int x, int y)
-{
-
 }
 
 void Character::move(int key, Character *c)

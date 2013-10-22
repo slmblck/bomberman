@@ -17,8 +17,6 @@ public:
     Character();
     Character(int x, int y, int numBombs, int player);
     ~Character();
-    //int playerID;
-    void onCreate(int x, int y);
     void move(int key, Character *c);
     void dropBomb(int key, Character *c);
     void pickedUp(int item, Character *c);

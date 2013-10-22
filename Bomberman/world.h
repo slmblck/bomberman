@@ -20,7 +20,7 @@ private:
 public:
     World();
     void keyHandler(QKeyEvent k);
-
+    void drawWorld(QPainter *painter);
 };
 
 #endif // WORLD_H

@@ -2,5 +2,8 @@
 
 World::World()
 {
-}
 
+}
+void World::drawWorld(QPainter *painter){
+
+}

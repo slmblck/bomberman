@@ -1,5 +1,6 @@
 #ifndef BOMB_H
 #define BOMB_H
+#include <QPainter>
 class Bomb
 {
 protected:
@@ -10,7 +11,7 @@ public:
     Bomb();
     Bomb(int x, int y, int explosionSize);
     ~Bomb();
-    void onCreate(int x, int y);
+    void draw(QPainter *painter);
     void explode();
 };
 

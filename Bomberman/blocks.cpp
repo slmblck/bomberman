@@ -18,14 +18,12 @@ Blocks::~Blocks()
 {
     std::cout << "Block has been destroyed" << std::endl;
 }
-void Blocks::onCreate(int x, int y)
-{
-    //Blocks::xPos = x;
-    //Blocks::yPos = y;
-
-}
-
 void Blocks::update(int x, int y)
 {
 
+}
+
+void Blocks::draw(QPainter *painter)
+{
+    painter->fillRect(400,300,100,100,Qt::gray);
 }

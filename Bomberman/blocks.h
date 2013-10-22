@@ -1,5 +1,6 @@
 #ifndef BLOCKS_H
 #define BLOCKS_H
+#include <QPainter>
 class Blocks
 {
 protected:
@@ -9,8 +10,8 @@ public:
     Blocks();
     Blocks(int x, int y);
     ~Blocks();
-    virtual void onCreate(int x, int y);
     virtual void update(int x,int y);
+    virtual void draw(QPainter *painter);
 };
 
 #endif // BLOCKS_H

@@ -6,7 +6,7 @@ class Walls: Blocks
 {
 public:
     Walls(int x, int y);
-    void onCreate(int x, int y);
+    void draw(QPainter *painter);
 
 };
 
