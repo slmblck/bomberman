@@ -21,8 +21,6 @@ SOURCES += main.cpp\
     infoscreen.cpp \
     walls.cpp \
     world.cpp \
-    ../../../../../../Qt/Qt5.1.1/Tools/QtCreator/bin/Bomberman/movement.cpp \
-    movement.cpp
 
 HEADERS  += mainwindow.h \
     blocks.h \
