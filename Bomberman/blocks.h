@@ -14,6 +14,8 @@ public:
     virtual void draw(int x, int y, QPainter *painter);
     int getX();
     int getY();
+    void setX(int x);
+    void setY(int y);
 };
 
 #endif // BLOCKS_H

@@ -34,6 +34,16 @@ int Blocks::getY()
     return yPos;
 }
 
+void Blocks::setX(int x)
+{
+    this->xPos = x;
+}
+
+void Blocks::setY(int y)
+{
+    this->yPos = y;
+}
+
 void Blocks::draw(int x, int y, QPainter *painter)
 {
     painter->setBrush(Qt::gray);
