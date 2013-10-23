@@ -15,18 +15,32 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_InfoScreen
 {
 public:
+    QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QDialog *InfoScreen)
     {
         if (InfoScreen->objectName().isEmpty())
             InfoScreen->setObjectName(QStringLiteral("InfoScreen"));
-        InfoScreen->resize(400, 300);
+        InfoScreen->resize(400, 174);
+        label = new QLabel(InfoScreen);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(160, 50, 81, 21));
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        label->setFont(font);
+        label_2 = new QLabel(InfoScreen);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(30, 90, 351, 20));
 
         retranslateUi(InfoScreen);
 
@@ -36,6 +50,8 @@ public:
     void retranslateUi(QDialog *InfoScreen)
     {
         InfoScreen->setWindowTitle(QApplication::translate("InfoScreen", "Dialog", 0));
+        label->setText(QApplication::translate("InfoScreen", "Bombster", 0));
+        label_2->setText(QApplication::translate("InfoScreen", "Created by: Dariusz Jedralski, Roberto Torres, Piotr Gorski, Wen Zhao", 0));
     } // retranslateUi
 
 };
