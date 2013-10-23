@@ -24,17 +24,17 @@ void Blocks::update(int x, int y)
     yPos = y;
 }
 
-int Blocks::getX(Blocks b)
+int Blocks::getX()
 {
-    return b.xPos;
+    return xPos;
 }
 
-int Blocks::getY(Blocks b)
+int Blocks::getY()
 {
-    return b.yPos;
+    return yPos;
 }
 
-void Blocks::draw(QPainter *painter)
+void Blocks::draw(int x, int y, QPainter *painter)
 {
     painter->setBrush(Qt::gray);
     painter->drawRect(x,y,10,10);

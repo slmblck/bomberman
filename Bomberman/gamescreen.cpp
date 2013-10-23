@@ -35,7 +35,8 @@ void GameScreen::paintEvent(QPaintEvent *event)
     Character *player = w->getPlayer(w);
     player->draw(&p);
     Blocks currentblock = w->getBlock(w,0,0);
-    currentblock.draw(&p);
+    
+    currentblock.draw(0,0, &p);
 
     p.end();
 }

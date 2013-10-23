@@ -11,9 +11,9 @@ public:
     Blocks(int x, int y);
     ~Blocks();
     virtual void update(int x, int y);
-    virtual void draw(QPainter *painter);
-    int getX(Blocks b);
-    int getY(Blocks b);
+    virtual void draw(int x, int y, QPainter *painter);
+    int getX();
+    int getY();
 };
 
 #endif // BLOCKS_H
