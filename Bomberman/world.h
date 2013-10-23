@@ -22,6 +22,8 @@ public:
     World();
     void keyHandler(QKeyEvent k);
     void drawWorld(QPainter *painter);
+    Character * getPlayer(World *w);
+    Blocks getBlock(World *w, int x, int y);
 };
 
 #endif // WORLD_H

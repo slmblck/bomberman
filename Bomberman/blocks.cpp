@@ -20,11 +20,22 @@ Blocks::~Blocks()
 }
 void Blocks::update(int x, int y)
 {
+    xPos = x;
+    yPos = y;
+}
 
+int Blocks::getX(Blocks b)
+{
+    return b.xPos;
+}
+
+int Blocks::getY(Blocks b)
+{
+    return b.yPos;
 }
 
 void Blocks::draw(QPainter *painter)
 {
     painter->setBrush(Qt::gray);
-    painter->drawRect(40,30,10,10);
+    painter->drawRect(x,y,10,10);
 }

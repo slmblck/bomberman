@@ -30,7 +30,6 @@ HEADERS  += mainwindow.h \
     infoscreen.h \
     walls.h \
     world.h \
-    ../../../../../../Qt/Qt5.1.1/Tools/QtCreator/bin/Bomberman/movement.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \

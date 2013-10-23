@@ -9,6 +9,7 @@ class GameScreen;
 
 class GameScreen : public QMainWindow
 {
+
     Q_OBJECT
 public slots:
     void loop();
