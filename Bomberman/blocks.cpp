@@ -1,13 +1,6 @@
 #include "blocks.h"
 #include <iostream>
 
-Blocks::Blocks()
-{
-    Blocks::xPos = 0;
-    Blocks::yPos = 0;
-
-}
-
 Blocks::Blocks(int x, int y)
 {
     Blocks::xPos = x;
@@ -24,14 +17,21 @@ void Blocks::update(int x, int y)
     yPos = y;
 }
 
+Blocks& Blocks::operator=(const Blocks& b)
+{
+    xPos = b.xPos;
+    yPos = b.yPos;
+    return *this;
+}
+
 int Blocks::getX()
 {
-    return xPos;
+    return this->xPos;
 }
 
 int Blocks::getY()
 {
-    return yPos;
+    return this->yPos;
 }
 
 void Blocks::setX(int x)
@@ -44,8 +44,8 @@ void Blocks::setY(int y)
     this->yPos = y;
 }
 
-void Blocks::draw(int x, int y, QPainter *painter)
+void Blocks::draw(QPainter *painter, int size)
 {
     painter->setBrush(Qt::gray);
-    painter->drawRect(x,y,10,10);
+    painter->drawRect(xPos,yPos,size,size);
 }

@@ -14,14 +14,13 @@ private:
     int playerID;
     int explosionsize;
 public:
-    Character();
-    Character(int x, int y, int numBombs, int player);
+    Character(int x = 0, int y = 0, int numBombs = 0, int player = -1);
     ~Character();
-    void move(int key, Character *c);
-    void dropBomb(int key, Character *c);
-    void pickedUp(int item, Character *c);
+    void move(int key);
+    void dropBomb(int key);
+    void pickedUp(int item);
     void draw(QPainter *painter);
-    int getPlayerID(Character *c);
+    int getPlayerID();
 };
 
 #endif // CHARACTER_H

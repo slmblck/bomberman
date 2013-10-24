@@ -10,7 +10,7 @@ GameScreen::GameScreen(QWidget *parent) :
 
     ui->setupUi(this);
 
-    w = new World;
+    w = new World();
 
     QTimer* timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(loop()));
@@ -35,15 +35,16 @@ void GameScreen::paintEvent(QPaintEvent *event)
     int j;
 
     w->drawWorld(&p);
-    Character *player = w->getPlayer(w);
+    Character *player = w->getPlayer();
     player->draw(&p);
     Blocks currentblock;
+    int size = w->getblockSize();
 
     for(i = 0; i < 20; i++){
         for(j = 0; j < 20; j++){
             if(i == 0 || j == 0 || i == 19 || j == 19){
-               currentblock = w->getBlock(w,i,j);
-               currentblock.draw(i*10,j*10, &p);
+               currentblock = w->getBlock(i,j);
+               currentblock.draw(&p,size);
             }
         }
     }

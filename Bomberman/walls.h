@@ -5,7 +5,7 @@
 class Walls: Blocks
 {
 public:
-    Walls(int x, int y);
+    Walls(int x=0, int y=0);
     void draw(QPainter *painter);
 
 };

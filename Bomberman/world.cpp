@@ -2,7 +2,15 @@
 
 World::World()
 {
-    World::player = new Character;
+    World::player = new Character();
+    World::blockSize = 30;
+    for(int i = 0;i<20;i++)
+    {
+        for(int j = 0; j<20; j++)
+        {
+            World::worldArr[i][j].update(i*World::blockSize,j*World::blockSize);
+        }
+    }
 }
 void World::drawWorld(QPainter *painter)
 {
@@ -10,15 +18,20 @@ void World::drawWorld(QPainter *painter)
     painter->drawRect(0,0,800,600);
 }
 
+int World::getblockSize()
+{
+    return this->blockSize;
+}
+
 void World::keyHandler(QKeyEvent k){
 
 }
 
-Character * World::getPlayer(World *w)
+Character * World::getPlayer()
 {
-    return w->player;
+    return this->player;
 }
-Blocks World::getBlock(World *w, int x, int y)
+Blocks World::getBlock(int x, int y)
 {
-    return w->worldArr[x][y];
+    return this->worldArr[x][y];
 }

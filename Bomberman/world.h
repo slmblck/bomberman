@@ -17,13 +17,15 @@ class World
 private:
     //Just a placeholder for the world
     Blocks worldArr[20][20];
+    int blockSize;
     Character *player;
 public:
     World();
     void keyHandler(QKeyEvent k);
     void drawWorld(QPainter *painter);
-    Character * getPlayer(World *w);
-    Blocks getBlock(World *w, int x, int y);
+    int getblockSize();
+    Character * getPlayer();
+    Blocks getBlock(int x, int y);
 };
 
 #endif // WORLD_H

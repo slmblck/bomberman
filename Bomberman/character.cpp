@@ -1,14 +1,6 @@
 #include "character.h"
 #include <iostream>
 
-Character::Character()
-{
-    Character::xPos = 0;
-    Character::yPos = 0;
-    Character::numBombs = 0;
-    Character::playerID = -1;
-}
-
 Character::Character(int x, int y, int numBombs, int player)
 {
     Character::xPos = x;
@@ -22,17 +14,17 @@ Character::~Character()
     std::cout<<"character is gone" << std::endl;
 }
 
-void Character::move(int key, Character *c)
+void Character::move(int key)
 {
 
 }
 
-void Character::pickedUp(int item, Character *c)
+void Character::pickedUp(int item)
 {
 
 }
 
-void Character::dropBomb(int key, Character *c)
+void Character::dropBomb(int key)
 {
 
 }
@@ -43,7 +35,7 @@ void Character::draw(QPainter *painter)
     painter->drawRect(400,300,50,50);
 }
 
-int Character::getPlayerID(Character *c)
+int Character::getPlayerID()
 {
     return c->playerID;
 }

@@ -8,8 +8,7 @@ protected:
     int yPos;
     int explosionSize;
 public:
-    Bomb();
-    Bomb(int x, int y, int explosionSize);
+    Bomb(int x=0, int y=0, int explosionSize=0);
     ~Bomb();
     void draw(QPainter *painter);
     void explode();
