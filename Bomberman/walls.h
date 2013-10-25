@@ -2,7 +2,7 @@
 #define WALLS_H
 #include "blocks.h"
 
-class Walls: Blocks
+class Walls: public Blocks
 {
 public:
     Walls(int x, int y);
