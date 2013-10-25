@@ -1,6 +1,7 @@
 #ifndef BOMB_H
 #define BOMB_H
 #include <QPainter>
+#include <QImage>
 class Bomb
 {
 protected:

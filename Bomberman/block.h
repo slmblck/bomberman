@@ -1,6 +1,7 @@
 #ifndef Block_H
 #define Block_H
 #include <QPainter>
+#include <QImage>
 class Block
 {
 protected:
@@ -11,7 +12,7 @@ public:
     Block(int x=0, int y=0, int type = 0);
     ~Block();
     void update(int x, int y);
-    void draw(QPainter *painter, int size);
+    void draw(QPainter *painter, const int size);
     Block& operator=(const Block& b);
     int getX();
     int getY();

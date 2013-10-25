@@ -2,6 +2,7 @@
 #define CHARACTER_H
 #include "bomb.h"
 #include <QPainter>
+#include <QImage>
 class Character
 {
 protected:

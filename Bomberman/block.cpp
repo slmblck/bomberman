@@ -58,6 +58,11 @@ void Block::setBlockType(int type)
 
 void Block::draw(QPainter *painter, int size)
 {
-    painter->setBrush(Qt::gray);
-    painter->drawRect(xPos,yPos,size,size);
+    QImage wall(":/bomberman/resources/Wall_Destructable_Small.png","PNG");
+    //painter->setBrush(Qt::gray);
+    //painter->drawRect(xPos,yPos,size,size);
+    //int x = xPos;
+    //int y = yPos;
+    int s = size;
+    painter->drawImage(0,0,wall,0,0,30,30,Qt::AutoColor);
 }

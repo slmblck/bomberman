@@ -10,6 +10,7 @@
 #include "bomb.h"
 #include "character.h"
 #include <QKeyEvent>
+#include <QImage>
 
 class World
 {
