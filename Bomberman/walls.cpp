@@ -6,6 +6,11 @@ Walls::Walls(int x, int y)
     Blocks::yPos = y;
 }
 
+Walls::Walls(){
+    Blocks::xPos = 0;
+    Blocks::yPos = 0;
+}
+
 void Walls::draw(QPainter *painter)
 {
     painter->setBrush(Qt::green);

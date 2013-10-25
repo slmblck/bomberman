@@ -7,7 +7,8 @@ protected:
     int xPos;
     int yPos;
 public:
-    Blocks(int x=0, int y=0);
+    Blocks(int x, int y);
+    Blocks();
     ~Blocks();
     virtual void update(int x, int y);
     virtual void draw(QPainter *painter, int size);

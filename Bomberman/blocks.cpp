@@ -7,6 +7,11 @@ Blocks::Blocks(int x, int y)
     Blocks::yPos = y;
 }
 
+Blocks::Blocks(){
+    Blocks::xPos = 0;
+    Blocks::yPos = 0;
+}
+
 Blocks::~Blocks()
 {
     std::cout << "Block has been destroyed" << std::endl;

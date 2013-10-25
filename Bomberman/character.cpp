@@ -37,5 +37,5 @@ void Character::draw(QPainter *painter)
 
 int Character::getPlayerID()
 {
-    return c->playerID;
+    return this->playerID;
 }
