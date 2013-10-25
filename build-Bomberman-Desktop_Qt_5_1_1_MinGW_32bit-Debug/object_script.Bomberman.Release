@@ -1,12 +1,11 @@
 INPUT(
 ./release\main.o
 ./release\mainwindow.o
-./release\blocks.o
+./release\block.o
 ./release\bomb.o
 ./release\character.o
 ./release\gamescreen.o
 ./release\infoscreen.o
-./release\walls.o
 ./release\world.o
 ./release\moc_mainwindow.o
 ./release\moc_gamescreen.o

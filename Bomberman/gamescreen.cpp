@@ -37,8 +37,8 @@ void GameScreen::paintEvent(QPaintEvent *event)
     w->drawWorld(&p);
     Character *player = w->getPlayer();
     player->draw(&p);
-    Blocks currentblock;
-    int size = w->getblockSize();
+    Block currentblock;
+    int size = w->getBlockize();
 
     for(i = 0; i < 20; i++){
         for(j = 0; j < 20; j++){
@@ -48,6 +48,7 @@ void GameScreen::paintEvent(QPaintEvent *event)
             }
         }
     }
+
     //currentblock.draw(0,0, &p);
 
     p.end();

@@ -14,21 +14,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    blocks.cpp \
+    block.cpp \
     bomb.cpp \
     character.cpp \
     gamescreen.cpp \
     infoscreen.cpp \
-    walls.cpp \
     world.cpp \
 
 HEADERS  += mainwindow.h \
-    blocks.h \
+    block.h \
     bomb.h \
     character.h \
     gamescreen.h \
     infoscreen.h \
-    walls.h \
     world.h \
 
 FORMS    += mainwindow.ui \

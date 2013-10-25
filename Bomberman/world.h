@@ -6,28 +6,28 @@
 #include <QWidget>
 #include <QtGui>
 #include <QPainter>
-#include "blocks.h"
+#include "Block.h"
 #include "bomb.h"
 #include "character.h"
-#include "walls.h"
 #include <QKeyEvent>
 
 class World
 {
 private:
     //Just a placeholder for the world
-    Blocks worldArr[20][20];
+    Block worldArr[20][20];
     //This is a test
-    Blocks ***testWorld;
-    int blockSize;
+    Block ***testWorld;
+    int Blockize;
     Character *player;
 public:
     World();
     void keyHandler(QKeyEvent k);
     void drawWorld(QPainter *painter);
-    int getblockSize();
+    int getBlockize();
     Character * getPlayer();
-    Blocks getBlock(int x, int y);
+    Block getBlock(int x, int y);
+
 };
 
 #endif // WORLD_H

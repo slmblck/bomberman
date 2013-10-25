@@ -9,7 +9,7 @@ protected:
 private:
     int xPos;
     int yPos;
-    //movespeed is 2/3 of blocksize
+    //movespeed is 2/3 of Blockize
     int numBombs;
     int playerID;
     int explosionsize;

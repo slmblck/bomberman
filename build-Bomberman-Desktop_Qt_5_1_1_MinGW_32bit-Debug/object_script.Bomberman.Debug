@@ -1,12 +1,11 @@
 INPUT(
 ./debug\main.o
 ./debug\mainwindow.o
-./debug\blocks.o
+./debug\block.o
 ./debug\bomb.o
 ./debug\character.o
 ./debug\gamescreen.o
 ./debug\infoscreen.o
-./debug\walls.o
 ./debug\world.o
 ./debug\moc_mainwindow.o
 ./debug\moc_gamescreen.o
