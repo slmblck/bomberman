@@ -11,6 +11,25 @@ World::World()
             World::worldArr[i][j].update(i*World::blockSize,j*World::blockSize);
         }
     }
+
+    /*
+    for(int i = 0;i<20;i++)
+    {
+        for(int j = 0; j<20; j++)
+        {
+            testWorld[i][j] = new Walls();
+            testWorld[i][j]->update(i*World::blockSize, j*World::blockSize);
+        }
+    }
+    */
+    /*
+    testWorld = new Walls()*20;
+    for(int i = 0; i < 20; i++){
+        *testWorld[i] = new Walls();
+    }
+    */
+
+
 }
 void World::drawWorld(QPainter *painter)
 {

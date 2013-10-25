@@ -18,7 +18,7 @@ private:
     //Just a placeholder for the world
     Blocks worldArr[20][20];
     //This is a test
-    Blocks **testWorld;
+    Blocks ***testWorld;
     int blockSize;
     Character *player;
 public:
