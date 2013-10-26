@@ -32,3 +32,6 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     gamescreen.ui \
     infoscreen.ui
+
+RESOURCES += \
+    images.qrc

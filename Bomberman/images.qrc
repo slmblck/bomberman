@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Wall_Nondestructable_Small.png</file>
+        <file>Crate_Small.png</file>
+        <file>Floor_Small.png</file>
+        <file>Wall_Destructable_Small.png</file>
+    </qresource>
+</RCC>
