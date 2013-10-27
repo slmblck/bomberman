@@ -12,10 +12,11 @@ Block::~Block()
 {
     std::cout << "Block has been destroyed" << std::endl;
 }
-void Block::update(int x, int y)
+void Block::update(int x, int y, int type)
 {
     xPos = x;
     yPos = y;
+    blockType = type;
 }
 
 Block& Block::operator =(const Block& b)

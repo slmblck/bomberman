@@ -8,7 +8,7 @@ World::World()
     {
         for(int j = 0; j<20; j++)
         {
-            World::worldArr[i][j].update(i*World::Blockize,j*World::Blockize);
+            World::worldArr[i][j].update(i*World::Blockize,j*World::Blockize, 0);
         }
     }
 

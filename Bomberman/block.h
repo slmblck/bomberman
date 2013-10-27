@@ -11,7 +11,7 @@ protected:
 public:
     Block(int x=0, int y=0, int type = 0);
     ~Block();
-    void update(int x, int y);
+    void update(int x, int y, int type);
     void draw(QPainter *painter, const int size);
     Block& operator=(const Block& b);
     int getX();
