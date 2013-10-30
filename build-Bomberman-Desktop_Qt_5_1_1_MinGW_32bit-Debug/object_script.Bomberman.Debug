@@ -7,6 +7,8 @@ INPUT(
 ./debug\gamescreen.o
 ./debug\infoscreen.o
 ./debug\world.o
+./debug\wall.o
+./debug\dwall.o
 ./debug\qrc_images.o
 ./debug\moc_mainwindow.o
 ./debug\moc_gamescreen.o

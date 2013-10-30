@@ -20,6 +20,8 @@ SOURCES += main.cpp\
     gamescreen.cpp \
     infoscreen.cpp \
     world.cpp \
+    wall.cpp \
+    dwall.cpp
 
 HEADERS  += mainwindow.h \
     block.h \
@@ -28,6 +30,8 @@ HEADERS  += mainwindow.h \
     gamescreen.h \
     infoscreen.h \
     world.h \
+    wall.h \
+    dwall.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \

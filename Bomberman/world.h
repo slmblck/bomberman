@@ -11,6 +11,8 @@
 #include "character.h"
 #include <QKeyEvent>
 #include <QImage>
+#include "wall.h"
+#include <iostream>
 
 class World
 {
@@ -19,15 +21,17 @@ private:
     Block worldArr[20][20];
     //This is a test
     Block ***testWorld;
-    int Blockize;
+    int Blocksize;
     Character *player;
 public:
     World();
+    ~World();
     void keyHandler(QKeyEvent k);
     void drawWorld(QPainter *painter);
-    int getBlockize();
+    int getBlocksize();
     Character * getPlayer();
     Block getBlock(int x, int y);
+    Block *getTestBlock(int x, int y);
 
 };
 
