@@ -24,6 +24,8 @@ public:
 private:
     Ui::GameScreen *ui;
     World *w;
+    void keyPressEvent(QKeyEvent *k);
+    void keyReleaseEvent(QKeyEvent *k);
 };
 
 #endif // GAMESCREEN_H

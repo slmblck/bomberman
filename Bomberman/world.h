@@ -26,7 +26,7 @@ private:
 public:
     World();
     ~World();
-    void keyHandler(QKeyEvent k);
+    void keyHandler(int k);
     void drawWorld(QPainter *painter);
     int getBlocksize();
     Character * getPlayer();

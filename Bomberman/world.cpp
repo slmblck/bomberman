@@ -2,7 +2,7 @@
 
 World::World()
 {
-    World::player = new Character();
+    World::player = new Character(30,30,1);
     World::Blocksize = 30;
     /*
     for(int i = 0;i<20;i++)
@@ -60,7 +60,29 @@ int World::getBlocksize()
     return this->Blocksize;
 }
 
-void World::keyHandler(QKeyEvent k){
+void World::keyHandler(int k)
+{
+    switch (k)
+    {
+        case Qt::Key_W:
+            player->moveUp();
+            break;
+        case Qt::Key_S:
+            player->moveDown();
+            break;
+        case Qt::Key_A:
+            player->moveLeft();
+            break;
+        case Qt::Key_D:
+            player->moveRight();
+            break;
+       /* case Qt::Key_K:
+            player->dropBomb();
+            break;
+            */
+        default:
+            break;
+    }
 
 }
 

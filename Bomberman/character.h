@@ -17,8 +17,11 @@ private:
 public:
     Character(int x = 0, int y = 0, int numBombs = 0, int player = -1);
     ~Character();
-    void move(int key);
-    void dropBomb(int key);
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+    void dropBomb();
     void pickedUp(int item);
     void draw(QPainter *painter);
     int getPlayerID();

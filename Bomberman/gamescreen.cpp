@@ -14,7 +14,7 @@ GameScreen::GameScreen(QWidget *parent) :
 
     QTimer* timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(loop()));
-    timer->start(60);
+    timer->start(20);
 }
 
 void GameScreen::loop(){
@@ -59,3 +59,16 @@ void GameScreen::paintEvent(QPaintEvent *event)
 
     p.end();
 }
+
+void GameScreen::keyPressEvent(QKeyEvent *event)
+{
+    //std::cout << event->key() << std::endl;
+    w->keyHandler(event->key());
+}
+
+void GameScreen::keyReleaseEvent(QKeyEvent *event)
+{
+    //std::cout << event->key() << std::endl;
+}
+
+

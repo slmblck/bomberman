@@ -16,10 +16,10 @@ Bomb::~Bomb()
 void Bomb::draw(QPainter *painter)
 {
     painter->setBrush(Qt::black);
-    painter->drawRect(Bomb::xPos,Bomb::yPos,10,10);
+    painter->drawRect(Bomb::xPos,Bomb::yPos,30,30);
 }
 
 void Bomb::explode()
 {
-
+    std::cout <<"Boom!" << std::endl;
 }

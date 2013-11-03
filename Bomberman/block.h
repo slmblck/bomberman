@@ -9,7 +9,7 @@ protected:
     int yPos;
 public:
     Block(int x=0, int y=0);
-    ~Block();
+    virtual ~Block();
     virtual void update(int x, int y);
     virtual void draw(QPainter *painter, const int size);
     int getX();

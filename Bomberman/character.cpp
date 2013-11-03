@@ -14,9 +14,24 @@ Character::~Character()
     std::cout<<"character is gone" << std::endl;
 }
 
-void Character::move(int key)
+void Character::moveUp()
 {
+    yPos -= 20;
+}
 
+void Character::moveDown()
+{
+    yPos += 20;
+}
+
+void Character::moveLeft()
+{
+    xPos -= 20;
+}
+
+void Character::moveRight()
+{
+    xPos += 20;
 }
 
 void Character::pickedUp(int item)
@@ -24,15 +39,20 @@ void Character::pickedUp(int item)
 
 }
 
-void Character::dropBomb(int key)
+void Character::dropBomb()
 {
-
+    /*
+    Bomb *b = new Bomb(xPos,yPos,this->explosionsize);
+    QPainter *p;
+    b->draw(p);
+    b->explode();
+    */
 }
 
 void Character::draw(QPainter *painter)
 {
     painter->setBrush(Qt::red);
-    painter->drawRect(400,300,50,50);
+    painter->drawRect(xPos,yPos,30,30);
 }
 
 int Character::getPlayerID()
