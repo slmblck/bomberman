@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,7 +22,8 @@ SOURCES += main.cpp\
     infoscreen.cpp \
     world.cpp \
     wall.cpp \
-    dwall.cpp
+    dwall.cpp \
+    sounds.cpp
 
 HEADERS  += mainwindow.h \
     block.h \
@@ -31,7 +33,8 @@ HEADERS  += mainwindow.h \
     infoscreen.h \
     world.h \
     wall.h \
-    dwall.h
+    dwall.h \
+    sounds.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \

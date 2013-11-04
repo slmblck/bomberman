@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "gamescreen.h"
 #include "infoscreen.h"
+#include "sounds.h"
 
 namespace Ui {
 class MainWindow;
