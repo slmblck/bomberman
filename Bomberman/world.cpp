@@ -15,7 +15,7 @@ World::World()
     {
         for(int j = 0; j<worldsize; j++)
         {
-            if(i == 0 || j == 0 || i == (worldsize-1) || j == (worldsize-1)){
+            if((i == 0 || j == 0 || i == (worldsize-1) || j == (worldsize-1) || ((i%2 == 0)&&(j%2 == 0)))){
                 World::testWorld[i][j] = new Wall(i*World::Blocksize,j*World::Blocksize);
             }
             else{
