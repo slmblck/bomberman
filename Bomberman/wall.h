@@ -7,6 +7,7 @@ class Wall : public Block
 {
 public:
     Wall(int x =0, int y=0);
+    ~Wall();
     void draw(QPainter *painter, const int size);
 };
 

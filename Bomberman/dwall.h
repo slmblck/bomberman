@@ -5,6 +5,7 @@ class dWall : public Block
 {
 public:
     dWall(int x, int y);
+    ~dWall();
     void draw(QPainter *painter, const int size);
 };
 
