@@ -1,9 +1,17 @@
 #include "dwall.h"
+#include <iostream>
 
 dWall::dWall(int x, int y)
 {
     xPos = x;
     yPos = y;
+    std::cout << "destructable wall has been created" << std::endl;
+
+}
+
+dWall::~dWall()
+{
+      std::cout << "destructable wall has been destroyed" << std::endl;
 }
 
 void dWall::draw(QPainter *painter, const int size)

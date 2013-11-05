@@ -18,9 +18,9 @@ class World
 {
 private:
     //Just a placeholder for the world
-    Block worldArr[20][20];
     //This is a test
     Block ***testWorld;
+    int worldsize;
     int Blocksize;
     Character *player;
 public:
@@ -29,8 +29,8 @@ public:
     void keyHandler(int k);
     void drawWorld(QPainter *painter);
     int getBlocksize();
+    int getWorldsize();
     Character * getPlayer();
-    Block getBlock(int x, int y);
     Block *getTestBlock(int x, int y);
 
 };

@@ -34,22 +34,13 @@ void GameScreen::paintEvent(QPaintEvent *event)
     int i;
     int j;
 
-    w->drawWorld(&p);
+    //w->drawWorld(&p);
     Character *player = w->getPlayer();
     Block* currentblock;
     int size = w->getBlocksize();
-    /*
-    for(i = 0; i < 20; i++){
-        for(j = 0; j < 20; j++){
-            if(i == 0 || j == 0 || i == 19 || j == 19){
-               currentblock = w->getBlock(i,j);
-               currentblock.draw(&p,size);
-            }
-        }
-    }
-    */
-    for(i = 0; i < 20; i++){
-        for(j = 0; j < 20; j++){
+    int wSize = w->getWorldsize();
+    for(i = 0; i < wSize; i++){
+        for(j = 0; j < wSize; j++){
             currentblock = w->getTestBlock(i,j);
             currentblock->draw(&p,size);
         }

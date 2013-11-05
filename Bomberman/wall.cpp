@@ -7,6 +7,11 @@ Wall::Wall(int x, int y)
     std::cout << "Wall has been created" << std::endl;
 }
 
+Wall::~Wall()
+{
+    std::cout << "Wall has been destroyed" << std::endl;
+}
+
 void Wall::draw(QPainter *painter, int size)
 {
     QImage wall(":/Wall_Nondestructable_Small.png");
