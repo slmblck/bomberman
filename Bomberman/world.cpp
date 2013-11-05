@@ -76,10 +76,9 @@ void World::keyHandler(int k)
         case Qt::Key_D:
             player->moveRight();
             break;
-       /* case Qt::Key_K:
+        case Qt::Key_K:
             player->dropBomb();
             break;
-            */
         default:
             break;
     }

@@ -15,7 +15,7 @@ private:
     int playerID;
     int explosionsize;
 public:
-    Character(int x = 0, int y = 0, int numBombs = 0, int player = -1);
+    Character(int x = 0, int y = 0, int numBombs = 3, int player = -1);
     ~Character();
     void moveUp();
     void moveDown();
