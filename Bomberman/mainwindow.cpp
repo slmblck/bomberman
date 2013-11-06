@@ -16,10 +16,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_gameButton_clicked()
 {
-    QMediaPlayer player;
-    player.setVolume(100);
-    player.setMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
-    player.play();
+    //QMediaPlayer player;
+    //player.setVolume(100);
+    //player.setMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
+    //player.play();
     gameScreen = new GameScreen;
     gameScreen->setVisible(true);
     gameScreen->show();

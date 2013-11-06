@@ -4,8 +4,8 @@
 
 int main(int argc, char *argv[])
 {
-    sounds s;
-    s.playMusic();
+    //sounds s;
+    //s.playMusic();
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

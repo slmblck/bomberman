@@ -12,7 +12,9 @@
 #include <QKeyEvent>
 #include <QImage>
 #include "wall.h"
+#include "dwall.h"
 #include <iostream>
+#include <stdlib.h>
 
 class World
 {
