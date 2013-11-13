@@ -2,7 +2,8 @@
 #define BOMB_H
 #include <QPainter>
 #include <QImage>
-class Bomb
+#include <QGraphicsItem>
+class Bomb : public QGraphicsItem
 {
 protected:
     int xPos;
@@ -13,6 +14,8 @@ public:
     ~Bomb();
     void draw(QPainter *painter);
     void explode();
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 
 #endif // BOMB_H

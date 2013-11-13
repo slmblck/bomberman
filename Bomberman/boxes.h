@@ -7,7 +7,7 @@ protected: int type;
 public:
     boxes(int x =0, int y = 0);
     ~boxes();
-    void draw(QPainter *painter, const int size);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 
 #endif // BOXES_H

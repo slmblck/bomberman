@@ -2,6 +2,8 @@
 #define GAMESCREEN_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
+#include <QAbstractGraphicsShapeItem>
 #include "world.h"
 namespace Ui {
 class GameScreen;
@@ -20,12 +22,13 @@ public:
     ~GameScreen();
     void paintEvent(QPaintEvent *event);
 
-
 private:
     Ui::GameScreen *ui;
     World *w;
     void keyPressEvent(QKeyEvent *k);
     void keyReleaseEvent(QKeyEvent *k);
+    QGraphicsScene *scene;
+
 };
 
 #endif // GAMESCREEN_H

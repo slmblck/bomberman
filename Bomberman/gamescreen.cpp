@@ -9,12 +9,18 @@ GameScreen::GameScreen(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    scene = new QGraphicsScene(this);
+    ui->graphicsView->setScene(scene);
 
     w = new World();
-
+    scene->addItem(w);
+    Character *player = w->getPlayer();
+    scene->addItem(player);
+    /*
     QTimer* timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(loop()));
     timer->start(20);
+    */
 }
 
 void GameScreen::loop(){
@@ -34,19 +40,22 @@ void GameScreen::paintEvent(QPaintEvent *event)
     int i;
     int j;
 
-    //w->drawWorld(&p);
+    /*
+    w->paint(&p,NULL,this);
     Character *player = w->getPlayer();
     Block* currentblock;
-    int size = w->getBlocksize();
-    int wSize = w->getWorldsize();
-    for(i = 0; i < wSize; i++){
-        for(j = 0; j < wSize; j++){
+    int size = w->getblockSize();
+    int blocks = w->getnumBlocks();
+
+    for(i = 0; i < blocks; i++){
+        for(j = 0; j < blocks; j++){
             currentblock = w->getTestBlock(i,j);
-            currentblock->draw(&p,size);
+            currentblock->paint(&p,NULL,this);
         }
     }
 
-    player->draw(&p);
+    player->paint(&p,NULL,this);
+    */
 
     p.end();
 }
@@ -61,5 +70,3 @@ void GameScreen::keyReleaseEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
 }
-
-

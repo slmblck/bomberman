@@ -5,6 +5,7 @@ Block::Block(int x, int y)
 {
     Block::xPos = x;
     Block::yPos = y;
+    setFlag(QGraphicsItem::ItemIsMovable,false);
     std::cout << "Block has been created" << std::endl;
 }
 
@@ -38,11 +39,15 @@ void Block::setY(int y)
     this->yPos = y;
 }
 
-void Block::draw(QPainter *painter, int size)
+QRectF Block::boundingRect() const
+{
+    return QRectF(0,0,30,30);
+}
+
+void Block::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     QImage floor(":/Floor_Small.png");
     int x = xPos;
     int y = yPos;
-    int s = size;
     painter->drawImage(x,y,floor,0,0,30,30,Qt::AutoColor);
 }
