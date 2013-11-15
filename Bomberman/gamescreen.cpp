@@ -13,6 +13,14 @@ GameScreen::GameScreen(QWidget *parent) :
     ui->graphicsView->setScene(scene);
 
     w = new World();
+
+    gameList= new QMediaPlaylist;
+    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->setPlaybackMode(QMediaPlaylist::Loop);
+    backgroundMusicGame = new QMediaPlayer(this);
+    backgroundMusicGame->setPlaylist(gameList);
+    backgroundMusicGame->play();
+
     scene->addItem(w);
     Character *player = w->getPlayer();
     scene->addItem(player);
@@ -30,6 +38,8 @@ void GameScreen::loop(){
 GameScreen::~GameScreen()
 {
     delete ui;
+    delete gameList;
+    delete backgroundMusicGame;
 }
 
 void GameScreen::paintEvent(QPaintEvent *event)

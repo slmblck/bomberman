@@ -23,7 +23,6 @@ SOURCES += main.cpp\
     world.cpp \
     wall.cpp \
     dwall.cpp \
-    sounds.cpp \
     boxes.cpp
 
 HEADERS  += mainwindow.h \
@@ -35,7 +34,6 @@ HEADERS  += mainwindow.h \
     world.h \
     wall.h \
     dwall.h \
-    sounds.h \
     boxes.h
 
 FORMS    += mainwindow.ui \

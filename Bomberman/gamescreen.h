@@ -5,14 +5,23 @@
 #include <QGraphicsScene>
 #include <QAbstractGraphicsShapeItem>
 #include "world.h"
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+
 namespace Ui {
 class GameScreen;
 }
+
+class QMediaPlayer;
+class QMediaPlaylist;
 
 class GameScreen : public QMainWindow
 {
 
     Q_OBJECT
+    QMediaPlayer *backgroundMusicGame;
+    QMediaPlaylist *gameList;
+
 public slots:
     void loop();
 
