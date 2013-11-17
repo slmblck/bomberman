@@ -7,6 +7,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    mainList= new QMediaPlaylist;
+    mainList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
+    mainList->setPlaybackMode(QMediaPlaylist::Loop);
+    backgroundMusicMain = new QMediaPlayer(this);
+    backgroundMusicMain->setPlaylist(mainList);
+    backgroundMusicMain->play();
 }
 
 MainWindow::~MainWindow()
@@ -16,11 +22,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_gameButton_clicked()
 {
-    //QMediaPlayer player;
-    //player.setVolume(100);
-    //player.setMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
-    //player.play();
     gameScreen = new GameScreen;
+    backgroundMusicMain->stop();
     gameScreen->setVisible(true);
     gameScreen->show();
 }

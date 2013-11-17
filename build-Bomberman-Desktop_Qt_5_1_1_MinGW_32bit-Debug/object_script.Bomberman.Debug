@@ -9,7 +9,6 @@ INPUT(
 ./debug\world.o
 ./debug\wall.o
 ./debug\dwall.o
-./debug\sounds.o
 ./debug\boxes.o
 ./debug\qrc_images.o
 ./debug\moc_mainwindow.o
