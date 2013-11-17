@@ -34,20 +34,16 @@ public:
     {
         if (GameScreen->objectName().isEmpty())
             GameScreen->setObjectName(QStringLiteral("GameScreen"));
-        GameScreen->resize(900, 720);
+        GameScreen->resize(800, 600);
         centralwidget = new QWidget(GameScreen);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-<<<<<<< HEAD
         graphicsView->setGeometry(QRect(10, 10, 781, 551));
-=======
-        graphicsView->setGeometry(QRect(10, 10, 800, 600));
->>>>>>> 06bb81a4ed4733f2b5a3f6f08783ddf261b52269
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 21));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         GameScreen->setMenuBar(menubar);
         statusbar = new QStatusBar(GameScreen);
         statusbar->setObjectName(QStringLiteral("statusbar"));

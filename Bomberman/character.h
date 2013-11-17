@@ -3,13 +3,7 @@
 #include "bomb.h"
 #include <QPainter>
 #include <QImage>
-#include <QFont>
-#include <QPen>
-#include <QBrush>
-#include <QWidget>
-#include <QtGui>
-#include <QGraphicsItem>
-class Character : public QGraphicsItem
+class Character
 {
 protected:
 
@@ -29,10 +23,8 @@ public:
     void moveRight();
     void dropBomb();
     void pickedUp(int item);
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    void draw(QPainter *painter);
     int getPlayerID();
-    //void advance(int phase);
 };
 
 #endif // CHARACTER_H

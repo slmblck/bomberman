@@ -4,21 +4,15 @@
 #include <QMainWindow>
 #include "gamescreen.h"
 #include "infoscreen.h"
-#include <QMediaPlayer>
-#include <QMediaPlaylist>
+#include "sounds.h"
 
 namespace Ui {
 class MainWindow;
 }
 
-class QMediaPlayer;
-class QMediaPlaylist;
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    QMediaPlayer *backgroundMusicMain;
-    QMediaPlaylist *mainList;
 
 public:
     explicit MainWindow(QWidget *parent = 0);

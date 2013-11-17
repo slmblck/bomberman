@@ -15,30 +15,26 @@
 #include "dwall.h"
 #include <iostream>
 #include <stdlib.h>
-#include <QGraphicsItem>
 
-
-class World : public QGraphicsItem
+class World
 {
 private:
     //Just a placeholder for the world
     //This is a test
     Block ***testWorld;
-    int numBlocks;
-    int blockSize;
+    int worldsize;
+    int Blocksize;
     Character *player;
-
 public:
     World();
     ~World();
     void keyHandler(int k);
     void drawWorld(QPainter *painter);
-    int getblockSize();
-    int getnumBlocks();
+    int getBlocksize();
+    int getWorldsize();
     Character * getPlayer();
     Block *getTestBlock(int x, int y);
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
 };
 
 #endif // WORLD_H
