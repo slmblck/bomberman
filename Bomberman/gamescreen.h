@@ -19,6 +19,7 @@ public:
     explicit GameScreen(QWidget *parent = 0);
     ~GameScreen();
     void paintEvent(QPaintEvent *event);
+    QGraphicsScene *scene;
 
 
 private:

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -25,6 +26,7 @@ class Ui_GameScreen
 {
 public:
     QWidget *centralwidget;
+    QGraphicsView *graphicsView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,6 +37,9 @@ public:
         GameScreen->resize(800, 600);
         centralwidget = new QWidget(GameScreen);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(10, 10, 781, 551));
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));

@@ -20,3 +20,13 @@ void Wall::draw(QPainter *painter, int size)
     int s = size;
     painter->drawImage(x,y,wall,0,0,30,30,Qt::AutoColor);
 }
+
+void Wall::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":Wall_Nondestructable_Small.png"));
+}
+
+QRectF Wall::boundingRect() const
+{
+    return QRectF(xPos, yPos, 30, 30);
+}

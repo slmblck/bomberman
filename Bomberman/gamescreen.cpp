@@ -2,6 +2,7 @@
 #include "ui_gamescreen.h"
 #include <QKeyEvent>
 #include <QTimer>
+#include <QGraphicsScene>
 
 GameScreen::GameScreen(QWidget *parent) :
     QMainWindow(parent),
@@ -10,7 +11,27 @@ GameScreen::GameScreen(QWidget *parent) :
 
     ui->setupUi(this);
 
+    scene = new QGraphicsScene(this);
+    ui->graphicsView->setScene(scene);
+
+    int i = 0;
+    int j =0;
     w = new World();
+
+    //Character *player = w->getPlayer();
+    Block* currentblock;
+    int size = w->getBlocksize();
+    int wSize = w->getWorldsize();
+    for(i = 0; i < wSize; i++){
+        for(j = 0; j < wSize; j++){
+            currentblock = w->getTestBlock(i,j);
+            //currentblock->draw(&p,size);
+            scene->addItem(currentblock);
+
+        }
+    }
+
+    //scene->addItem(player);
 
     QTimer* timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(loop()));
@@ -43,6 +64,7 @@ void GameScreen::paintEvent(QPaintEvent *event)
         for(j = 0; j < wSize; j++){
             currentblock = w->getTestBlock(i,j);
             currentblock->draw(&p,size);
+
         }
     }
 

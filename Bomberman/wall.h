@@ -9,6 +9,8 @@ public:
     Wall(int x =0, int y=0);
     ~Wall();
     void draw(QPainter *painter, const int size);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    QRectF boundingRect() const;
 };
 
 #endif // WALL_H

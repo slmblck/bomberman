@@ -38,6 +38,11 @@ void Block::setY(int y)
     this->yPos = y;
 }
 
+QRectF Block::boundingRect() const
+{
+    return QRectF(xPos, yPos, 30, 30);
+}
+
 void Block::draw(QPainter *painter, int size)
 {
     QImage floor(":/Floor_Small.png");
@@ -45,4 +50,9 @@ void Block::draw(QPainter *painter, int size)
     int y = yPos;
     int s = size;
     painter->drawImage(x,y,floor,0,0,30,30,Qt::AutoColor);
+}
+
+void Block::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Floor_Small.png"));
 }
