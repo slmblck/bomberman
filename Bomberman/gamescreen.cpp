@@ -11,14 +11,15 @@ GameScreen::GameScreen(QWidget *parent) :
 
     ui->setupUi(this);
 
-    scene = new QGraphicsScene(this);
+    scene = new QGraphicsScene(0, 0, 570, 570, this);
+    scene->setSceneRect(0,0,570,570);
     ui->graphicsView->setScene(scene);
 
     int i = 0;
     int j =0;
     w = new World();
 
-    //Character *player = w->getPlayer();
+    Character *player = w->getPlayer();
     Block* currentblock;
     int size = w->getBlocksize();
     int wSize = w->getWorldsize();
@@ -31,7 +32,7 @@ GameScreen::GameScreen(QWidget *parent) :
         }
     }
 
-    //scene->addItem(player);
+    scene->addItem(player);
 
     QTimer* timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(loop()));

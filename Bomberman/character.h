@@ -3,7 +3,9 @@
 #include "bomb.h"
 #include <QPainter>
 #include <QImage>
-class Character
+#include <QGraphicsItem>
+
+class Character : public QGraphicsItem
 {
 protected:
 
@@ -25,6 +27,8 @@ public:
     void pickedUp(int item);
     void draw(QPainter *painter);
     int getPlayerID();
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    virtual QRectF boundingRect() const;
 };
 
 #endif // CHARACTER_H

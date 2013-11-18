@@ -39,7 +39,9 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(10, 10, 781, 551));
+        graphicsView->setGeometry(QRect(10, 10, 570, 570));
+        graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));
