@@ -16,30 +16,30 @@ Character::~Character()
 
 void Character::moveUp()
 {
-    yPos -= 10;
     //update();
-    QGraphicsItem::moveBy(0, -10);
+    QGraphicsItem::moveBy(0, -20);
+    //yPos -= 20;
 }
 
 void Character::moveDown()
 {
-    yPos += 10;
     //update();
-    QGraphicsItem::moveBy(0, 10);
+    QGraphicsItem::moveBy(0, 20);
+    //yPos += 20;
 }
 
 void Character::moveLeft()
 {
-    xPos -= 10;
     //update();
-    QGraphicsItem::moveBy(-10, 0);
+    QGraphicsItem::moveBy(-20, 0);
+    //xPos -= 20;
 }
 
 void Character::moveRight()
 {
-    xPos += 10;
     //update();
-    QGraphicsItem::moveBy(10, 0);
+    QGraphicsItem::moveBy(20, 0);
+    //xPos += 20;
 }
 
 void Character::pickedUp(int item)
