@@ -4,6 +4,7 @@
 #include <QPainter>
 #include <QImage>
 #include <QGraphicsItem>
+#include <QGraphicsScene>
 
 class Character : public QGraphicsItem
 {
@@ -15,7 +16,7 @@ private:
     //movespeed is 2/3 of Blockize
     int numBombs;
     int playerID;
-    int explosionsize;
+    int explosionsize; //5 squares is max
 public:
     Character(int x = 0, int y = 0, int numBombs = 3, int player = -1);
     ~Character();
@@ -23,9 +24,8 @@ public:
     void moveDown();
     void moveLeft();
     void moveRight();
-    void dropBomb();
+    void dropBomb(QGraphicsScene *scene);
     void pickedUp(int item);
-    void draw(QPainter *painter);
     int getPlayerID();
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     virtual QRectF boundingRect() const;

@@ -2,17 +2,23 @@
 #define BOMB_H
 #include <QPainter>
 #include <QImage>
-class Bomb
+#include <QGraphicsItem>
+#include <QGraphicsScene>
+#include "explosion.h"
+class Bomb : public QGraphicsItem
 {
 protected:
     int xPos;
     int yPos;
     int explosionSize;
+    std::vector<explosion*> explosionVector;
+public slots:
+    void explode(QGraphicsScene *scene);
 public:
     Bomb(int x=0, int y=0, int explosionSize=0);
     ~Bomb();
-    void draw(QPainter *painter);
-    void explode();
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 
 #endif // BOMB_H

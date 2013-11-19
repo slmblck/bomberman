@@ -1,6 +1,7 @@
 #include "bomb.h"
 #include <iostream>
-
+#include <vector>
+#include <QTimer>
 Bomb::Bomb(int x, int y, int explosionSize)
 {
     Bomb::xPos = x;
@@ -13,13 +14,47 @@ Bomb::~Bomb()
     std::cout << "bomb has been destoryed" << std::endl;
 }
 
-void Bomb::draw(QPainter *painter)
+QRectF Bomb::boundingRect() const
 {
-    painter->setBrush(Qt::black);
-    painter->drawRect(Bomb::xPos,Bomb::yPos,30,30);
+    return QRectF(xPos, yPos, 30, 30);
 }
 
-void Bomb::explode()
+void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    explosion *center = new explosion(xPos,yPos);
+    explosionVector.push_back(center);
+    for(int i = 0; i < explosionSize; i++)
+    {
+        explosion *left = new explosion(xPos - (i*30),yPos);
+        explosion *right = new explosion(xPos + (i*30),yPos);
+        explosion *up = new explosion(xPos, yPos + (i*30));
+        explosion *down = new explosion(xPos, yPos - (i*30));
+        explosionVector.push_back(left);
+        explosionVector.push_back(right);
+        explosionVector.push_back(up);
+        explosionVector.push_back(down);
+        //std::cout << " " <<std::endl;
+    }
+
+    painter->setBrush(Qt::black);
+    painter->drawRect(xPos, yPos, 30, 30);
+}
+
+void Bomb::explode(QGraphicsScene *scene)
 {
     std::cout <<"Boom!" << std::endl;
+
+    /*painter->setBrush(Qt::yellow);
+    painter->drawRect(xPos, yPos, 30, 30);*/
+
+    for(unsigned int i = 0; i < explosionVector.size(); i++)
+    {
+        scene->addItem(explosionVector.at(i));
+    }
+    /*
+    for(unsigned int i = 0; i < explosionVector.size(); i++)
+    {
+        scene->removeItem(explosionVector.at(i));
+    }
+    */
 }

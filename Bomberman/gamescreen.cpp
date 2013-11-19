@@ -12,7 +12,7 @@ GameScreen::GameScreen(QWidget *parent) :
     ui->setupUi(this);
 
     gameList= new QMediaPlaylist;
-    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
     gameList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicGame = new QMediaPlayer(this);
     backgroundMusicGame->setPlaylist(gameList);
@@ -33,7 +33,6 @@ GameScreen::GameScreen(QWidget *parent) :
     for(i = 0; i < wSize; i++){
         for(j = 0; j < wSize; j++){
             currentblock = w->getTestBlock(i,j);
-            //currentblock->draw(&p,size);
             scene->addItem(currentblock);
 
         }
@@ -42,13 +41,8 @@ GameScreen::GameScreen(QWidget *parent) :
     scene->addItem(player);
 
     QTimer* timer = new QTimer(this);
-    connect(timer,SIGNAL(timeout()),this,SLOT(loop()));
-    timer->start(20);
 }
 
-void GameScreen::loop(){
-    repaint();
-}
 void GameScreen::closeEvent(QCloseEvent *bar)
 {
     backgroundMusicGame->stop();
@@ -66,37 +60,17 @@ void GameScreen::paintEvent(QPaintEvent *event)
 {
     QPainter p;
     p.begin(this);
-    /*
-    int i;
-    int j;
 
-    //w->drawWorld(&p);
-    Character *player = w->getPlayer();
-    Block* currentblock;
-    int size = w->getBlocksize();
-    int wSize = w->getWorldsize();
-    for(i = 0; i < wSize; i++){
-        for(j = 0; j < wSize; j++){
-            currentblock = w->getTestBlock(i,j);
-            currentblock->draw(&p,size);
-
-        }
-    }
-
-    player->draw(&p);
-    */
     p.end();
 }
 
 void GameScreen::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
-    w->keyHandler(event->key());
+    w->keyHandler(event->key(),scene);
 }
 
 void GameScreen::keyReleaseEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
 }
-
-

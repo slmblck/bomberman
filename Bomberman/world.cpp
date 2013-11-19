@@ -66,7 +66,7 @@ int World::getWorldsize()
     return this->worldsize;
 }
 
-void World::keyHandler(int k)
+void World::keyHandler(int k,QGraphicsScene *scene)
 {
     switch (k)
     {
@@ -83,7 +83,7 @@ void World::keyHandler(int k)
             player->moveRight();
             break;
         case Qt::Key_K:
-            player->dropBomb();
+            player->dropBomb(scene);
             break;
         default:
             break;

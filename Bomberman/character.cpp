@@ -1,6 +1,6 @@
 #include "character.h"
 #include <iostream>
-
+#include <QTimer>
 Character::Character(int x, int y, int numBombs, int player)
 {
     Character::xPos = x;
@@ -47,23 +47,16 @@ void Character::pickedUp(int item)
 
 }
 
-void Character::dropBomb()
+void Character::dropBomb(QGraphicsScene *scene)
 {
-
     Bomb *b = new Bomb(xPos,yPos,this->explosionsize);
-    QPainter p;// = new QPainter();
-    //p.begin(this);
-    //p->setBrush(Qt::black);
-    //p->drawRect(xPos + 10, yPos + 10, 20, 20);
-    b->draw(&p);
-    b->explode();
 
-}
+    scene->addItem(b);
 
-void Character::draw(QPainter *painter)
-{
-    painter->setBrush(Qt::red);
-    painter->drawRect(xPos,yPos,30,30);
+    QTimer timer;
+
+
+    scene->removeItem(b);
 }
 
 int Character::getPlayerID()

@@ -23,7 +23,6 @@ class GameScreen : public QMainWindow
     QMediaPlaylist *gameList;
 
 public slots:
-    void loop();
 
 
 public:

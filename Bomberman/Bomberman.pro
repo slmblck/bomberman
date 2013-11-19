@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     world.cpp \
     wall.cpp \
     dwall.cpp \
-    boxes.cpp
+    boxes.cpp \
+    explosion.cpp
 
 HEADERS  += mainwindow.h \
     block.h \
@@ -34,7 +35,8 @@ HEADERS  += mainwindow.h \
     world.h \
     wall.h \
     dwall.h \
-    boxes.h
+    boxes.h \
+    explosion.h
 
 FORMS    += mainwindow.ui \
     gamescreen.ui \
