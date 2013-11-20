@@ -9,7 +9,7 @@ explosion::explosion(int x, int y)
 
 explosion::~explosion()
 {
-    std::cout << "Boom!" << std::endl;
+    std::cout << "explosion has been deleted" << std::endl;
 }
 
 QRectF explosion::boundingRect() const

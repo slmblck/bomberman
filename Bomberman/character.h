@@ -8,11 +8,9 @@
 
 class Character : public QGraphicsItem
 {
-protected:
-
 private:
-    int xPos;
-    int yPos;
+    qreal xPos;
+    qreal yPos;
     //movespeed is 2/3 of Blockize
     int numBombs;
     int playerID;
@@ -24,11 +22,13 @@ public:
     void moveDown();
     void moveLeft();
     void moveRight();
-    void dropBomb(QGraphicsScene *scene);
+    void dropBomb();
     void pickedUp(int item);
     int getPlayerID();
-    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-    virtual QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    QRectF boundingRect() const;
+    //void collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const;
+
 };
 
 #endif // CHARACTER_H

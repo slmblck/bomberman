@@ -7,6 +7,21 @@ Bomb::Bomb(int x, int y, int explosionSize)
     Bomb::xPos = x;
     Bomb::yPos = y;
     Bomb::explosionSize = explosionSize;
+
+    explosion *center = new explosion(x,y);
+    explosionVector.push_back(center);
+    for(int i = 1; i <= explosionSize; i++)
+    {
+        explosion *left = new explosion(x - (i*30),y);
+        explosion *right = new explosion(x + (i*30),y);
+        explosion *up = new explosion(x, y + (i*30));
+        explosion *down = new explosion(x, y - (i*30));
+        explosionVector.push_back(left);
+        explosionVector.push_back(right);
+        explosionVector.push_back(up);
+        explosionVector.push_back(down);
+    }
+    std::cout << explosionVector.size() << std::endl;
 }
 
 Bomb::~Bomb()
@@ -16,45 +31,28 @@ Bomb::~Bomb()
 
 QRectF Bomb::boundingRect() const
 {
-    return QRectF(xPos, yPos, 30, 30);
+    return QRectF(this->xPos, this->yPos, 30, 30);
 }
 
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    explosion *center = new explosion(xPos,yPos);
-    explosionVector.push_back(center);
-    for(int i = 0; i < explosionSize; i++)
-    {
-        explosion *left = new explosion(xPos - (i*30),yPos);
-        explosion *right = new explosion(xPos + (i*30),yPos);
-        explosion *up = new explosion(xPos, yPos + (i*30));
-        explosion *down = new explosion(xPos, yPos - (i*30));
-        explosionVector.push_back(left);
-        explosionVector.push_back(right);
-        explosionVector.push_back(up);
-        explosionVector.push_back(down);
-        //std::cout << " " <<std::endl;
-    }
-
     painter->setBrush(Qt::black);
-    painter->drawRect(xPos, yPos, 30, 30);
+    painter->drawRect(this->xPos, this->yPos, 30, 30);
 }
 
-void Bomb::explode(QGraphicsScene *scene)
+void Bomb::explode()
 {
     std::cout <<"Boom!" << std::endl;
-
-    /*painter->setBrush(Qt::yellow);
-    painter->drawRect(xPos, yPos, 30, 30);*/
+    QGraphicsScene *scene = this->scene();
 
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
-        scene->addItem(explosionVector.at(i));
+        scene->addItem(explosionVector[i]);
     }
     /*
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
-        scene->removeItem(explosionVector.at(i));
+        scene->removeItem(explosionVector[i]);
     }
     */
 }

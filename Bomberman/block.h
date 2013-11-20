@@ -6,8 +6,8 @@
 class Block : public QGraphicsItem
 {
 protected:
-    int xPos;
-    int yPos;
+    qreal xPos;
+    qreal yPos;
 public:
     Block(int x=0, int y=0);
     virtual ~Block();

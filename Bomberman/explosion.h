@@ -6,8 +6,8 @@
 class explosion : public QGraphicsItem
 {
 private:
-    int xPos;
-    int yPos;
+    qreal xPos;
+    qreal yPos;
 public:
     explosion(int x =0, int y = 0);
     ~explosion();

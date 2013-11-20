@@ -28,7 +28,6 @@ GameScreen::GameScreen(QWidget *parent) :
 
     Character *player = w->getPlayer();
     Block* currentblock;
-    int size = w->getBlocksize();
     int wSize = w->getWorldsize();
     for(i = 0; i < wSize; i++){
         for(j = 0; j < wSize; j++){
@@ -40,7 +39,7 @@ GameScreen::GameScreen(QWidget *parent) :
 
     scene->addItem(player);
 
-    QTimer* timer = new QTimer(this);
+    //QTimer* timer = new QTimer(this);
 }
 
 void GameScreen::closeEvent(QCloseEvent *bar)
@@ -67,7 +66,7 @@ void GameScreen::paintEvent(QPaintEvent *event)
 void GameScreen::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
-    w->keyHandler(event->key(),scene);
+    w->keyHandler(event->key());
 }
 
 void GameScreen::keyReleaseEvent(QKeyEvent *event)

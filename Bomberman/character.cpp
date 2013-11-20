@@ -17,29 +17,37 @@ Character::~Character()
 void Character::moveUp()
 {
     //update();
-    QGraphicsItem::moveBy(0, -20);
-    //yPos -= 20;
+    this->moveBy(0, -20);
+    yPos = yPos - 20;
+    this->moveBy(0, 20);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveDown()
 {
     //update();
-    QGraphicsItem::moveBy(0, 20);
-    //yPos += 20;
+    this->moveBy(0, 20);
+    yPos = yPos + 20;
+    this->moveBy(0, -20);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveLeft()
 {
     //update();
-    QGraphicsItem::moveBy(-20, 0);
-    //xPos -= 20;
+    this->moveBy(-20, 0);
+    xPos = xPos - 20;
+    this->moveBy(20, 0);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveRight()
 {
     //update();
-    QGraphicsItem::moveBy(20, 0);
-    //xPos += 20;
+    this->moveBy(20, 0);
+    xPos = xPos + 20;
+    this->moveBy(-20, 0);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::pickedUp(int item)
@@ -47,15 +55,13 @@ void Character::pickedUp(int item)
 
 }
 
-void Character::dropBomb(QGraphicsScene *scene)
+void Character::dropBomb()
 {
-    Bomb *b = new Bomb(xPos,yPos,this->explosionsize);
-
+    Bomb *b = new Bomb(this->xPos,this->yPos,this->explosionsize);
+    QGraphicsScene *scene = this->scene();
     scene->addItem(b);
-
-    QTimer timer;
-
-
+    //QTimer::singleShot(1000,b,SLOT(explode(scene)));
+    b->explode();
     scene->removeItem(b);
 }
 
