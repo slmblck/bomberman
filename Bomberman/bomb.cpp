@@ -21,7 +21,7 @@ Bomb::Bomb(int x, int y, int explosionSize)
         explosionVector.push_back(up);
         explosionVector.push_back(down);
     }
-    std::cout << explosionVector.size() << std::endl;
+    //std::cout << explosionVector.size() << std::endl;
 }
 
 Bomb::~Bomb()
@@ -36,8 +36,8 @@ QRectF Bomb::boundingRect() const
 
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::black);
-    painter->drawRect(this->xPos, this->yPos, 30, 30);
+   this->setOpacity(0.5);
+   painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_pixel.png"));
 }
 
 void Bomb::explode()
