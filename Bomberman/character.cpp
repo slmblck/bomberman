@@ -60,8 +60,13 @@ void Character::dropBomb()
     Bomb *b = new Bomb(this->xPos,this->yPos,this->explosionsize);
     QGraphicsScene *scene = this->scene();
     scene->addItem(b);
-    //b->explode();
-    //scene->removeItem(b);
+    /*
+    QTimer *timer = new QTimer(b);
+    connect(timer, SIGNAL(timeout()),b, SLOT(explode());
+    timer->start(1000);
+    */
+    b->explode();
+    scene->removeItem(b);
 }
 
 int Character::getPlayerID()

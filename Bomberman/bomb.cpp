@@ -49,10 +49,18 @@ void Bomb::explode()
     {
         scene->addItem(explosionVector[i]);
     }
-    /*
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()),this,SLOT(explode2()),Qt::AutoConnection);
+    timer->start(1000);
+
+}
+void Bomb::explode2()
+{
+    QGraphicsScene *scene = this->scene();
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
         scene->removeItem(explosionVector[i]);
     }
-    */
+
 }
