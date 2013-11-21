@@ -4,9 +4,11 @@
 #include <QImage>
 #include <QGraphicsObject>
 #include <QGraphicsScene>
+#include <QObject>
 #include "explosion.h"
 class Bomb : public QGraphicsObject
 {
+    Q_OBJECT
 protected:
     qreal xPos;
     qreal yPos;

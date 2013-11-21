@@ -60,11 +60,9 @@ void Character::dropBomb()
     Bomb *b = new Bomb(this->xPos,this->yPos,this->explosionsize);
     QGraphicsScene *scene = this->scene();
     scene->addItem(b);
-    /*
-    QTimer *timer = new QTimer(b);
-    connect(timer, SIGNAL(timeout()),b, SLOT(explode());
-    timer->start(1000);
-    */
+
+    //QTimer::singleShot(1000,b,SLOT(explode()));
+
     b->explode();
     scene->removeItem(b);
 }

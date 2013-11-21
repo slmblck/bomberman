@@ -13,6 +13,8 @@ INPUT(
 ./debug\explosion.o
 ./debug\qrc_images.o
 ./debug\moc_mainwindow.o
+./debug\moc_bomb.o
+./debug\moc_character.o
 ./debug\moc_gamescreen.o
 ./debug\moc_infoscreen.o
 );

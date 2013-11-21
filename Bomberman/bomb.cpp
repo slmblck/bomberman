@@ -26,7 +26,7 @@ Bomb::Bomb(int x, int y, int explosionSize)
 
 Bomb::~Bomb()
 {
-    std::cout << "bomb has been destoryed" << std::endl;
+    std::cout << "bomb has been destroyed" << std::endl;
 }
 
 QRectF Bomb::boundingRect() const
@@ -36,8 +36,7 @@ QRectF Bomb::boundingRect() const
 
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-   this->setOpacity(0.5);
-   painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_pixel.png"));
+   painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
 }
 
 void Bomb::explode()
@@ -50,14 +49,14 @@ void Bomb::explode()
         scene->addItem(explosionVector[i]);
     }
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()),this,SLOT(explode2()),Qt::AutoConnection);
-    timer->start(1000);
+    QTimer::singleShot(1000,this,SLOT(explode2()));
 
 }
+
 void Bomb::explode2()
 {
-    QGraphicsScene *scene = this->scene();
+    QGraphicsScene *scene;
+    scene = this->scene();
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
         scene->removeItem(explosionVector[i]);

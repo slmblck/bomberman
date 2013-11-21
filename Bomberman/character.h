@@ -8,6 +8,7 @@
 
 class Character : public QGraphicsObject
 {
+    Q_OBJECT
 private:
     qreal xPos;
     qreal yPos;

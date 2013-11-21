@@ -8,5 +8,6 @@
         <file>Explosion_Horizontal_Small.png</file>
         <file>bomb_unexploded_pixel.png</file>
         <file>Explosion_Vertical_Small.png</file>
+        <file>bomb_unexploded_transparent.png</file>
     </qresource>
 </RCC>
