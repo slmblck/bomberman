@@ -47,9 +47,6 @@ QRectF Bomb::boundingRect() const
 /// \brief
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-
-   //this->setOpacity(0.5);
-
    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
 }
 
@@ -59,7 +56,7 @@ void Bomb::explode()
 {
     std::cout <<"Boom!" << std::endl;
     QGraphicsScene *scene = this->scene();
-    QSound::play("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
+    QSound::play("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
 
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
@@ -67,7 +64,7 @@ void Bomb::explode()
     }
 
     //QTimer::singleShot(1000,this,SLOT(explode2()));
-
+    //explode2();
 }
 
 void Bomb::explode2()
@@ -77,6 +74,7 @@ void Bomb::explode2()
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
         scene->removeItem(explosionVector[i]);
+        delete explosionVector[i];
     }
 
 }
