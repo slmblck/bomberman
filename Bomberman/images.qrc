@@ -4,5 +4,9 @@
         <file>Crate_Small.png</file>
         <file>Floor_Small.png</file>
         <file>Wall_Destructable_Small.png</file>
+        <file>Explosion_Center_Small.png</file>
+        <file>Explosion_Horizontal_Small.png</file>
+        <file>bomb_unexploded_pixel.png</file>
+        <file>Explosion_Vertical_Small.png</file>
     </qresource>
 </RCC>
