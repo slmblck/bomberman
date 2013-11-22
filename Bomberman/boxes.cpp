@@ -1,5 +1,9 @@
 #include "boxes.h"
 #include <iostream>
+/*! \brief this class creates a box
+ *  \param the x coordinate in the world
+ *  \param the y coordinate in the world
+ *  creates a box with they x and y coordinate given and notes it in the console */
 boxes::boxes(int x, int y)
 {
     xPos = x;

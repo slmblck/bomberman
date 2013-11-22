@@ -15,23 +15,23 @@ Inheritance diagram for Character\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_character_ade1bb6dc548f73fb814702776457a1f3}{Character} (int x=0, int y=0, int num\-Bombs=3, int player=-\/1)
-\item 
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_character}{Character} constructer. \end{DoxyCompactList}\item 
 \hyperlink{class_character_a9e9be564d05ded80962b2045aa70b3fc}{$\sim$\-Character} ()
 \begin{DoxyCompactList}\small\item\em The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class_character}{Character} and prints to console whenever that happens. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a5e63747ea61305391cd0ada0898e485c}{move\-Up} ()
-\item 
+\begin{DoxyCompactList}\small\item\em moves a character Up a 1/2 block. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_afa7763e81bca6a0b9b0c044f39c429f0}{move\-Down} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Moves a \hyperlink{class_character}{Character} down a 1/2 block. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a88dfc867ab226d3f115b891fc3b34d67}{move\-Left} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Moves a \hyperlink{class_character}{Character} Left a 1/2 block. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a0a8bf66e3d70c196a0fa8ce183f4aeb4}{move\-Right} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Moves a \hyperlink{class_character}{Character} Right a 1/2 block. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a38747fb2a1e186e6cc871f0836eb83e8}{drop\-Bomb} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Allows the \hyperlink{class_character}{Character} to drop a \hyperlink{class_bomb}{Bomb}. Places a bomb in the Game where the \hyperlink{class_character}{Character} currently is placed and starts the ountdown to the explosion. \end{DoxyCompactList}\item 
 void \hyperlink{class_character_acb99685904de8dce448ad8a51efed7cb}{picked\-Up} (int item)
 \item 
 int \hyperlink{class_character_aacb2a15ce71f1165daceb29cf481a4cb}{get\-Player\-I\-D} ()
-\item 
+\begin{DoxyCompactList}\small\item\em gets a Player I\-D \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a099916c7331625461d7cd976ec4b0498}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \item 
 Q\-Rect\-F \hyperlink{class_character_af3bf8c7fe7ddbad47b54193374d25ee2}{bounding\-Rect} () const 
@@ -49,6 +49,21 @@ Q\-Rect\-F \hyperlink{class_character_af3bf8c7fe7ddbad47b54193374d25ee2}{boundin
 \item[{int}]{player = {\ttfamily -\/1}}
 \end{DoxyParamCaption}
 )}}\label{class_character_ade1bb6dc548f73fb814702776457a1f3}
+
+
+The \hyperlink{class_character}{Character} constructer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & x coordinate of where the player currently is. \\
+\hline
+{\em The} & y coordinate of where the player currently is. \\
+\hline
+{\em The} & initial number of bombs the character may have. \\
+\hline
+{\em The} & player\-I\-D. this constructor creates a character given a position in the world, the amount of bombs the character can have, and the player\-I\-D \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_character_a9e9be564d05ded80962b2045aa70b3fc}{\index{Character@{Character}!$\sim$\-Character@{$\sim$\-Character}}
 \index{$\sim$\-Character@{$\sim$\-Character}!Character@{Character}}
 \subsubsection[{$\sim$\-Character}]{\setlength{\rightskip}{0pt plus 5cm}Character\-::$\sim$\-Character (
@@ -77,6 +92,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_a38747fb2a1e186e6cc871f0836eb83e8}
+
+
+Allows the \hyperlink{class_character}{Character} to drop a \hyperlink{class_bomb}{Bomb}. Places a bomb in the Game where the \hyperlink{class_character}{Character} currently is placed and starts the ountdown to the explosion. 
+
 \hypertarget{class_character_aacb2a15ce71f1165daceb29cf481a4cb}{\index{Character@{Character}!get\-Player\-I\-D@{get\-Player\-I\-D}}
 \index{get\-Player\-I\-D@{get\-Player\-I\-D}!Character@{Character}}
 \subsubsection[{get\-Player\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Character\-::get\-Player\-I\-D (
@@ -84,6 +103,13 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_aacb2a15ce71f1165daceb29cf481a4cb}
+
+
+gets a Player I\-D 
+
+\begin{DoxyReturn}{Returns}
+Returns the \hyperlink{class_character}{Character}'s player\-I\-D 
+\end{DoxyReturn}
 \hypertarget{class_character_afa7763e81bca6a0b9b0c044f39c429f0}{\index{Character@{Character}!move\-Down@{move\-Down}}
 \index{move\-Down@{move\-Down}!Character@{Character}}
 \subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Down (
@@ -91,6 +117,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_afa7763e81bca6a0b9b0c044f39c429f0}
+
+
+Moves a \hyperlink{class_character}{Character} down a 1/2 block. 
+
 \hypertarget{class_character_a88dfc867ab226d3f115b891fc3b34d67}{\index{Character@{Character}!move\-Left@{move\-Left}}
 \index{move\-Left@{move\-Left}!Character@{Character}}
 \subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Left (
@@ -98,6 +128,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_a88dfc867ab226d3f115b891fc3b34d67}
+
+
+Moves a \hyperlink{class_character}{Character} Left a 1/2 block. 
+
 \hypertarget{class_character_a0a8bf66e3d70c196a0fa8ce183f4aeb4}{\index{Character@{Character}!move\-Right@{move\-Right}}
 \index{move\-Right@{move\-Right}!Character@{Character}}
 \subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Right (
@@ -105,6 +139,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_a0a8bf66e3d70c196a0fa8ce183f4aeb4}
+
+
+Moves a \hyperlink{class_character}{Character} Right a 1/2 block. 
+
 \hypertarget{class_character_a5e63747ea61305391cd0ada0898e485c}{\index{Character@{Character}!move\-Up@{move\-Up}}
 \index{move\-Up@{move\-Up}!Character@{Character}}
 \subsubsection[{move\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Up (
@@ -112,6 +150,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 )}}\label{class_character_a5e63747ea61305391cd0ada0898e485c}
+
+
+moves a character Up a 1/2 block. 
+
 \hypertarget{class_character_a099916c7331625461d7cd976ec4b0498}{\index{Character@{Character}!paint@{paint}}
 \index{paint@{paint}!Character@{Character}}
 \subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::paint (

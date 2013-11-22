@@ -1,6 +1,10 @@
 #include "dwall.h"
 #include <iostream>
 
+/*! \brief Destructable wall constructor
+ *  \param the x Position in the World
+ *  \param the y Position in the World
+ * Given Coordinates, this constuctor creates a destructable Wall and prints to console whenever that happens */
 dWall::dWall(int x, int y)
 {
     xPos = x;

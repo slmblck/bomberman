@@ -9,11 +9,11 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_world}{World} class Creates a \hyperlink{class_world}{World}, sets the block size to 30$\ast$30, creates the world to be 19$\ast$19 blocks, and randomly generates destructable walls. \end{DoxyCompactList}\item 
 \hyperlink{class_world_a8c73fba541a5817fff65147ba47cd827}{$\sim$\-World} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_world}{World} destructor Removes an world block by block and prints to console whenever that happens. \end{DoxyCompactList}\item 
 void \hyperlink{class_world_a83f49e35b8f8b33f14198e87b2fa7312}{key\-Handler} (int k)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
 void \hyperlink{class_world_a08d405bfe0cef56b06f731addeb22bcf}{draw\-World} (Q\-Painter $\ast$painter)
 \item 
 int \hyperlink{class_world_ab44648ec788ea8dfe063a1fce7f86026}{get\-Blocksize} ()
@@ -21,9 +21,9 @@ int \hyperlink{class_world_ab44648ec788ea8dfe063a1fce7f86026}{get\-Blocksize} ()
 int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 \item 
 \hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_a66856566fadcf64eba71f5e3ccc790df}{get\-Player} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a Player. \end{DoxyCompactList}\item 
 \hyperlink{class_block}{Block} $\ast$ \hyperlink{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{get\-Test\-Block} (int x, int y)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns a \hyperlink{class_block}{Block} given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -34,6 +34,10 @@ int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}
+
+
+The \hyperlink{class_world}{World} class Creates a \hyperlink{class_world}{World}, sets the block size to 30$\ast$30, creates the world to be 19$\ast$19 blocks, and randomly generates destructable walls. 
+
 \hypertarget{class_world_a8c73fba541a5817fff65147ba47cd827}{\index{World@{World}!$\sim$\-World@{$\sim$\-World}}
 \index{$\sim$\-World@{$\sim$\-World}!World@{World}}
 \subsubsection[{$\sim$\-World}]{\setlength{\rightskip}{0pt plus 5cm}World\-::$\sim$\-World (
@@ -41,6 +45,10 @@ int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_a8c73fba541a5817fff65147ba47cd827}
+
+
+The \hyperlink{class_world}{World} destructor Removes an world block by block and prints to console whenever that happens. 
+
 
 
 \subsection{Member Function Documentation}
@@ -65,6 +73,13 @@ int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_a66856566fadcf64eba71f5e3ccc790df}
+
+
+Returns a Player. 
+
+\begin{DoxyReturn}{Returns}
+Returns the Player 
+\end{DoxyReturn}
 \hypertarget{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{\index{World@{World}!get\-Test\-Block@{get\-Test\-Block}}
 \index{get\-Test\-Block@{get\-Test\-Block}!World@{World}}
 \subsubsection[{get\-Test\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} $\ast$ World\-::get\-Test\-Block (
@@ -73,6 +88,20 @@ int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 \item[{int}]{y}
 \end{DoxyParamCaption}
 )}}\label{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}
+
+
+Returns a \hyperlink{class_block}{Block} given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & X position of the \hyperlink{class_block}{Block} in the \hyperlink{class_world}{World} \\
+\hline
+{\em The} & Y position of the \hyperlink{class_block}{Block} in the world \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the block given the position in the world 
+\end{DoxyReturn}
 \hypertarget{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{\index{World@{World}!get\-Worldsize@{get\-Worldsize}}
 \index{get\-Worldsize@{get\-Worldsize}!World@{World}}
 \subsubsection[{get\-Worldsize}]{\setlength{\rightskip}{0pt plus 5cm}int World\-::get\-Worldsize (
@@ -87,6 +116,15 @@ int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 \item[{int}]{k}
 \end{DoxyParamCaption}
 )}}\label{class_world_a83f49e35b8f8b33f14198e87b2fa7312}
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & key pressed Calls the functions to allowthe player to move and drop bombs \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

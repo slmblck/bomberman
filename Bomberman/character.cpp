@@ -1,6 +1,14 @@
 #include "character.h"
 #include <iostream>
 #include <QTimer>
+
+/*! \brief The Character constructer
+ *  \param The x coordinate of where the player currently is.
+ *  \param The y coordinate of where the player currently is.
+ *  \param The initial number of bombs the character may have.
+ *  \param The playerID.
+ *  this constructor creates a character given a position in the world,
+ *the amount of bombs the character can have, and the playerID */
 Character::Character(int x, int y, int numBombs, int player)
 {
     Character::xPos = x;
@@ -17,6 +25,7 @@ Character::~Character()
     std::cout<<"character is gone" << std::endl;
 }
 
+/// \brief moves a character Up a 1/2 block.
 void Character::moveUp()
 {
     //update();
@@ -42,6 +51,7 @@ void Character::moveUp()
     //this->setPos(xPos,yPos);
 }
 
+/// \brief Moves a Character down a 1/2 block.
 void Character::moveDown()
 {
     //update();
@@ -81,6 +91,7 @@ void Character::moveDown()
     //this->setPos(xPos,yPos);
 }
 
+/// \brief Moves a Character Left a 1/2 block.
 void Character::moveLeft()
 {
     //update();
@@ -105,6 +116,7 @@ void Character::moveLeft()
     //this->setPos(xPos,yPos);
 }
 
+/// \brief Moves a Character Right a 1/2 block.
 void Character::moveRight()
 {
     //update();
@@ -134,6 +146,8 @@ void Character::pickedUp(int item)
 
 }
 
+/*! \brief Allows the Character to drop a Bomb.
+ * Places a bomb in the Game where the Character currently is placed and starts the ountdown to the explosion */
 void Character::dropBomb()
 {
     Bomb *b = new Bomb(this->xPos,this->yPos,this->explosionsize);
@@ -146,6 +160,8 @@ void Character::dropBomb()
     scene->removeItem(b);
 }
 
+/*! \brief gets a Player ID
+ *  \return Returns the Character's playerID */
 int Character::getPlayerID()
 {
     return this->playerID;

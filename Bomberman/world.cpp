@@ -1,5 +1,7 @@
 #include "world.h"
 
+/*! \brief The World class
+ * Creates a World, sets the block size to 30*30, creates the world to be 19*19 blocks, and randomly generates destructable walls */
 World::World()
 {
     World::player = new Character(30,30,1);
@@ -35,6 +37,8 @@ World::World()
     }
 }
 
+/*! \brief The World destructor
+ * Removes an world block by block and prints to console whenever that happens */
 World::~World()
 {
     std::cout << "World has been destroyed" << std::endl;
@@ -52,6 +56,7 @@ World::~World()
     delete[] World::testWorld;
 }
 
+
 void World::drawWorld(QPainter *painter)
 {
     painter->setBrush(Qt::blue);
@@ -68,6 +73,9 @@ int World::getWorldsize()
     return this->worldsize;
 }
 
+/*! \brief Handles keyboard input
+ *  \param The key pressed
+ *  Calls the functions to allowthe player to move and drop bombs */
 void World::keyHandler(int k)
 {
     switch (k)
@@ -92,11 +100,17 @@ void World::keyHandler(int k)
     }
 }
 
+/*! \brief Returns a Player
+ *  \return Returns the Player */
 Character * World::getPlayer()
 {
     return this->player;
 }
 
+/*! \brief Returns a Block given coordinates
+ *  \param The X position of the Block in the World
+ *  \param The Y position of the Block in the world
+ *  \return Returns the block given the position in the world */
 Block* World::getTestBlock(int x, int y)
 {
     return this->testWorld[x][y];

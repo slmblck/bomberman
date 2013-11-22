@@ -27,13 +27,15 @@ void Block::update(int x, int y)
     this->yPos = y;
 }
 
-/*! \brief Return the X Position of a Block */
+/*! \brief Return the X Position of a Block
+ *  \return Returns int xPos */
 int Block::getX()
 {
     return this->xPos;
 }
 
-/*! \brief Return the Y Position of a Block */
+/*! \brief Return the Y Position of a Block
+ *  \return Returns int yPos */
 int Block::getY()
 {
     return this->yPos;
@@ -47,7 +49,7 @@ void Block::setX(int x)
 }
 
 /*! \brief Set the Y Position of a Block
- * \param The block's Y position*/
+ *  \param The block's Y position */
 void Block::setY(int y)
 {
     this->yPos = y;
