@@ -6,13 +6,12 @@
 class Block : public QGraphicsItem
 {
 protected:
-    int xPos;
-    int yPos;
+    qreal xPos;
+    qreal yPos;
 public:
     Block(int x=0, int y=0);
     virtual ~Block();
     virtual void update(int x, int y);
-    virtual void draw(QPainter *painter, const int size);
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     virtual QRectF boundingRect() const;
     int getX();

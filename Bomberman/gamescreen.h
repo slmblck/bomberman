@@ -3,22 +3,33 @@
 
 #include <QMainWindow>
 #include "world.h"
+//#include "mainwindow.h"
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QCloseEvent>
+
 namespace Ui {
 class GameScreen;
 }
+
+class QMediaPlayer;
+class QMediaPlaylist;
 
 class GameScreen : public QMainWindow
 {
 
     Q_OBJECT
+    QMediaPlayer *backgroundMusicGame;
+    QMediaPlaylist *gameList;
+
 public slots:
-    void loop();
 
 
 public:
     explicit GameScreen(QWidget *parent = 0);
     ~GameScreen();
     void paintEvent(QPaintEvent *event);
+    void closeEvent(QCloseEvent *);
     QGraphicsScene *scene;
 
 

@@ -4,9 +4,8 @@
 class dWall : public Block
 {
 public:
-    dWall(int x, int y);
+    dWall(int x = 0, int y = 0);
     ~dWall();
-    void draw(QPainter *painter, const int size);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
 };

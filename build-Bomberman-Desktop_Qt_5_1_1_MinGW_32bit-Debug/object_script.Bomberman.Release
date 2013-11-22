@@ -9,7 +9,6 @@ INPUT(
 ./release\world.o
 ./release\wall.o
 ./release\dwall.o
-./release\sounds.o
 ./release\boxes.o
 ./release\qrc_images.o
 ./release\moc_mainwindow.o

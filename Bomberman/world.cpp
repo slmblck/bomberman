@@ -88,7 +88,6 @@ void World::keyHandler(int k)
         default:
             break;
     }
-
 }
 
 Character * World::getPlayer()

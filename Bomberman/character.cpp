@@ -1,6 +1,6 @@
 #include "character.h"
 #include <iostream>
-
+#include <QTimer>
 Character::Character(int x, int y, int numBombs, int player)
 {
     Character::xPos = x;
@@ -17,29 +17,37 @@ Character::~Character()
 void Character::moveUp()
 {
     //update();
-    QGraphicsItem::moveBy(0, -20);
-    //yPos -= 20;
+    this->moveBy(0, -20);
+    yPos = yPos - 20;
+    this->moveBy(0, 20);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveDown()
 {
     //update();
-    QGraphicsItem::moveBy(0, 20);
-    //yPos += 20;
+    this->moveBy(0, 20);
+    yPos = yPos + 20;
+    this->moveBy(0, -20);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveLeft()
 {
     //update();
-    QGraphicsItem::moveBy(-20, 0);
-    //xPos -= 20;
+    this->moveBy(-20, 0);
+    xPos = xPos - 20;
+    this->moveBy(20, 0);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::moveRight()
 {
     //update();
-    QGraphicsItem::moveBy(20, 0);
-    //xPos += 20;
+    this->moveBy(20, 0);
+    xPos = xPos + 20;
+    this->moveBy(-20, 0);
+    //this->setPos(xPos,yPos);
 }
 
 void Character::pickedUp(int item)
@@ -49,21 +57,12 @@ void Character::pickedUp(int item)
 
 void Character::dropBomb()
 {
-
-    Bomb *b = new Bomb(xPos,yPos,this->explosionsize);
-    QPainter p;// = new QPainter();
-    //p.begin(this);
-    //p->setBrush(Qt::black);
-    //p->drawRect(xPos + 10, yPos + 10, 20, 20);
-    b->draw(&p);
+    Bomb *b = new Bomb(this->xPos,this->yPos,this->explosionsize);
+    QGraphicsScene *scene = this->scene();
+    scene->addItem(b);
+    //QTimer::singleShot(1000,b,SLOT(explode(scene)));
     b->explode();
-
-}
-
-void Character::draw(QPainter *painter)
-{
-    painter->setBrush(Qt::red);
-    painter->drawRect(xPos,yPos,30,30);
+    scene->removeItem(b);
 }
 
 int Character::getPlayerID()

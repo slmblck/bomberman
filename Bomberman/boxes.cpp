@@ -13,15 +13,6 @@ boxes::~boxes()
     std::cout << "box has been deleted" << std::endl;
 }
 
-void boxes::draw(QPainter *painter, const int size)
-{
-    QImage crate(":/Crate_Small.png");
-    int x = xPos;
-    int y = yPos;
-    int s = size;
-    painter->drawImage(x,y,crate,0,0,30,30,Qt::AutoColor);
-}
-
 void boxes::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Crate_Small.png"));
