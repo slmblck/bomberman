@@ -1,9 +1,12 @@
 #include "gamescreen.h"
+#include "mainwindow.h"
 #include "ui_gamescreen.h"
 #include <QKeyEvent>
 #include <QTimer>
 #include <QGraphicsScene>
 
+/*! \brief A Gamescreen Object
+ * This class creates the game UI and sets up background music */
 GameScreen::GameScreen(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GameScreen)
@@ -12,7 +15,7 @@ GameScreen::GameScreen(QWidget *parent) :
     ui->setupUi(this);
 
     gameList= new QMediaPlaylist;
-    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
     gameList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicGame = new QMediaPlayer(this);
     backgroundMusicGame->setPlaylist(gameList);
@@ -49,18 +52,26 @@ GameScreen::GameScreen(QWidget *parent) :
     //QTimer* timer = new QTimer(this);
 }
 
+/*! \brief Closing window event
+ *  \param Takes in a QCloseEvent AKA window close;
+ *  \bug cannot restart main menu music
+ * Closes the current Game and stops music from playing */
 void GameScreen::closeEvent(QCloseEvent *bar)
 {
     backgroundMusicGame->stop();
-    //playAgain();
+    //MainWindow::playAgain();
     bar->accept();
 }
+
+/*! \brief A Gamescreen Destructor
+ * The abstract parent of all chess pieces. */
 GameScreen::~GameScreen()
 {
     delete ui;
     delete gameList;
     delete backgroundMusicGame;
 }
+
 
 void GameScreen::paintEvent(QPaintEvent *event)
 {
@@ -70,6 +81,9 @@ void GameScreen::paintEvent(QPaintEvent *event)
     p.end();
 }
 
+/*! \brief Keyhandler
+ *  \param Takes in a keystroke
+ * Uses the keyHandler to interpret what should happen in the UI  */
 void GameScreen::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;

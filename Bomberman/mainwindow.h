@@ -24,6 +24,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void playAgain();
     ~MainWindow();
+    friend class GameScreen;
 
 private slots:
     void on_gameButton_clicked();

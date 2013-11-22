@@ -17,7 +17,7 @@ Character::~Character()
 void Character::moveUp()
 {
     //update();
-    this->moveBy(0, -20);
+    this->moveBy(0, -15);
     //yPos = yPos - 20;
     //this->moveBy(0, 20);
     //this->moveBy(0, 20);
@@ -42,7 +42,7 @@ void Character::moveUp()
 void Character::moveDown()
 {
     //update();
-    this->moveBy(0, 20);
+    this->moveBy(0, 15);
     QGraphicsScene *scene = this->scene();
     QList<QGraphicsItem*> collisions = scene->collidingItems(this);
     for(int i = 0; i < collisions.size(); i++){
@@ -81,7 +81,7 @@ void Character::moveDown()
 void Character::moveLeft()
 {
     //update();
-    this->moveBy(-20, 0);
+    this->moveBy(-15, 0);
     //xPos = xPos - 20;
     //this->moveBy(20, 0);
     //this->moveBy(0, 20);
@@ -105,7 +105,7 @@ void Character::moveLeft()
 void Character::moveRight()
 {
     //update();
-    this->moveBy(20, 0);
+    this->moveBy(15, 0);
     //xPos = xPos + 20;
     //this->moveBy(-20, 0);
     //this->moveBy(0, 20);
