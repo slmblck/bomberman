@@ -63,7 +63,7 @@ void Bomb::explode()
         scene->addItem(explosionVector[i]);
     }
 
-    //QTimer::singleShot(1000,this,SLOT(explode2()));
+    QTimer::singleShot(1000,this,SLOT(explode2()));
     //explode2();
 }
 
