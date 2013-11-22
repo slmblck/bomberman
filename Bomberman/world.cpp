@@ -54,6 +54,7 @@ World::~World()
     }
 
     delete[] World::testWorld;
+    delete player;
 }
 
 
@@ -94,6 +95,9 @@ void World::keyHandler(int k)
             break;
         case Qt::Key_K:
             player->dropBomb();
+            break;
+        case Qt::Key_R:
+            player->setPos(300,300);
             break;
         default:
             break;
