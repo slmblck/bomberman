@@ -9,6 +9,9 @@ Character::Character(int x, int y, int numBombs, int player)
     Character::playerID = player;
     Character::explosionsize = 2;
 }
+
+/*! \brief The Character destructor
+ * Removes a Character and prints to console whenever that happens */
 Character::~Character()
 {
     std::cout<<"character is gone" << std::endl;

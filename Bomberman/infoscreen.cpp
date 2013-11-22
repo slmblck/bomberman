@@ -8,6 +8,8 @@ InfoScreen::InfoScreen(QWidget *parent) :
     ui->setupUi(this);
 }
 
+/*! \brief The InfoScreen destructor
+ * Deletes the InfoScreen UI*/
 InfoScreen::~InfoScreen()
 {
     delete ui;

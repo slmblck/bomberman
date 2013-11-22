@@ -2,6 +2,12 @@
 #include <iostream>
 #include <vector>
 #include <QTimer>
+
+/*! \brief places bomb
+ *  \param x position of the bomb
+ *  \param y position of the bomb
+ *  \param the size of blocks that the explosion should be
+ * This class creates an explosion given the location and the size of the bomb  */
 Bomb::Bomb(int x, int y, int explosionSize)
 {
     Bomb::xPos = x;
@@ -24,16 +30,21 @@ Bomb::Bomb(int x, int y, int explosionSize)
     //std::cout << explosionVector.size() << std::endl;
 }
 
+/*! \brief The Bomb destructor
+ * Removes a Bomb and prints to console whenever that happens */
 Bomb::~Bomb()
 {
     std::cout << "bomb has been destroyed" << std::endl;
 }
 
+/*! \brief Creates a bomb area
+ * Bounds a bomb to a size of 30*30 pixels */
 QRectF Bomb::boundingRect() const
 {
     return QRectF(this->xPos, this->yPos, 30, 30);
 }
 
+/// \brief
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
 
@@ -42,10 +53,13 @@ void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
 }
 
+/*! \brief The Bomb explodes
+ * Prints to console and removes bomb image with an explosion for a predetermined time */
 void Bomb::explode()
 {
     std::cout <<"Boom!" << std::endl;
     QGraphicsScene *scene = this->scene();
+    QSound::play("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
 
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {

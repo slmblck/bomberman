@@ -8,6 +8,8 @@ boxes::boxes(int x, int y)
 
 }
 
+/*! \brief The boxes destructor
+ * Removes a box and prints to console whenever that happens */
 boxes::~boxes()
 {
     std::cout << "box has been deleted" << std::endl;

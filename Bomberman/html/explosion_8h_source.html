@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -61,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -69,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">explosion.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EXPLOSION_H</span></div>
+<a href="explosion_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EXPLOSION_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EXPLOSION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QGraphicsItem&gt;</span></div>
@@ -94,18 +96,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    qreal xPos;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    qreal yPos;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classexplosion.html">explosion</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ~<a class="code" href="classexplosion.html">explosion</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    QRectF boundingRect() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> paint(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classexplosion.html#ac3aabcbf16f356fcd3bdc8588cf36cf1">explosion</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">~explosion</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    QRectF <a class="code" href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">boundingRect</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // EXPLOSION_H</span></div>
 <div class="ttc" id="classexplosion_html"><div class="ttname"><a href="classexplosion.html">explosion</a></div><div class="ttdef"><b>Definition:</b> explosion.h:6</div></div>
+<div class="ttc" id="classexplosion_html_adc8680178e9e7d4e388d8850a2c03125"><div class="ttname"><a href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">explosion::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const </div><div class="ttdef"><b>Definition:</b> explosion.cpp:17</div></div>
+<div class="ttc" id="classexplosion_html_a401d7dbebfc4a92bcc408172df67c782"><div class="ttname"><a href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">explosion::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</div><div class="ttdef"><b>Definition:</b> explosion.cpp:22</div></div>
+<div class="ttc" id="classexplosion_html_ac3aabcbf16f356fcd3bdc8588cf36cf1"><div class="ttname"><a href="classexplosion.html#ac3aabcbf16f356fcd3bdc8588cf36cf1">explosion::explosion</a></div><div class="ttdeci">explosion(int x=0, int y=0)</div><div class="ttdef"><b>Definition:</b> explosion.cpp:4</div></div>
+<div class="ttc" id="classexplosion_html_a3fc08d8c702d74ee3164825c975f8230"><div class="ttname"><a href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">explosion::~explosion</a></div><div class="ttdeci">~explosion()</div><div class="ttdoc">The Explosion destructor Removes an explosion and prints to console whenever that happens...</div><div class="ttdef"><b>Definition:</b> explosion.cpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 03:56:59 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 22 2013 04:54:25 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

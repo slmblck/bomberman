@@ -64,7 +64,7 @@ void GameScreen::closeEvent(QCloseEvent *bar)
 }
 
 /*! \brief A Gamescreen Destructor
- * The abstract parent of all chess pieces. */
+ * Destroys the UI and Removes the music player and music list for the game. */
 GameScreen::~GameScreen()
 {
     delete ui;

@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -62,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,65 +92,297 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Bomb Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="bomb_8h_source.html">bomb.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Bomb:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_bomb__inherit__graph.png" border="0" usemap="#_bomb_inherit__map" alt="Inheritance graph"/></div>
-<map name="_bomb_inherit__map" id="_bomb_inherit__map">
+ <div class="center">
+  <img src="class_bomb.png" usemap="#Bomb_map" alt=""/>
+  <map id="Bomb_map" name="Bomb_map">
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Bomb:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_bomb__coll__graph.png" border="0" usemap="#_bomb_coll__map" alt="Collaboration graph"/></div>
-<map name="_bomb_coll__map" id="_bomb_coll__map">
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a5752ce7daece5c3bf2e2178bcfcb820d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5752ce7daece5c3bf2e2178bcfcb820d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>explode</b> ()</td></tr>
+<tr class="memitem:a5752ce7daece5c3bf2e2178bcfcb820d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#a5752ce7daece5c3bf2e2178bcfcb820d">explode</a> ()</td></tr>
+<tr class="memdesc:a5752ce7daece5c3bf2e2178bcfcb820d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_bomb.html">Bomb</a> explodes Prints to console and removes bomb image with an explosion for a predetermined time.  <a href="#a5752ce7daece5c3bf2e2178bcfcb820d">More...</a><br/></td></tr>
 <tr class="separator:a5752ce7daece5c3bf2e2178bcfcb820d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9410dc9b499dad8e4f0f200d9b0ead7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9410dc9b499dad8e4f0f200d9b0ead7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>explode2</b> ()</td></tr>
+<tr class="memitem:ae9410dc9b499dad8e4f0f200d9b0ead7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#ae9410dc9b499dad8e4f0f200d9b0ead7">explode2</a> ()</td></tr>
 <tr class="separator:ae9410dc9b499dad8e4f0f200d9b0ead7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ada9d05fb30c035691190e80d1d0a1c7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada9d05fb30c035691190e80d1d0a1c7f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Bomb</b> (int x=0, int y=0, int explosionSize=0)</td></tr>
+<tr class="memitem:ada9d05fb30c035691190e80d1d0a1c7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#ada9d05fb30c035691190e80d1d0a1c7f">Bomb</a> (int x=0, int y=0, int <a class="el" href="class_bomb.html#a7576bf99d4bcfbc7dda365511ca2fcd7">explosionSize</a>=0)</td></tr>
+<tr class="memdesc:ada9d05fb30c035691190e80d1d0a1c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">places bomb  <a href="#ada9d05fb30c035691190e80d1d0a1c7f">More...</a><br/></td></tr>
 <tr class="separator:ada9d05fb30c035691190e80d1d0a1c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad047941e8f1413a061f98f460dcea22a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad047941e8f1413a061f98f460dcea22a"></a>
-QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>boundingRect</b> () const </td></tr>
+<tr class="memitem:acbb47327cfb2fa429887774ef3597965"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#acbb47327cfb2fa429887774ef3597965">~Bomb</a> ()</td></tr>
+<tr class="memdesc:acbb47327cfb2fa429887774ef3597965"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_bomb.html">Bomb</a> destructor Removes a <a class="el" href="class_bomb.html">Bomb</a> and prints to console whenever that happens.  <a href="#acbb47327cfb2fa429887774ef3597965">More...</a><br/></td></tr>
+<tr class="separator:acbb47327cfb2fa429887774ef3597965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad047941e8f1413a061f98f460dcea22a"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#ad047941e8f1413a061f98f460dcea22a">boundingRect</a> () const </td></tr>
+<tr class="memdesc:ad047941e8f1413a061f98f460dcea22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bomb area Bounds a bomb to a size of 30*30 pixels.  <a href="#ad047941e8f1413a061f98f460dcea22a">More...</a><br/></td></tr>
 <tr class="separator:ad047941e8f1413a061f98f460dcea22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e930cc66f5d3f41e8a02f3d0d8185e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8e930cc66f5d3f41e8a02f3d0d8185e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr class="memitem:ab8e930cc66f5d3f41e8a02f3d0d8185e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#ab8e930cc66f5d3f41e8a02f3d0d8185e">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
 <tr class="separator:ab8e930cc66f5d3f41e8a02f3d0d8185e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac2068167b771ed338aa17c99524b8131"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2068167b771ed338aa17c99524b8131"></a>
-qreal&#160;</td><td class="memItemRight" valign="bottom"><b>xPos</b></td></tr>
+<tr class="memitem:ac2068167b771ed338aa17c99524b8131"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#ac2068167b771ed338aa17c99524b8131">xPos</a></td></tr>
 <tr class="separator:ac2068167b771ed338aa17c99524b8131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d1028a49b33b08f5c96a943fab0beff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d1028a49b33b08f5c96a943fab0beff"></a>
-qreal&#160;</td><td class="memItemRight" valign="bottom"><b>yPos</b></td></tr>
+<tr class="memitem:a0d1028a49b33b08f5c96a943fab0beff"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#a0d1028a49b33b08f5c96a943fab0beff">yPos</a></td></tr>
 <tr class="separator:a0d1028a49b33b08f5c96a943fab0beff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7576bf99d4bcfbc7dda365511ca2fcd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7576bf99d4bcfbc7dda365511ca2fcd7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>explosionSize</b></td></tr>
+<tr class="memitem:a7576bf99d4bcfbc7dda365511ca2fcd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#a7576bf99d4bcfbc7dda365511ca2fcd7">explosionSize</a></td></tr>
 <tr class="separator:a7576bf99d4bcfbc7dda365511ca2fcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03d27f3d615aba4b77f83427912a7de6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03d27f3d615aba4b77f83427912a7de6"></a>
-std::vector&lt; <a class="el" href="classexplosion.html">explosion</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>explosionVector</b></td></tr>
+<tr class="memitem:a03d27f3d615aba4b77f83427912a7de6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classexplosion.html">explosion</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bomb.html#a03d27f3d615aba4b77f83427912a7de6">explosionVector</a></td></tr>
 <tr class="separator:a03d27f3d615aba4b77f83427912a7de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ada9d05fb30c035691190e80d1d0a1c7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bomb::Bomb </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>explosionSize</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>places bomb </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position of the bomb </td></tr>
+    <tr><td class="paramname">y</td><td>position of the bomb </td></tr>
+    <tr><td class="paramname">the</td><td>size of blocks that the explosion should be This class creates an explosion given the location and the size of the bomb </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acbb47327cfb2fa429887774ef3597965"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bomb::~Bomb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_bomb.html">Bomb</a> destructor Removes a <a class="el" href="class_bomb.html">Bomb</a> and prints to console whenever that happens. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad047941e8f1413a061f98f460dcea22a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRectF Bomb::boundingRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a bomb area Bounds a bomb to a size of 30*30 pixels. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5752ce7daece5c3bf2e2178bcfcb820d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bomb::explode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_bomb.html">Bomb</a> explodes Prints to console and removes bomb image with an explosion for a predetermined time. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9410dc9b499dad8e4f0f200d9b0ead7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bomb::explode2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8e930cc66f5d3f41e8a02f3d0d8185e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bomb::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>widget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a7576bf99d4bcfbc7dda365511ca2fcd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Bomb::explosionSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03d27f3d615aba4b77f83427912a7de6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classexplosion.html">explosion</a>*&gt; Bomb::explosionVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2068167b771ed338aa17c99524b8131"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal Bomb::xPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d1028a49b33b08f5c96a943fab0beff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal Bomb::yPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="bomb_8h_source.html">bomb.h</a></li>
-<li>bomb.cpp</li>
+<li><a class="el" href="bomb_8cpp.html">bomb.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 03:57:00 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 22 2013 04:54:26 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

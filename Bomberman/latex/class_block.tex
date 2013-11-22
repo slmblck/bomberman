@@ -3,49 +3,180 @@
 }
 
 
-Inheritance diagram for Block\-:
+{\ttfamily \#include $<$block.\-h$>$}
 
-
-Collaboration diagram for Block\-:
+Inheritance diagram for Block\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_block}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_block_aada344df339d2124eeaa726367ae27fe}{{\bfseries Block} (int x=0, int y=0)}\label{class_block_aada344df339d2124eeaa726367ae27fe}
-
+\hyperlink{class_block_aada344df339d2124eeaa726367ae27fe}{Block} (int x=0, int y=0)
+\begin{DoxyCompactList}\small\item\em A Standard \hyperlink{class_block}{Block} This class creates and positions a block into the \hyperlink{class_game_screen}{Game\-Screen}. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_block_a19d1bd0e1cef6a865ed2745a2e648405}{$\sim$\-Block} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_block}{Block} destructor Removes a block and prints to console whenever that happens. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_block_aa374e103c2ba9e060c4689f4da21a9ff}{update} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Updates a \hyperlink{class_block}{Block} Position. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \item 
-\hypertarget{class_block_aa374e103c2ba9e060c4689f4da21a9ff}{virtual void {\bfseries update} (int x, int y)}\label{class_block_aa374e103c2ba9e060c4689f4da21a9ff}
-
+virtual Q\-Rect\-F \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{bounding\-Rect} () const 
 \item 
-\hypertarget{class_block_a8f526f6d76bf11afae85d8b23239cce2}{virtual void {\bfseries paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)}\label{class_block_a8f526f6d76bf11afae85d8b23239cce2}
-
-\item 
-\hypertarget{class_block_aee4444b92a82f5a8080e9019ef1e554d}{virtual Q\-Rect\-F {\bfseries bounding\-Rect} () const }\label{class_block_aee4444b92a82f5a8080e9019ef1e554d}
-
-\item 
-\hypertarget{class_block_a527c8f990b4b99dda6f4ca225ee32c14}{int {\bfseries get\-X} ()}\label{class_block_a527c8f990b4b99dda6f4ca225ee32c14}
-
-\item 
-\hypertarget{class_block_a2501c303a7975db005ddc49d9551a51b}{int {\bfseries get\-Y} ()}\label{class_block_a2501c303a7975db005ddc49d9551a51b}
-
-\item 
-\hypertarget{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}{void {\bfseries set\-X} (int x)}\label{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}
-
-\item 
-\hypertarget{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}{void {\bfseries set\-Y} (int y)}\label{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}
-
-\end{DoxyCompactItemize}
+int \hyperlink{class_block_a527c8f990b4b99dda6f4ca225ee32c14}{get\-X} ()
+\begin{DoxyCompactList}\small\item\em Return the X Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\item 
+int \hyperlink{class_block_a2501c303a7975db005ddc49d9551a51b}{get\-Y} ()
+\begin{DoxyCompactList}\small\item\em Return the Y Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\item 
+void \hyperlink{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}{set\-X} (int x)
+\begin{DoxyCompactList}\small\item\em Set the X Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\item 
+void \hyperlink{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}{set\-Y} (int y)
+\begin{DoxyCompactList}\small\item\em Set the Y Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_block_a97b5b28230920e5f6e3335a023628477}{qreal {\bfseries x\-Pos}}\label{class_block_a97b5b28230920e5f6e3335a023628477}
-
+qreal \hyperlink{class_block_a97b5b28230920e5f6e3335a023628477}{x\-Pos}
 \item 
-\hypertarget{class_block_a0857435a94babc54051428becff56867}{qreal {\bfseries y\-Pos}}\label{class_block_a0857435a94babc54051428becff56867}
-
+qreal \hyperlink{class_block_a0857435a94babc54051428becff56867}{y\-Pos}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_block_aada344df339d2124eeaa726367ae27fe}{\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\subsubsection[{Block}]{\setlength{\rightskip}{0pt plus 5cm}Block\-::\-Block (
+\begin{DoxyParamCaption}
+\item[{int}]{x = {\ttfamily 0}, }
+\item[{int}]{y = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_block_aada344df339d2124eeaa726367ae27fe}
+
+
+A Standard \hyperlink{class_block}{Block} This class creates and positions a block into the \hyperlink{class_game_screen}{Game\-Screen}. 
+
+\hypertarget{class_block_a19d1bd0e1cef6a865ed2745a2e648405}{\index{Block@{Block}!$\sim$\-Block@{$\sim$\-Block}}
+\index{$\sim$\-Block@{$\sim$\-Block}!Block@{Block}}
+\subsubsection[{$\sim$\-Block}]{\setlength{\rightskip}{0pt plus 5cm}Block\-::$\sim$\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_a19d1bd0e1cef6a865ed2745a2e648405}
+
+
+The \hyperlink{class_block}{Block} destructor Removes a block and prints to console whenever that happens. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_block_aee4444b92a82f5a8080e9019ef1e554d}{\index{Block@{Block}!bounding\-Rect@{bounding\-Rect}}
+\index{bounding\-Rect@{bounding\-Rect}!Block@{Block}}
+\subsubsection[{bounding\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Rect\-F Block\-::bounding\-Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_aee4444b92a82f5a8080e9019ef1e554d}
+
+
+Reimplemented in \hyperlink{class_wall_aae7888200bcd5afb12b24110886366a0}{Wall}, \hyperlink{classboxes_a4855400f92db9ebe776a79c79bac1d50}{boxes}, and \hyperlink{classd_wall_a84d4bba890333394f10c5497379d894c}{d\-Wall}.
+
+\hypertarget{class_block_a527c8f990b4b99dda6f4ca225ee32c14}{\index{Block@{Block}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!Block@{Block}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}int Block\-::get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_block_a527c8f990b4b99dda6f4ca225ee32c14}
+
+
+Return the X Position of a \hyperlink{class_block}{Block}. 
+
+\hypertarget{class_block_a2501c303a7975db005ddc49d9551a51b}{\index{Block@{Block}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!Block@{Block}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int Block\-::get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_block_a2501c303a7975db005ddc49d9551a51b}
+
+
+Return the Y Position of a \hyperlink{class_block}{Block}. 
+
+\hypertarget{class_block_a8f526f6d76bf11afae85d8b23239cce2}{\index{Block@{Block}!paint@{paint}}
+\index{paint@{paint}!Block@{Block}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Block\-::paint (
+\begin{DoxyParamCaption}
+\item[{Q\-Painter $\ast$}]{painter, }
+\item[{const Q\-Style\-Option\-Graphics\-Item $\ast$}]{option, }
+\item[{Q\-Widget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_a8f526f6d76bf11afae85d8b23239cce2}
+
+
+Reimplemented in \hyperlink{class_wall_aae57ed47f7d5d58b513d2ebd8feb8057}{Wall}, \hyperlink{classboxes_aa07b0460f8be5da676c4369331061fa6}{boxes}, and \hyperlink{classd_wall_aeaec158ea8576bfe6d40d8197ffceaf6}{d\-Wall}.
+
+\hypertarget{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}{\index{Block@{Block}!set\-X@{set\-X}}
+\index{set\-X@{set\-X}!Block@{Block}}
+\subsubsection[{set\-X}]{\setlength{\rightskip}{0pt plus 5cm}void Block\-::set\-X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}
+
+
+Set the X Position of a \hyperlink{class_block}{Block}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & block's X position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}{\index{Block@{Block}!set\-Y@{set\-Y}}
+\index{set\-Y@{set\-Y}!Block@{Block}}
+\subsubsection[{set\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void Block\-::set\-Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}
+
+
+Set the Y Position of a \hyperlink{class_block}{Block}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & block's Y position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_block_aa374e103c2ba9e060c4689f4da21a9ff}{\index{Block@{Block}!update@{update}}
+\index{update@{update}!Block@{Block}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Block\-::update (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_aa374e103c2ba9e060c4689f4da21a9ff}
+
+
+Updates a \hyperlink{class_block}{Block} Position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & position \\
+\hline
+{\em y} & position This updates the position of the block \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_block_a97b5b28230920e5f6e3335a023628477}{\index{Block@{Block}!x\-Pos@{x\-Pos}}
+\index{x\-Pos@{x\-Pos}!Block@{Block}}
+\subsubsection[{x\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}qreal Block\-::x\-Pos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_block_a97b5b28230920e5f6e3335a023628477}
+\hypertarget{class_block_a0857435a94babc54051428becff56867}{\index{Block@{Block}!y\-Pos@{y\-Pos}}
+\index{y\-Pos@{y\-Pos}!Block@{Block}}
+\subsubsection[{y\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}qreal Block\-::y\-Pos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_block_a0857435a94babc54051428becff56867}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-block.\-h\item 
-block.\-cpp\end{DoxyCompactItemize}
+\hyperlink{block_8h}{block.\-h}\item 
+\hyperlink{block_8cpp}{block.\-cpp}\end{DoxyCompactItemize}

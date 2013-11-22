@@ -7,6 +7,8 @@ explosion::explosion(int x, int y)
     explosion::yPos = y;
 }
 
+/*! \brief The Explosion destructor
+ * Removes an explosion and prints to console whenever that happens */
 explosion::~explosion()
 {
     std::cout << "explosion has been deleted" << std::endl;

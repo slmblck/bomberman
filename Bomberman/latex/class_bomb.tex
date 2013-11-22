@@ -3,49 +3,138 @@
 }
 
 
-Inheritance diagram for Bomb\-:
+{\ttfamily \#include $<$bomb.\-h$>$}
 
-
-Collaboration diagram for Bomb\-:
+Inheritance diagram for Bomb\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bomb}
+\end{center}
+\end{figure}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}{void {\bfseries explode} ()}\label{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}
-
-\item 
-\hypertarget{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}{void {\bfseries explode2} ()}\label{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}
-
+void \hyperlink{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}{explode} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_bomb}{Bomb} explodes Prints to console and removes bomb image with an explosion for a predetermined time. \end{DoxyCompactList}\item 
+void \hyperlink{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}{explode2} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}{{\bfseries Bomb} (int x=0, int y=0, int explosion\-Size=0)}\label{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}
-
-\item 
-\hypertarget{class_bomb_ad047941e8f1413a061f98f460dcea22a}{Q\-Rect\-F {\bfseries bounding\-Rect} () const }\label{class_bomb_ad047941e8f1413a061f98f460dcea22a}
-
-\item 
-\hypertarget{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}{void {\bfseries paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)}\label{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}
-
+\hyperlink{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}{Bomb} (int x=0, int y=0, int \hyperlink{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}{explosion\-Size}=0)
+\begin{DoxyCompactList}\small\item\em places bomb \end{DoxyCompactList}\item 
+\hyperlink{class_bomb_acbb47327cfb2fa429887774ef3597965}{$\sim$\-Bomb} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_bomb}{Bomb} destructor Removes a \hyperlink{class_bomb}{Bomb} and prints to console whenever that happens. \end{DoxyCompactList}\item 
+Q\-Rect\-F \hyperlink{class_bomb_ad047941e8f1413a061f98f460dcea22a}{bounding\-Rect} () const 
+\begin{DoxyCompactList}\small\item\em Creates a bomb area Bounds a bomb to a size of 30$\ast$30 pixels. \end{DoxyCompactList}\item 
+void \hyperlink{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_bomb_ac2068167b771ed338aa17c99524b8131}{qreal {\bfseries x\-Pos}}\label{class_bomb_ac2068167b771ed338aa17c99524b8131}
-
+qreal \hyperlink{class_bomb_ac2068167b771ed338aa17c99524b8131}{x\-Pos}
 \item 
-\hypertarget{class_bomb_a0d1028a49b33b08f5c96a943fab0beff}{qreal {\bfseries y\-Pos}}\label{class_bomb_a0d1028a49b33b08f5c96a943fab0beff}
-
+qreal \hyperlink{class_bomb_a0d1028a49b33b08f5c96a943fab0beff}{y\-Pos}
 \item 
-\hypertarget{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}{int {\bfseries explosion\-Size}}\label{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}
-
+int \hyperlink{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}{explosion\-Size}
 \item 
-\hypertarget{class_bomb_a03d27f3d615aba4b77f83427912a7de6}{std\-::vector$<$ \hyperlink{classexplosion}{explosion} $\ast$ $>$ {\bfseries explosion\-Vector}}\label{class_bomb_a03d27f3d615aba4b77f83427912a7de6}
-
+std\-::vector$<$ \hyperlink{classexplosion}{explosion} $\ast$ $>$ \hyperlink{class_bomb_a03d27f3d615aba4b77f83427912a7de6}{explosion\-Vector}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}{\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\subsubsection[{Bomb}]{\setlength{\rightskip}{0pt plus 5cm}Bomb\-::\-Bomb (
+\begin{DoxyParamCaption}
+\item[{int}]{x = {\ttfamily 0}, }
+\item[{int}]{y = {\ttfamily 0}, }
+\item[{int}]{explosion\-Size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}
+
+
+places bomb 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & position of the bomb \\
+\hline
+{\em y} & position of the bomb \\
+\hline
+{\em the} & size of blocks that the explosion should be This class creates an explosion given the location and the size of the bomb \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bomb_acbb47327cfb2fa429887774ef3597965}{\index{Bomb@{Bomb}!$\sim$\-Bomb@{$\sim$\-Bomb}}
+\index{$\sim$\-Bomb@{$\sim$\-Bomb}!Bomb@{Bomb}}
+\subsubsection[{$\sim$\-Bomb}]{\setlength{\rightskip}{0pt plus 5cm}Bomb\-::$\sim$\-Bomb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bomb_acbb47327cfb2fa429887774ef3597965}
+
+
+The \hyperlink{class_bomb}{Bomb} destructor Removes a \hyperlink{class_bomb}{Bomb} and prints to console whenever that happens. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bomb_ad047941e8f1413a061f98f460dcea22a}{\index{Bomb@{Bomb}!bounding\-Rect@{bounding\-Rect}}
+\index{bounding\-Rect@{bounding\-Rect}!Bomb@{Bomb}}
+\subsubsection[{bounding\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Rect\-F Bomb\-::bounding\-Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_bomb_ad047941e8f1413a061f98f460dcea22a}
+
+
+Creates a bomb area Bounds a bomb to a size of 30$\ast$30 pixels. 
+
+\hypertarget{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}{\index{Bomb@{Bomb}!explode@{explode}}
+\index{explode@{explode}!Bomb@{Bomb}}
+\subsubsection[{explode}]{\setlength{\rightskip}{0pt plus 5cm}void Bomb\-::explode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}
+
+
+The \hyperlink{class_bomb}{Bomb} explodes Prints to console and removes bomb image with an explosion for a predetermined time. 
+
+\hypertarget{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}{\index{Bomb@{Bomb}!explode2@{explode2}}
+\index{explode2@{explode2}!Bomb@{Bomb}}
+\subsubsection[{explode2}]{\setlength{\rightskip}{0pt plus 5cm}void Bomb\-::explode2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}
+\hypertarget{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}{\index{Bomb@{Bomb}!paint@{paint}}
+\index{paint@{paint}!Bomb@{Bomb}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void Bomb\-::paint (
+\begin{DoxyParamCaption}
+\item[{Q\-Painter $\ast$}]{painter, }
+\item[{const Q\-Style\-Option\-Graphics\-Item $\ast$}]{option, }
+\item[{Q\-Widget $\ast$}]{widget}
+\end{DoxyParamCaption}
+)}}\label{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}{\index{Bomb@{Bomb}!explosion\-Size@{explosion\-Size}}
+\index{explosion\-Size@{explosion\-Size}!Bomb@{Bomb}}
+\subsubsection[{explosion\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Bomb\-::explosion\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}
+\hypertarget{class_bomb_a03d27f3d615aba4b77f83427912a7de6}{\index{Bomb@{Bomb}!explosion\-Vector@{explosion\-Vector}}
+\index{explosion\-Vector@{explosion\-Vector}!Bomb@{Bomb}}
+\subsubsection[{explosion\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf explosion}$\ast$$>$ Bomb\-::explosion\-Vector\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bomb_a03d27f3d615aba4b77f83427912a7de6}
+\hypertarget{class_bomb_ac2068167b771ed338aa17c99524b8131}{\index{Bomb@{Bomb}!x\-Pos@{x\-Pos}}
+\index{x\-Pos@{x\-Pos}!Bomb@{Bomb}}
+\subsubsection[{x\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}qreal Bomb\-::x\-Pos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bomb_ac2068167b771ed338aa17c99524b8131}
+\hypertarget{class_bomb_a0d1028a49b33b08f5c96a943fab0beff}{\index{Bomb@{Bomb}!y\-Pos@{y\-Pos}}
+\index{y\-Pos@{y\-Pos}!Bomb@{Bomb}}
+\subsubsection[{y\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}qreal Bomb\-::y\-Pos\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_bomb_a0d1028a49b33b08f5c96a943fab0beff}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-bomb.\-h\item 
-bomb.\-cpp\end{DoxyCompactItemize}
+\hyperlink{bomb_8h}{bomb.\-h}\item 
+\hyperlink{bomb_8cpp}{bomb.\-cpp}\end{DoxyCompactItemize}

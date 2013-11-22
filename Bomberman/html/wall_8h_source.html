@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -61,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -69,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,27 +85,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">wall.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WALL_H</span></div>
+<a href="wall_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WALL_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WALL_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;block.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="block_8h.html">block.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_wall.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_wall.html">Wall</a> : <span class="keyword">public</span> <a class="code" href="class_block.html">Block</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_wall.html">Wall</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y=0);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    ~<a class="code" href="class_wall.html">Wall</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> paint(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    QRectF boundingRect() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_wall.html#a23004a32bc2720e18793d6db6a5f0fd5">Wall</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y=0);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">~Wall</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_wall.html#aae57ed47f7d5d58b513d2ebd8feb8057">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    QRectF <a class="code" href="class_wall.html#aae7888200bcd5afb12b24110886366a0">boundingRect</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // WALL_H</span></div>
+<div class="ttc" id="class_wall_html_aae57ed47f7d5d58b513d2ebd8feb8057"><div class="ttname"><a href="class_wall.html#aae57ed47f7d5d58b513d2ebd8feb8057">Wall::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</div><div class="ttdef"><b>Definition:</b> wall.cpp:15</div></div>
 <div class="ttc" id="class_wall_html"><div class="ttname"><a href="class_wall.html">Wall</a></div><div class="ttdef"><b>Definition:</b> wall.h:6</div></div>
 <div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>Definition:</b> block.h:6</div></div>
+<div class="ttc" id="class_wall_html_a9a2992f2b533e1c160513d1e719f920c"><div class="ttname"><a href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">Wall::~Wall</a></div><div class="ttdeci">~Wall()</div><div class="ttdef"><b>Definition:</b> wall.cpp:10</div></div>
+<div class="ttc" id="class_wall_html_a23004a32bc2720e18793d6db6a5f0fd5"><div class="ttname"><a href="class_wall.html#a23004a32bc2720e18793d6db6a5f0fd5">Wall::Wall</a></div><div class="ttdeci">Wall(int x=0, int y=0)</div><div class="ttdef"><b>Definition:</b> wall.cpp:3</div></div>
+<div class="ttc" id="class_wall_html_aae7888200bcd5afb12b24110886366a0"><div class="ttname"><a href="class_wall.html#aae7888200bcd5afb12b24110886366a0">Wall::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const </div><div class="ttdef"><b>Definition:</b> wall.cpp:20</div></div>
+<div class="ttc" id="block_8h_html"><div class="ttname"><a href="block_8h.html">block.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 03:57:00 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 22 2013 04:54:25 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

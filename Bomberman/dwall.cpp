@@ -9,6 +9,8 @@ dWall::dWall(int x, int y)
 
 }
 
+/*! \brief The Destructable Wall destructor
+ * Removes a Destructable Wall from the game and prints to console whenever that happens */
 dWall::~dWall()
 {
       std::cout << "Destructable wall has been destroyed" << std::endl;

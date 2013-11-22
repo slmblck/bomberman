@@ -3,30 +3,55 @@
 }
 
 
-Inheritance diagram for Game\-Screen\-:
+{\ttfamily \#include $<$gamescreen.\-h$>$}
 
-
-Collaboration diagram for Game\-Screen\-:
+Inheritance diagram for Game\-Screen\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_screen}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_screen_a61ac084a564d45be53337cc364214a60}{\hyperlink{class_game_screen_a61ac084a564d45be53337cc364214a60}{Game\-Screen} (Q\-Widget $\ast$parent=0)}\label{class_game_screen_a61ac084a564d45be53337cc364214a60}
-
+\hyperlink{class_game_screen_a61ac084a564d45be53337cc364214a60}{Game\-Screen} (Q\-Widget $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em A Gamescreen Object This class creates the game U\-I and sets up background music. \end{DoxyCompactList}\item 
-\hypertarget{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}{\hyperlink{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}{$\sim$\-Game\-Screen} ()}\label{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}
-
-\begin{DoxyCompactList}\small\item\em A Gamescreen Destructor The abstract parent of all chess pieces. \end{DoxyCompactList}\item 
-\hypertarget{class_game_screen_ab954f12aa342e80cb55dd4e2b8d3afeb}{void {\bfseries paint\-Event} (Q\-Paint\-Event $\ast$event)}\label{class_game_screen_ab954f12aa342e80cb55dd4e2b8d3afeb}
-
+\hyperlink{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}{$\sim$\-Game\-Screen} ()
+\begin{DoxyCompactList}\small\item\em A Gamescreen Destructor Destroys the U\-I and Removes the music player and music list for the game. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_screen_ab954f12aa342e80cb55dd4e2b8d3afeb}{paint\-Event} (Q\-Paint\-Event $\ast$event)
 \item 
 void \hyperlink{class_game_screen_af2a5d4c707d0d0f47201eec498b77bd6}{close\-Event} (Q\-Close\-Event $\ast$)
 \begin{DoxyCompactList}\small\item\em Closing window event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_screen_af1416b1a2647d06d0777b863be9c090e}{Q\-Graphics\-Scene $\ast$ {\bfseries scene}}\label{class_game_screen_af1416b1a2647d06d0777b863be9c090e}
-
+Q\-Graphics\-Scene $\ast$ \hyperlink{class_game_screen_af1416b1a2647d06d0777b863be9c090e}{scene}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_screen_a61ac084a564d45be53337cc364214a60}{\index{Game\-Screen@{Game\-Screen}!Game\-Screen@{Game\-Screen}}
+\index{Game\-Screen@{Game\-Screen}!GameScreen@{Game\-Screen}}
+\subsubsection[{Game\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Screen\-::\-Game\-Screen (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_game_screen_a61ac084a564d45be53337cc364214a60}
+
+
+A Gamescreen Object This class creates the game U\-I and sets up background music. 
+
+\hypertarget{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}{\index{Game\-Screen@{Game\-Screen}!$\sim$\-Game\-Screen@{$\sim$\-Game\-Screen}}
+\index{$\sim$\-Game\-Screen@{$\sim$\-Game\-Screen}!GameScreen@{Game\-Screen}}
+\subsubsection[{$\sim$\-Game\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Screen\-::$\sim$\-Game\-Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_screen_a0d25dfce42d72954aab40dbccbf1a0b1}
+
+
+A Gamescreen Destructor Destroys the U\-I and Removes the music player and music list for the game. 
+
 
 
 \subsection{Member Function Documentation}
@@ -41,11 +66,29 @@ void \hyperlink{class_game_screen_af2a5d4c707d0d0f47201eec498b77bd6}{close\-Even
 
 Closing window event. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em Takes} & in a Q\-Close\-Event A\-K\-A window close; \\
+\hline
+\end{DoxyParams}
 \begin{DoxyRefDesc}{Bug}
 \item[\hyperlink{bug__bug000001}{Bug}]cannot restart main menu music Closes the current Game and stops music from playing \end{DoxyRefDesc}
+\hypertarget{class_game_screen_ab954f12aa342e80cb55dd4e2b8d3afeb}{\index{Game\-Screen@{Game\-Screen}!paint\-Event@{paint\-Event}}
+\index{paint\-Event@{paint\-Event}!GameScreen@{Game\-Screen}}
+\subsubsection[{paint\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Screen\-::paint\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Paint\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)}}\label{class_game_screen_ab954f12aa342e80cb55dd4e2b8d3afeb}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_screen_af1416b1a2647d06d0777b863be9c090e}{\index{Game\-Screen@{Game\-Screen}!scene@{scene}}
+\index{scene@{scene}!GameScreen@{Game\-Screen}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Scene$\ast$ Game\-Screen\-::scene}}\label{class_game_screen_af1416b1a2647d06d0777b863be9c090e}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-gamescreen.\-h\item 
-gamescreen.\-cpp\end{DoxyCompactItemize}
+\hyperlink{gamescreen_8h}{gamescreen.\-h}\item 
+\hyperlink{gamescreen_8cpp}{gamescreen.\-cpp}\end{DoxyCompactItemize}

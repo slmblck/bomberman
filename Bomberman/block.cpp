@@ -11,7 +11,7 @@ Block::Block(int x, int y)
 }
 
 /*! \brief The Block destructor
- * removes a block and prints to console whenever that happens */
+ * Removes a block and prints to console whenever that happens */
 Block::~Block()
 {
     std::cout << "Block has been destroyed" << std::endl;

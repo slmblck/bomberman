@@ -5,6 +5,7 @@
 #include <QGraphicsObject>
 #include <QGraphicsScene>
 #include <QObject>
+#include <QSound>
 #include "explosion.h"
 class Bomb : public QGraphicsObject
 {

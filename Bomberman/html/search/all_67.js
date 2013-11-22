@@ -1,4 +1,13 @@
 var searchData=
 [
-  ['gamescreen',['GameScreen',['../class_game_screen.html',1,'GameScreen'],['../class_game_screen.html#a61ac084a564d45be53337cc364214a60',1,'GameScreen::GameScreen()']]]
+  ['gamescreen',['GameScreen',['../class_game_screen.html',1,'GameScreen'],['../class_main_window.html#a56592566d22f2b39f7d090a5001d3988',1,'MainWindow::GameScreen()'],['../class_game_screen.html#a61ac084a564d45be53337cc364214a60',1,'GameScreen::GameScreen()']]],
+  ['gamescreen_2ecpp',['gamescreen.cpp',['../gamescreen_8cpp.html',1,'']]],
+  ['gamescreen_2eh',['gamescreen.h',['../gamescreen_8h.html',1,'']]],
+  ['getblocksize',['getBlocksize',['../class_world.html#ab44648ec788ea8dfe063a1fce7f86026',1,'World']]],
+  ['getplayer',['getPlayer',['../class_world.html#a66856566fadcf64eba71f5e3ccc790df',1,'World']]],
+  ['getplayerid',['getPlayerID',['../class_character.html#aacb2a15ce71f1165daceb29cf481a4cb',1,'Character']]],
+  ['gettestblock',['getTestBlock',['../class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55',1,'World']]],
+  ['getworldsize',['getWorldsize',['../class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f',1,'World']]],
+  ['getx',['getX',['../class_block.html#a527c8f990b4b99dda6f4ca225ee32c14',1,'Block']]],
+  ['gety',['getY',['../class_block.html#a2501c303a7975db005ddc49d9551a51b',1,'Block']]]
 ];
