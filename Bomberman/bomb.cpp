@@ -36,8 +36,8 @@ QRectF Bomb::boundingRect() const
 
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-   this->setOpacity(0.5);
-   painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_pixel.png"));
+   //this->setOpacity(0.5);
+   painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
 }
 
 void Bomb::explode()

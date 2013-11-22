@@ -10,6 +10,7 @@ INPUT(
 ./release\wall.o
 ./release\dwall.o
 ./release\boxes.o
+./release\explosion.o
 ./release\qrc_images.o
 ./release\moc_mainwindow.o
 ./release\moc_gamescreen.o
