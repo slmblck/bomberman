@@ -19,13 +19,15 @@ World::World()
                 World::testWorld[i][j] = new Wall(i*World::Blocksize,j*World::Blocksize);
             } else if ((i == 1 && j == 1) || (i == 1 && j == 2) || (i == 2 && j == 1)
                        || (i == 17 && j == 17) || (i == 16 && j == 17) || (i == 17 && j == 16)){
-                World::testWorld[i][j] = new Block(i*World::Blocksize,j*World::Blocksize);
+                //World::testWorld[i][j] = new Block(i*World::Blocksize,j*World::Blocksize);
+                World::testWorld[i][j] = NULL;
             } else{
                 int k = rand()%2;
                 if(k == 0){
                     World::testWorld[i][j] = new dWall(i*World::Blocksize,j*World::Blocksize);
                 } else {
-                    World::testWorld[i][j] = new Block(i*World::Blocksize,j*World::Blocksize);
+                    //World::testWorld[i][j] = new Block(i*World::Blocksize,j*World::Blocksize);
+                    World::testWorld[i][j] = NULL;
                 }
             }
 

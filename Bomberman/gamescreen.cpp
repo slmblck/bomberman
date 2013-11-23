@@ -22,9 +22,16 @@ GameScreen::GameScreen(QWidget *parent) :
     scene->setSceneRect(0,0,570,570);
     ui->graphicsView->setScene(scene);
 
+    QPixmap *background = new QPixmap(":/Floor_Small.png");
+    scene->setBackgroundBrush(Qt::gray);
+    //scene->setBackgroundBrush(background->);
+
+
     int i = 0;
     int j =0;
     w = new World();
+
+
 
     Character *player = w->getPlayer();
     Block* currentblock;

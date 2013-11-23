@@ -36,10 +36,9 @@ QRectF Bomb::boundingRect() const
 
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-<<<<<<< HEAD
+
    //this->setOpacity(0.5);
-=======
->>>>>>> a245962dd23b5c0c5841729cd0b40560ea4f8570
+
    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
 }
 
@@ -53,7 +52,7 @@ void Bomb::explode()
         scene->addItem(explosionVector[i]);
     }
 
-    QTimer::singleShot(1000,this,SLOT(explode2()));
+    //QTimer::singleShot(1000,this,SLOT(explode2()));
 
 }
 

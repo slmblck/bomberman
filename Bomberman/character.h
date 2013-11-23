@@ -5,6 +5,9 @@
 #include <QImage>
 #include <QGraphicsObject>
 #include <QGraphicsScene>
+#include "block.h"
+#include "wall.h"
+#include <QList>
 
 class Character : public QGraphicsObject
 {
