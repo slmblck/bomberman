@@ -3,7 +3,7 @@
 
 #include <QGraphicsItem>
 
-class explosion : public QGraphicsItem
+class explosion : public QGraphicsObject
 {
 private:
     qreal xPos;

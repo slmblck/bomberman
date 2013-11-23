@@ -1,9 +1,9 @@
 #ifndef Block_H
 #define Block_H
 #include <QPainter>
-#include <QGraphicsItem>
+#include <QGraphicsObject>
 #include <QImage>
-class Block : public QGraphicsItem
+class Block : public QGraphicsObject
 {
 protected:
     qreal xPos;

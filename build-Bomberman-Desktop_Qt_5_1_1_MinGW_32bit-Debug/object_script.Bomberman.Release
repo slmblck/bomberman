@@ -13,6 +13,8 @@ INPUT(
 ./release\explosion.o
 ./release\qrc_images.o
 ./release\moc_mainwindow.o
+./release\moc_bomb.o
+./release\moc_character.o
 ./release\moc_gamescreen.o
 ./release\moc_infoscreen.o
 );

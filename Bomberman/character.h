@@ -3,11 +3,12 @@
 #include "bomb.h"
 #include <QPainter>
 #include <QImage>
-#include <QGraphicsItem>
+#include <QGraphicsObject>
 #include <QGraphicsScene>
 
-class Character : public QGraphicsItem
+class Character : public QGraphicsObject
 {
+    Q_OBJECT
 private:
     qreal xPos;
     qreal yPos;
