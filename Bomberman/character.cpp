@@ -20,6 +20,7 @@ void Character::moveUp()
     this->moveBy(0, -20);
     yPos = yPos - 20;
     this->moveBy(0, 20);
+    //this->setVisible(true);
     //this->setPos(xPos,yPos);
 }
 
@@ -29,6 +30,8 @@ void Character::moveDown()
     this->moveBy(0, 20);
     yPos = yPos + 20;
     this->moveBy(0, -20);
+    //this->setVisible(false);
+    //this->setVisible(true);
     //this->setPos(xPos,yPos);
 }
 
