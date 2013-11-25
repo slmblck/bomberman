@@ -141,20 +141,16 @@ void Character::pickedUp(int item)
  * Places a bomb in the Game where the Character currently is placed and starts the ountdown to the explosion */
 void Character::dropBomb()
 {
+    QGraphicsScene *scene = this->scene();
     if(this->numBombs != 0)
     {
         Bomb *b = new Bomb(this->x() + 30,this->y() + 30,this->explosionsize);
-        QGraphicsScene *scene = this->scene();
         scene->addItem(b);
         this->numBombs -= 1;
-        //QTimer::singleShot(1000,b,SLOT(explode()));
 
-        b->explode();
-        scene->removeItem(b);
-        delete b;
+        QTimer::singleShot(1000,Qt::CoarseTimer,b,SLOT(explode()));
         this->numBombs += 1;
     }
-    this->ensureVisible();
 }
 
 /*! \brief gets a Player ID

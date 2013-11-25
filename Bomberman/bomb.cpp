@@ -14,14 +14,14 @@ Bomb::Bomb(int x, int y, int explosionSize)
     Bomb::yPos = y;
     Bomb::explosionSize = explosionSize;
 
-    explosion *center = new explosion(x,y);
+    explosion *center = new explosion(x,y,QPixmap(":/Explosion_Center_Small.png"));
     explosionVector.push_back(center);
     for(int i = 1; i <= explosionSize; i++)
     {
-        explosion *left = new explosion(x - (i*30),y);
-        explosion *right = new explosion(x + (i*30),y);
-        explosion *up = new explosion(x, y + (i*30));
-        explosion *down = new explosion(x, y - (i*30));
+        explosion *left = new explosion(x - (i*30),y, QPixmap(":/Explosion_Horizontal_Small.png"));
+        explosion *right = new explosion(x + (i*30),y, QPixmap(":/Explosion_Horizontal_Small.png"));
+        explosion *up = new explosion(x, y + (i*30), QPixmap(":/Explosion_Vertical_Small.png"));
+        explosion *down = new explosion(x, y - (i*30), QPixmap(":/Explosion_Vertical_Small.png"));
         explosionVector.push_back(left);
         explosionVector.push_back(right);
         explosionVector.push_back(up);
@@ -63,12 +63,7 @@ void Bomb::explode()
         scene->addItem(explosionVector[i]);
     }
 
-    //QTimer::singleShot(1000,this,SLOT(explode2()));
-    QTimer *timer = new QTimer(this);
-    timer->setSingleShot(true);
-    connect(timer,SIGNAL(timeout()),this,SLOT(explode2()));
-    timer->start(100);
-    //explode2();
+    QTimer::singleShot(1000,this,SLOT(explode2()));
 }
 
 void Bomb::explode2()
@@ -80,5 +75,12 @@ void Bomb::explode2()
         scene->removeItem(explosionVector[i]);
         delete explosionVector[i];
     }
+    erase();
+}
 
+void Bomb::erase()
+{
+    QGraphicsScene *scene = this->scene();
+    scene->removeItem(this);
+    delete this;
 }
