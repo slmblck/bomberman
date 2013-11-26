@@ -24,7 +24,8 @@ private:
     Block ***testWorld;
     int worldsize;
     int Blocksize;
-    Character *player;
+    Character *player1;
+    Character *player2;
 public:
     World();
     ~World();
@@ -32,7 +33,8 @@ public:
     void drawWorld(QPainter *painter);
     int getBlocksize();
     int getWorldsize();
-    Character * getPlayer();
+    Character * getPlayer1();
+    Character * getPlayer2();
     Block *getTestBlock(int x, int y);
 
 };

@@ -12,7 +12,7 @@ explosion::explosion(int x, int y,QPixmap image)
  * Removes an explosion and prints to console whenever that happens */
 explosion::~explosion()
 {
-    std::cout << "explosion has been deleted" << std::endl;
+    std::cout << "Explosion has been deleted" << std::endl;
 }
 
 QRectF explosion::boundingRect() const

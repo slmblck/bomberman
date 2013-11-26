@@ -25,7 +25,7 @@ GameScreen::GameScreen(QWidget *parent) :
     scene->setSceneRect(0,0,570,570);
     ui->graphicsView->setScene(scene);
 
-    QPixmap *background = new QPixmap(":/Floor_Small.png");
+    //QPixmap *background = new QPixmap(":/Floor_Small.png");
     scene->setBackgroundBrush(Qt::gray);
     //scene->setBackgroundBrush(background->);
 
@@ -36,7 +36,8 @@ GameScreen::GameScreen(QWidget *parent) :
 
 
 
-    Character *player = w->getPlayer();
+    Character *player1 = w->getPlayer1();
+    Character *player2 = w->getPlayer2();
     Block* currentblock;
     int wSize = w->getWorldsize();
     for(i = 0; i < wSize; i++){
@@ -49,7 +50,10 @@ GameScreen::GameScreen(QWidget *parent) :
         }
     }
 
-    scene->addItem(player);
+    scene->addItem(player1);
+    scene->addItem(player2);
+    player1->grabKeyboard();
+    player2->grabKeyboard();
 }
 
 /*! \brief Closing window event

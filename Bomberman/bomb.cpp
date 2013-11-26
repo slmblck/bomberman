@@ -35,7 +35,7 @@ Bomb::Bomb(int x, int y, int explosionSize)
 Bomb::~Bomb()
 {
     std::vector<explosion*>().swap(explosionVector);
-    std::cout << "bomb has been destroyed" << std::endl;
+    std::cout << "Bomb has been destroyed" << std::endl;
 }
 
 /*! \brief Creates a bomb area

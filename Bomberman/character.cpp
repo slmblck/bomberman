@@ -22,7 +22,7 @@ Character::Character(int x, int y, int numBombs, int player)
  * Removes a Character and prints to console whenever that happens */
 Character::~Character()
 {
-    std::cout<<"character is gone" << std::endl;
+    std::cout<<"Character has been deleted" << std::endl;
 }
 
 /// \brief moves a character Up a 1/2 block.

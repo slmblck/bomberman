@@ -4,7 +4,8 @@
  * Creates a World, sets the block size to 30*30, creates the world to be 19*19 blocks, and randomly generates destructable walls */
 World::World()
 {
-    World::player = new Character(30,30,1);
+    World::player1 = new Character(30,30,3,1);
+    World::player2 = new Character(510,510,3,1);
     World::Blocksize = 30;
     World::worldsize = 19;
 
@@ -52,7 +53,7 @@ World::~World()
     }
 
     delete this->testWorld;
-    delete this->player;
+    delete this->player1;
 
 }
 
@@ -81,22 +82,37 @@ void World::keyHandler(int k)
     switch (k)
     {
         case Qt::Key_W:
-            player->moveUp();
+            player1->moveUp();
             break;
         case Qt::Key_S:
-            player->moveDown();
+            player1->moveDown();
             break;
         case Qt::Key_A:
-            player->moveLeft();
+            player1->moveLeft();
             break;
         case Qt::Key_D:
-            player->moveRight();
+            player1->moveRight();
             break;
-        case Qt::Key_K:
-            player->dropBomb();
+        case Qt::Key_H:
+            player1->dropBomb();
             break;
         case Qt::Key_R:
-            player->setPos(300,300);
+            player1->setPos(300,300);
+            break;
+        case Qt::Key_Up:
+            player2->moveUp();
+            break;
+        case Qt::Key_Down:
+            player2->moveDown();
+            break;
+        case Qt::Key_Left:
+            player2->moveLeft();
+            break;
+        case Qt::Key_Right:
+            player2->moveRight();
+            break;
+        case Qt::Key_Slash:
+            player2->dropBomb();
             break;
         default:
             break;
@@ -105,9 +121,14 @@ void World::keyHandler(int k)
 
 /*! \brief Returns a Player
  *  \return Returns the Player */
-Character * World::getPlayer()
+Character * World::getPlayer1()
 {
-    return this->player;
+    return this->player1;
+}
+
+Character * World::getPlayer2()
+{
+    return this->player2;
 }
 
 /*! \brief Returns a Block given coordinates
