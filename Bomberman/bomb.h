@@ -24,6 +24,7 @@ public:
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     void erase();
+    int type() const;
 };
 
 #endif // BOMB_H

@@ -9,6 +9,7 @@ public:
     ~boxes();
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
+    //int type() const;
 };
 
 #endif // BOXES_H

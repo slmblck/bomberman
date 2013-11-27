@@ -14,6 +14,7 @@ public:
     ~explosion();
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    int type() const;
 };
 
 #endif // EXPLOSION_H

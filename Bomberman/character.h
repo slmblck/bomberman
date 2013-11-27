@@ -35,6 +35,7 @@ public:
     int getPlayerID();
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
+    int type() const;
     //void collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const;
 
 };

@@ -21,3 +21,8 @@ QRectF Wall::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);
 }
+
+int Wall::type() const
+{
+    return 7;
+}

@@ -84,3 +84,8 @@ void Bomb::erase()
     scene->removeItem(this);
     delete this;
 }
+
+int Bomb::type() const
+{
+    return 2;
+}

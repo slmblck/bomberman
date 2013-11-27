@@ -24,3 +24,8 @@ void explosion::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 {
     painter->drawPixmap(xPos, yPos, 30, 30, explosionImage);
 }
+
+int explosion::type() const
+{
+    return 6;
+}

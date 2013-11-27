@@ -55,6 +55,11 @@ void Block::setY(int y)
     this->yPos = y;
 }
 
+int Block::type() const
+{
+    return 1;
+}
+
 QRectF Block::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);
