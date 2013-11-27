@@ -22,6 +22,7 @@ private:
     int numBombs;
     int playerID;
     int explosionsize; //5 squares is max
+    QPixmap charImage;
 public:
     Character(int x = 0, int y = 0, int numBombs = 3, int player = -1);
     ~Character();

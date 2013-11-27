@@ -50,8 +50,6 @@ GameScreen::GameScreen(QWidget *parent) :
     }
 
     scene->addItem(player);
-
-    //QTimer* timer = new QTimer(this);
 }
 
 /*! \brief Closing window event

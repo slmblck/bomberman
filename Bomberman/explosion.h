@@ -8,8 +8,9 @@ class explosion : public QGraphicsObject
 private:
     qreal xPos;
     qreal yPos;
+    QPixmap explosionImage;
 public:
-    explosion(int x =0, int y = 0);
+    explosion(int x =0, int y = 0, QPixmap image = QPixmap(0,0));
     ~explosion();
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
