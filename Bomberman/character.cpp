@@ -38,12 +38,26 @@ void Character::moveUp()
     {
         if(this->collidesWithItem(collisions.value(i)))
         {
+            /*
+            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+            if((item = qobject_cast<Bomb*>(item))){
+                if(this->isObscuredBy(item)){
+                    continue;
+                }
+            }
+            */
             this->moveBy(0, 7.5);
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
-                if(this->collidesWithItem(collisions1.value(i)))
+                if(this->collidesWithItem(collisions1.value(j)))
                 {
+                    /*
+                    item = collisions.value(j)->toGraphicsObject();
+                    if((item = qobject_cast<Bomb*>(item))){
+                        continue;
+                    }
+                    */
                     this->moveBy(0, 7.5);
                 }
             }
@@ -54,7 +68,7 @@ void Character::moveUp()
 /// \brief Moves a Character down a 1/2 block.
 void Character::moveDown()
 {
-    //update();
+
     this->moveBy(0, 15);
     QGraphicsScene *scene = this->scene();
     QList<QGraphicsItem*> collisions = scene->collidingItems(this);
@@ -62,13 +76,27 @@ void Character::moveDown()
     {
         if(this->collidesWithItem(collisions.value(i)))
         {
+            /*
+            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+            if((item = qobject_cast<Bomb*>(item))){
+                continue;
+            }
+            */
+            //QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+
             //this->setVisible(false);
             this->moveBy(0, -7.5);
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
-                if(this->collidesWithItem(collisions1.value(i)))
+                if(this->collidesWithItem(collisions1.value(j)))
                 {
+                    /*
+                    item = collisions.value(j)->toGraphicsObject();
+                    if((item = qobject_cast<Bomb*>(item))){
+                        continue;
+                    }
+                    */
                     this->moveBy(0, -7.5);
                 }
             }
@@ -91,13 +119,25 @@ void Character::moveLeft()
     {
         if(this->collidesWithItem(collisions.value(i)))
         {
+            /*
+            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+            if((item = qobject_cast<Bomb*>(item))){
+                continue;
+            }
+            */
             //this->setVisible(false);
             this->moveBy(7.5, 0);
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
-                if(this->collidesWithItem(collisions1.value(i)))
+                if(this->collidesWithItem(collisions1.value(j)))
                 {
+                    /*
+                    item = collisions.value(j)->toGraphicsObject();
+                    if((item = qobject_cast<Bomb*>(item))){
+                        continue;
+                    }
+                    */
                     this->moveBy(7.5, 0);
                 }
             }
@@ -118,13 +158,26 @@ void Character::moveRight()
     {
         if(this->collidesWithItem(collisions.value(i)))
         {
+            /*
+            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+
+            if((item = qobject_cast<Bomb*>(item))){
+                continue;
+            }
+            */
             //this->setVisible(false);
             this->moveBy(-7.5, 0);
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
-                if(this->collidesWithItem(collisions1.value(i)))
+                if(this->collidesWithItem(collisions1.value(j)))
                 {
+                    /*
+                    item = collisions.value(j)->toGraphicsObject();
+                    if((item = qobject_cast<Bomb*>(item))){
+                        continue;
+                    }
+                    */
                     this->moveBy(-7.5, 0);
                 }
             }
@@ -145,7 +198,12 @@ void Character::dropBomb()
     QGraphicsScene *scene = this->scene();
     scene->addItem(b);
 
-    //QTimer::singleShot(1000,Qt::CoarseTimer,b,SLOT(explode()));
+    //QTimer *timer = new QTimer(this);
+    //connect(timer, SIGNAL(timeout()), b, SLOT(explode()));
+
+    //timer->start(1000);
+
+    QTimer::singleShot(1000,Qt::CoarseTimer,b,SLOT(explode()));
 
     //b->explode();
     //scene->removeItem(b);

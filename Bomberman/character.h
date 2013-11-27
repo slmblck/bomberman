@@ -8,6 +8,9 @@
 #include "block.h"
 #include "wall.h"
 #include <QList>
+#include <typeinfo>
+#include <iostream>
+#include <string>
 
 class Character : public QGraphicsObject
 {
