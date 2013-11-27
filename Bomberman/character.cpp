@@ -41,12 +41,14 @@ void Character::moveUp()
 
             QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                if(this->isObscuredBy(item)){
-                    break;
-                }
+                continue;
+                //if(this->isObscuredBy(item)){
+                //    continue;
+                //}
             }
 
-            this->moveBy(0, 7.5);
+            this->moveBy(0, 15);
+            /*
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
@@ -61,6 +63,7 @@ void Character::moveUp()
                     this->moveBy(0, 7.5);
                 }
             }
+            */
         }
     }
 }
@@ -79,13 +82,14 @@ void Character::moveDown()
 
             QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                break;
+                continue;
             }
 
             //QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
 
             //this->setVisible(false);
-            this->moveBy(0, -7.5);
+            this->moveBy(0, -15);
+            /*
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
@@ -100,6 +104,7 @@ void Character::moveDown()
                     this->moveBy(0, -7.5);
                 }
             }
+            */
         }
     }
     //yPos = yPos + 15;
@@ -122,11 +127,12 @@ void Character::moveLeft()
 
             QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                break;
+                continue;
             }
 
             //this->setVisible(false);
-            this->moveBy(7.5, 0);
+            this->moveBy(15, 0);
+            /*
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
@@ -141,6 +147,7 @@ void Character::moveLeft()
                     this->moveBy(7.5, 0);
                 }
             }
+            */
         }
     }
 }
@@ -162,11 +169,12 @@ void Character::moveRight()
             QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
 
             if(item->type() == 2){
-                break;
+                continue;
             }
 
             //this->setVisible(false);
-            this->moveBy(-7.5, 0);
+            this->moveBy(-15, 0);
+            /*
             QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
             for(int j = 0; j < collisions1.size(); j++)
             {
@@ -181,6 +189,7 @@ void Character::moveRight()
                     this->moveBy(-7.5, 0);
                 }
             }
+            */
         }
     }
 }

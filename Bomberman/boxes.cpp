@@ -29,4 +29,9 @@ QRectF boxes::boundingRect() const
     return QRectF(xPos, yPos, 30, 30);
 }
 
+int boxes::type() const
+{
+    return 3;
+}
+
 
