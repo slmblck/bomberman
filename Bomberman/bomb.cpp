@@ -34,6 +34,7 @@ Bomb::Bomb(int x, int y, int explosionSize)
  * Removes a Bomb and prints to console whenever that happens */
 Bomb::~Bomb()
 {
+    std::vector<explosion*>().swap(explosionVector);
     std::cout << "bomb has been destroyed" << std::endl;
 }
 

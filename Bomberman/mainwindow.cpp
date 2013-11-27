@@ -30,7 +30,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_gameButton_clicked()
 {
 
-    gameScreen = new GameScreen;
+    gameScreen = new GameScreen(this);
     backgroundMusicMain->stop();
     gameScreen->setVisible(true);
     gameScreen->show();

@@ -46,15 +46,14 @@ World::~World()
     {
         for(int j = 0; j<worldsize; j++)
         {
-            delete World::testWorld[i][j];
+            delete this->testWorld[i][j];
         }
-    }
-    for (int i = 0; i < worldsize; ++i) {
-        delete[] World::testWorld[i];
+        delete[] this->testWorld[i];
     }
 
-    delete[] World::testWorld;
-    delete player;
+    delete this->testWorld;
+    delete this->player;
+
 }
 
 

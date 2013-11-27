@@ -59,8 +59,11 @@ GameScreen::GameScreen(QWidget *parent) :
 void GameScreen::closeEvent(QCloseEvent *bar)
 {
     backgroundMusicGame->stop();
-    //MainWindow::playAgain();
+    ((MainWindow*)this->parent())->playAgain();
     bar->accept();
+    delete gameList;
+    delete backgroundMusicGame;
+    delete w;
 }
 
 /*! \brief A Gamescreen Destructor
@@ -68,8 +71,6 @@ void GameScreen::closeEvent(QCloseEvent *bar)
 GameScreen::~GameScreen()
 {
     delete ui;
-    delete gameList;
-    delete backgroundMusicGame;
 }
 
 
