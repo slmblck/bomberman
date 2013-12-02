@@ -12,13 +12,18 @@
 #include <iostream>
 #include <string>
 
+/*! \brief The Character class
+ *         of Bombster used to create a movable player in the world.
+ *
+ *  Inherits QGraphicsObject from Qt
+ */
 class Character : public QGraphicsObject
 {
     Q_OBJECT
 private:
     qreal xPos;
     qreal yPos;
-    //movespeed is 2/3 of Blockize
+    //movespeed is 1/2 of Blockize
     int numBombs;
     int playerID;
     int explosionsize; //5 squares is max

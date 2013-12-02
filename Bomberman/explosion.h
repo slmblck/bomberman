@@ -3,6 +3,11 @@
 
 #include <QGraphicsItem>
 
+/*! \brief The Explosion class
+ *         of Bombster used in addition to the bomb class to remove blocks/players.
+ *
+ *  Inherits QGraphicsObject from Qt
+ */
 class explosion : public QGraphicsObject
 {
 private:

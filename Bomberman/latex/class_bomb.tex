@@ -3,6 +3,11 @@
 }
 
 
+The \hyperlink{class_bomb}{Bomb} class of Bombster used for destruction of blocks and players in game.  
+
+
+
+
 {\ttfamily \#include $<$bomb.\-h$>$}
 
 Inheritance diagram for Bomb\-:\begin{figure}[H]
@@ -28,6 +33,10 @@ void \hyperlink{class_bomb_ae9410dc9b499dad8e4f0f200d9b0ead7}{explode2} ()
 Q\-Rect\-F \hyperlink{class_bomb_ad047941e8f1413a061f98f460dcea22a}{bounding\-Rect} () const 
 \begin{DoxyCompactList}\small\item\em Creates a bomb area Bounds a bomb to a size of 30$\ast$30 pixels. \end{DoxyCompactList}\item 
 void \hyperlink{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
+\item 
+void \hyperlink{class_bomb_aacd1b797985f1f77e896c69a067126ec}{erase} ()
+\item 
+int \hyperlink{class_bomb_aa555383c82ad5ea7155e8fccbd9566a8}{type} () const 
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -41,6 +50,11 @@ int \hyperlink{class_bomb_a7576bf99d4bcfbc7dda365511ca2fcd7}{explosion\-Size}
 std\-::vector$<$ \hyperlink{classexplosion}{explosion} $\ast$ $>$ \hyperlink{class_bomb_a03d27f3d615aba4b77f83427912a7de6}{explosion\-Vector}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The \hyperlink{class_bomb}{Bomb} class of Bombster used for destruction of blocks and players in game. 
+
+Inherits Q\-Graphics\-Object from Qt 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_bomb_ada9d05fb30c035691190e80d1d0a1c7f}{\index{Bomb@{Bomb}!Bomb@{Bomb}}
@@ -90,6 +104,13 @@ The \hyperlink{class_bomb}{Bomb} destructor Removes a \hyperlink{class_bomb}{Bom
 
 Creates a bomb area Bounds a bomb to a size of 30$\ast$30 pixels. 
 
+\hypertarget{class_bomb_aacd1b797985f1f77e896c69a067126ec}{\index{Bomb@{Bomb}!erase@{erase}}
+\index{erase@{erase}!Bomb@{Bomb}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}void Bomb\-::erase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bomb_aacd1b797985f1f77e896c69a067126ec}
 \hypertarget{class_bomb_a5752ce7daece5c3bf2e2178bcfcb820d}{\index{Bomb@{Bomb}!explode@{explode}}
 \index{explode@{explode}!Bomb@{Bomb}}
 \subsubsection[{explode}]{\setlength{\rightskip}{0pt plus 5cm}void Bomb\-::explode (
@@ -117,6 +138,13 @@ The \hyperlink{class_bomb}{Bomb} explodes Prints to console and removes bomb ima
 \item[{Q\-Widget $\ast$}]{widget}
 \end{DoxyParamCaption}
 )}}\label{class_bomb_ab8e930cc66f5d3f41e8a02f3d0d8185e}
+\hypertarget{class_bomb_aa555383c82ad5ea7155e8fccbd9566a8}{\index{Bomb@{Bomb}!type@{type}}
+\index{type@{type}!Bomb@{Bomb}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int Bomb\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_bomb_aa555383c82ad5ea7155e8fccbd9566a8}
 
 
 \subsection{Member Data Documentation}

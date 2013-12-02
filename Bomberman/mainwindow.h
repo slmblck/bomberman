@@ -13,7 +13,11 @@ class MainWindow;
 class QMediaPlayer;
 class QMediaPlaylist;
 
-
+/*! \brief The MainWindow class
+ *         of Bombster used at the start of program as a menu.
+ *
+ *  Inherits QMainWindow from Qt
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

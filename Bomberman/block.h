@@ -3,6 +3,12 @@
 #include <QPainter>
 #include <QGraphicsObject>
 #include <QImage>
+
+/*! \brief The Block class
+ *         of Bombster used as a base for the game grid.
+ *
+ *  Inherits QGraphicsObject from Qt
+ */
 class Block : public QGraphicsObject
 {
 protected:

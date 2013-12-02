@@ -100,43 +100,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>QMediaPlayer;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>QMediaPlaylist;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_main_window.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QMediaPlayer *backgroundMusicMain;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QMediaPlaylist *mainList;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab622d7f3b4082b8221185e216991e602">playAgain</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_main_window.html#a56592566d22f2b39f7d090a5001d3988">   27</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_game_screen.html">GameScreen</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> on_gameButton_clicked();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> on_infoButton_clicked();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Ui::MainWindow *ui;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_game_screen.html">GameScreen</a> *gameScreen;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_info_screen.html">InfoScreen</a> *infoScreen;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_main_window.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    QMediaPlayer *backgroundMusicMain;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    QMediaPlaylist *mainList;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab622d7f3b4082b8221185e216991e602">playAgain</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_main_window.html#a56592566d22f2b39f7d090a5001d3988">   31</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_game_screen.html">GameScreen</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> on_gameButton_clicked();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> on_infoButton_clicked();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Ui::MainWindow *ui;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_game_screen.html">GameScreen</a> *gameScreen;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_info_screen.html">InfoScreen</a> *infoScreen;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
 <div class="ttc" id="class_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">A MainWindow Destructor Destroys the UI and Removes the music player and music list for the menu...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:21</div></div>
 <div class="ttc" id="class_main_window_html_ab622d7f3b4082b8221185e216991e602"><div class="ttname"><a href="class_main_window.html#ab622d7f3b4082b8221185e216991e602">MainWindow::playAgain</a></div><div class="ttdeci">void playAgain()</div><div class="ttdoc">Restarts the menu music. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:50</div></div>
-<div class="ttc" id="class_game_screen_html"><div class="ttname"><a href="class_game_screen.html">GameScreen</a></div><div class="ttdef"><b>Definition:</b> gamescreen.h:18</div></div>
+<div class="ttc" id="class_game_screen_html"><div class="ttname"><a href="class_game_screen.html">GameScreen</a></div><div class="ttdoc">The Gamescreen class of Bombster used to create a new game. </div><div class="ttdef"><b>Definition:</b> gamescreen.h:23</div></div>
 <div class="ttc" id="infoscreen_8h_html"><div class="ttname"><a href="infoscreen_8h.html">infoscreen.h</a></div></div>
-<div class="ttc" id="class_info_screen_html"><div class="ttname"><a href="class_info_screen.html">InfoScreen</a></div><div class="ttdef"><b>Definition:</b> infoscreen.h:10</div></div>
+<div class="ttc" id="class_info_screen_html"><div class="ttname"><a href="class_info_screen.html">InfoScreen</a></div><div class="ttdoc">The InfoScreen class of Bombster used to give information and credits about the game. </div><div class="ttdef"><b>Definition:</b> infoscreen.h:15</div></div>
 <div class="ttc" id="class_main_window_html_a8b244be8b7b7db1b08de2a2acb9409db"><div class="ttname"><a href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=0)</div><div class="ttdoc">A MainWindow Object This class creates the Menu UI and sets up background music. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:6</div></div>
 <div class="ttc" id="gamescreen_8h_html"><div class="ttname"><a href="gamescreen_8h.html">gamescreen.h</a></div></div>
-<div class="ttc" id="class_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:17</div></div>
+<div class="ttc" id="class_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">The MainWindow class of Bombster used at the start of program as a menu. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 10:57:04 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 2 2013 10:15:41 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

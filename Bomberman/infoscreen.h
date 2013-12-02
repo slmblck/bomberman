@@ -7,6 +7,11 @@ namespace Ui {
 class InfoScreen;
 }
 
+/*! \brief The InfoScreen class
+ *         of Bombster used to give information and credits about the game.
+ *
+ *  Inherits QDialog from Qt
+ */
 class InfoScreen : public QDialog
 {
     Q_OBJECT

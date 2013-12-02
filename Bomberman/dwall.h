@@ -1,6 +1,12 @@
 #ifndef DWALL_H
 #define DWALL_H
 #include "block.h"
+
+/*! \brief The dWall class
+ *         of Bombster used a destructable wall in the game.
+ *
+ *  Inherits Block
+ */
 class dWall : public Block
 {
 public:

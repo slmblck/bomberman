@@ -1,6 +1,12 @@
 #ifndef BOXES_H
 #define BOXES_H
 #include "block.h"
+
+/*! \brief The Boxes class
+ *         of Bombster used.
+ *
+ *  Inherits Block
+ */
 class boxes : public Block
 {
 protected:

@@ -15,6 +15,11 @@ class GameScreen;
 class QMediaPlayer;
 class QMediaPlaylist;
 
+/*! \brief The Gamescreen class
+ *         of Bombster used to create a new game.
+ *
+ *  Inherits QMainWindow from Qt
+ */
 class GameScreen : public QMainWindow
 {
 

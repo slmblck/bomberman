@@ -90,28 +90,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QGraphicsItem&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classexplosion.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classexplosion.html">explosion</a> : <span class="keyword">public</span> QGraphicsObject</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    qreal xPos;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    qreal yPos;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classexplosion.html#ac3aabcbf16f356fcd3bdc8588cf36cf1">explosion</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">~explosion</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    QRectF <a class="code" href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">boundingRect</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // EXPLOSION_H</span></div>
-<div class="ttc" id="classexplosion_html"><div class="ttname"><a href="classexplosion.html">explosion</a></div><div class="ttdef"><b>Definition:</b> explosion.h:6</div></div>
-<div class="ttc" id="classexplosion_html_adc8680178e9e7d4e388d8850a2c03125"><div class="ttname"><a href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">explosion::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const </div><div class="ttdef"><b>Definition:</b> explosion.cpp:17</div></div>
-<div class="ttc" id="classexplosion_html_a401d7dbebfc4a92bcc408172df67c782"><div class="ttname"><a href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">explosion::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</div><div class="ttdef"><b>Definition:</b> explosion.cpp:22</div></div>
-<div class="ttc" id="classexplosion_html_ac3aabcbf16f356fcd3bdc8588cf36cf1"><div class="ttname"><a href="classexplosion.html#ac3aabcbf16f356fcd3bdc8588cf36cf1">explosion::explosion</a></div><div class="ttdeci">explosion(int x=0, int y=0)</div><div class="ttdef"><b>Definition:</b> explosion.cpp:4</div></div>
-<div class="ttc" id="classexplosion_html_a3fc08d8c702d74ee3164825c975f8230"><div class="ttname"><a href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">explosion::~explosion</a></div><div class="ttdeci">~explosion()</div><div class="ttdoc">The Explosion destructor Removes an explosion and prints to console whenever that happens...</div><div class="ttdef"><b>Definition:</b> explosion.cpp:12</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classexplosion.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classexplosion.html">explosion</a> : <span class="keyword">public</span> QGraphicsObject</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    qreal xPos;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    qreal yPos;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    QPixmap explosionImage;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classexplosion.html#a792865d6d3230927b5a85c72c9867555">explosion</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0, QPixmap image = QPixmap(0,0));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">~explosion</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QRectF <a class="code" href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">boundingRect</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classexplosion.html#a1f660a5ee0c892cdd4edba1d00df87a7">type</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // EXPLOSION_H</span></div>
+<div class="ttc" id="classexplosion_html"><div class="ttname"><a href="classexplosion.html">explosion</a></div><div class="ttdoc">The Explosion class of Bombster used in addition to the bomb class to remove blocks/players. </div><div class="ttdef"><b>Definition:</b> explosion.h:11</div></div>
+<div class="ttc" id="classexplosion_html_a792865d6d3230927b5a85c72c9867555"><div class="ttname"><a href="classexplosion.html#a792865d6d3230927b5a85c72c9867555">explosion::explosion</a></div><div class="ttdeci">explosion(int x=0, int y=0, QPixmap image=QPixmap(0, 0))</div><div class="ttdef"><b>Definition:</b> explosion.cpp:4</div></div>
+<div class="ttc" id="classexplosion_html_a1f660a5ee0c892cdd4edba1d00df87a7"><div class="ttname"><a href="classexplosion.html#a1f660a5ee0c892cdd4edba1d00df87a7">explosion::type</a></div><div class="ttdeci">int type() const </div><div class="ttdef"><b>Definition:</b> explosion.cpp:28</div></div>
+<div class="ttc" id="classexplosion_html_adc8680178e9e7d4e388d8850a2c03125"><div class="ttname"><a href="classexplosion.html#adc8680178e9e7d4e388d8850a2c03125">explosion::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const </div><div class="ttdef"><b>Definition:</b> explosion.cpp:18</div></div>
+<div class="ttc" id="classexplosion_html_a401d7dbebfc4a92bcc408172df67c782"><div class="ttname"><a href="classexplosion.html#a401d7dbebfc4a92bcc408172df67c782">explosion::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</div><div class="ttdef"><b>Definition:</b> explosion.cpp:23</div></div>
+<div class="ttc" id="classexplosion_html_a3fc08d8c702d74ee3164825c975f8230"><div class="ttname"><a href="classexplosion.html#a3fc08d8c702d74ee3164825c975f8230">explosion::~explosion</a></div><div class="ttdeci">~explosion()</div><div class="ttdoc">The Explosion destructor Removes an explosion and prints to console whenever that happens...</div><div class="ttdef"><b>Definition:</b> explosion.cpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 10:57:04 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 2 2013 10:15:41 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

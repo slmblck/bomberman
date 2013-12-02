@@ -88,29 +88,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="boxes_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BOXES_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOXES_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="block_8h.html">block.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classboxes.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboxes.html">boxes</a> : <span class="keyword">public</span> <a class="code" href="class_block.html">Block</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classboxes.html#a2600eb866b188f33fb6415fc358f449a">    6</a></span>&#160;<span class="keyword">protected</span>: <span class="keywordtype">int</span> <a class="code" href="classboxes.html#a2600eb866b188f33fb6415fc358f449a">type</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classboxes.html#a093427b27f4b84a803544cb738dc12e6">boxes</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classboxes.html#a7d70921b4fe775ad313ac80d6da55222">~boxes</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classboxes.html#aa07b0460f8be5da676c4369331061fa6">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    QRectF <a class="code" href="classboxes.html#a4855400f92db9ebe776a79c79bac1d50">boundingRect</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif // BOXES_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classboxes.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboxes.html">boxes</a> : <span class="keyword">public</span> <a class="code" href="class_block.html">Block</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classboxes.html#ad34ca64e7ce23ca05cff8c2b1f8deb36">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classboxes.html#ad34ca64e7ce23ca05cff8c2b1f8deb36">upgradeType</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classboxes.html#a093427b27f4b84a803544cb738dc12e6">boxes</a>(<span class="keywordtype">int</span> x =0, <span class="keywordtype">int</span> y = 0);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classboxes.html#a7d70921b4fe775ad313ac80d6da55222">~boxes</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classboxes.html#aa07b0460f8be5da676c4369331061fa6">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    QRectF <a class="code" href="classboxes.html#a4855400f92db9ebe776a79c79bac1d50">boundingRect</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classboxes.html#abc3e99501e6d9108c0fa115214b0e14e">type</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif // BOXES_H</span></div>
 <div class="ttc" id="classboxes_html_a093427b27f4b84a803544cb738dc12e6"><div class="ttname"><a href="classboxes.html#a093427b27f4b84a803544cb738dc12e6">boxes::boxes</a></div><div class="ttdeci">boxes(int x=0, int y=0)</div><div class="ttdoc">this class creates a box </div><div class="ttdef"><b>Definition:</b> boxes.cpp:7</div></div>
 <div class="ttc" id="classboxes_html_aa07b0460f8be5da676c4369331061fa6"><div class="ttname"><a href="classboxes.html#aa07b0460f8be5da676c4369331061fa6">boxes::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</div><div class="ttdef"><b>Definition:</b> boxes.cpp:22</div></div>
-<div class="ttc" id="classboxes_html"><div class="ttname"><a href="classboxes.html">boxes</a></div><div class="ttdef"><b>Definition:</b> boxes.h:4</div></div>
-<div class="ttc" id="classboxes_html_a2600eb866b188f33fb6415fc358f449a"><div class="ttname"><a href="classboxes.html#a2600eb866b188f33fb6415fc358f449a">boxes::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition:</b> boxes.h:6</div></div>
-<div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>Definition:</b> block.h:6</div></div>
+<div class="ttc" id="classboxes_html"><div class="ttname"><a href="classboxes.html">boxes</a></div><div class="ttdoc">The Boxes class of Bombster used. </div><div class="ttdef"><b>Definition:</b> boxes.h:10</div></div>
+<div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdoc">The Block class of Bombster used as a base for the game grid. </div><div class="ttdef"><b>Definition:</b> block.h:12</div></div>
+<div class="ttc" id="classboxes_html_ad34ca64e7ce23ca05cff8c2b1f8deb36"><div class="ttname"><a href="classboxes.html#ad34ca64e7ce23ca05cff8c2b1f8deb36">boxes::upgradeType</a></div><div class="ttdeci">int upgradeType</div><div class="ttdef"><b>Definition:</b> boxes.h:13</div></div>
 <div class="ttc" id="classboxes_html_a7d70921b4fe775ad313ac80d6da55222"><div class="ttname"><a href="classboxes.html#a7d70921b4fe775ad313ac80d6da55222">boxes::~boxes</a></div><div class="ttdeci">~boxes()</div><div class="ttdoc">The boxes destructor Removes a box and prints to console whenever that happens. </div><div class="ttdef"><b>Definition:</b> boxes.cpp:17</div></div>
+<div class="ttc" id="classboxes_html_abc3e99501e6d9108c0fa115214b0e14e"><div class="ttname"><a href="classboxes.html#abc3e99501e6d9108c0fa115214b0e14e">boxes::type</a></div><div class="ttdeci">int type() const </div><div class="ttdef"><b>Definition:</b> boxes.cpp:32</div></div>
 <div class="ttc" id="block_8h_html"><div class="ttname"><a href="block_8h.html">block.h</a></div></div>
 <div class="ttc" id="classboxes_html_a4855400f92db9ebe776a79c79bac1d50"><div class="ttname"><a href="classboxes.html#a4855400f92db9ebe776a79c79bac1d50">boxes::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const </div><div class="ttdef"><b>Definition:</b> boxes.cpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 10:57:04 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 2 2013 10:15:41 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

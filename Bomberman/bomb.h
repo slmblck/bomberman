@@ -7,6 +7,12 @@
 #include <QObject>
 #include <QSound>
 #include "explosion.h"
+
+/*! \brief The Bomb class
+ *         of Bombster used for destruction of blocks and players in game.
+ *
+ *  Inherits QGraphicsObject from Qt
+ */
 class Bomb : public QGraphicsObject
 {
     Q_OBJECT

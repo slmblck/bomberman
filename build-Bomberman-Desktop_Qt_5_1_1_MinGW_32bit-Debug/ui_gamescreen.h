@@ -50,7 +50,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(10, 10, 570, 570));
+        graphicsView->setGeometry(QRect(10, 10, 573, 573));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         label = new QLabel(centralwidget);
@@ -86,7 +86,7 @@ public:
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 23));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         GameScreen->setMenuBar(menubar);
         statusbar = new QStatusBar(GameScreen);
         statusbar->setObjectName(QStringLiteral("statusbar"));

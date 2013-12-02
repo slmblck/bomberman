@@ -3,6 +3,11 @@
 }
 
 
+The Explosion class of Bombster used in addition to the bomb class to remove blocks/players.  
+
+
+
+
 {\ttfamily \#include $<$explosion.\-h$>$}
 
 Inheritance diagram for explosion\-:\begin{figure}[H]
@@ -14,25 +19,33 @@ Inheritance diagram for explosion\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classexplosion_ac3aabcbf16f356fcd3bdc8588cf36cf1}{explosion} (int x=0, int y=0)
+\hyperlink{classexplosion_a792865d6d3230927b5a85c72c9867555}{explosion} (int x=0, int y=0, Q\-Pixmap image=Q\-Pixmap(0, 0))
 \item 
 \hyperlink{classexplosion_a3fc08d8c702d74ee3164825c975f8230}{$\sim$explosion} ()
 \begin{DoxyCompactList}\small\item\em The Explosion destructor Removes an explosion and prints to console whenever that happens. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{classexplosion_adc8680178e9e7d4e388d8850a2c03125}{bounding\-Rect} () const 
 \item 
 void \hyperlink{classexplosion_a401d7dbebfc4a92bcc408172df67c782}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
+\item 
+int \hyperlink{classexplosion_a1f660a5ee0c892cdd4edba1d00df87a7}{type} () const 
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The Explosion class of Bombster used in addition to the bomb class to remove blocks/players. 
+
+Inherits Q\-Graphics\-Object from Qt 
+
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classexplosion_ac3aabcbf16f356fcd3bdc8588cf36cf1}{\index{explosion@{explosion}!explosion@{explosion}}
+\hypertarget{classexplosion_a792865d6d3230927b5a85c72c9867555}{\index{explosion@{explosion}!explosion@{explosion}}
 \index{explosion@{explosion}!explosion@{explosion}}
 \subsubsection[{explosion}]{\setlength{\rightskip}{0pt plus 5cm}explosion\-::explosion (
 \begin{DoxyParamCaption}
 \item[{int}]{x = {\ttfamily 0}, }
-\item[{int}]{y = {\ttfamily 0}}
+\item[{int}]{y = {\ttfamily 0}, }
+\item[{Q\-Pixmap}]{image = {\ttfamily QPixmap(0,0)}}
 \end{DoxyParamCaption}
-)}}\label{classexplosion_ac3aabcbf16f356fcd3bdc8588cf36cf1}
+)}}\label{classexplosion_a792865d6d3230927b5a85c72c9867555}
 \hypertarget{classexplosion_a3fc08d8c702d74ee3164825c975f8230}{\index{explosion@{explosion}!$\sim$explosion@{$\sim$explosion}}
 \index{$\sim$explosion@{$\sim$explosion}!explosion@{explosion}}
 \subsubsection[{$\sim$explosion}]{\setlength{\rightskip}{0pt plus 5cm}explosion\-::$\sim$explosion (
@@ -63,6 +76,13 @@ The Explosion destructor Removes an explosion and prints to console whenever tha
 \item[{Q\-Widget $\ast$}]{widget}
 \end{DoxyParamCaption}
 )}}\label{classexplosion_a401d7dbebfc4a92bcc408172df67c782}
+\hypertarget{classexplosion_a1f660a5ee0c892cdd4edba1d00df87a7}{\index{explosion@{explosion}!type@{type}}
+\index{type@{type}!explosion@{explosion}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int explosion\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classexplosion_a1f660a5ee0c892cdd4edba1d00df87a7}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

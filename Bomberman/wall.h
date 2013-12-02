@@ -3,6 +3,11 @@
 #include "block.h"
 #include <iostream>
 
+/*! \brief The Wall class
+ *         of Bombster used to create and destroy non-destructable walls in the game.
+ *
+ *  Inherits Block
+ */
 class Wall : public Block
 {
 public:

@@ -16,6 +16,10 @@
 #include <iostream>
 #include <stdlib.h>
 
+/*! \brief The World class
+ *         of Bombster used to create a new game world.
+ *
+ */
 class World
 {
 private:

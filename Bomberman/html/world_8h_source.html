@@ -103,48 +103,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_world.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_world.html">World</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//Just a placeholder for the world</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//This is a test</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_block.html">Block</a> ***testWorld;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> worldsize;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> Blocksize;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_character.html">Character</a> *player;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_world.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_world.html#a8c73fba541a5817fff65147ba47cd827">~World</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_world.html#a83f49e35b8f8b33f14198e87b2fa7312">keyHandler</a>(<span class="keywordtype">int</span> k);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_world.html#a08d405bfe0cef56b06f731addeb22bcf">drawWorld</a>(QPainter *painter);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_world.html#ab44648ec788ea8dfe063a1fce7f86026">getBlocksize</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f">getWorldsize</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_character.html">Character</a> * <a class="code" href="class_world.html#a66856566fadcf64eba71f5e3ccc790df">getPlayer</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_block.html">Block</a> *<a class="code" href="class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55">getTestBlock</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // WORLD_H</span></div>
-<div class="ttc" id="class_world_html_a24f0eab80a2a3b6bc983f58fa2adaa55"><div class="ttname"><a href="class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55">World::getTestBlock</a></div><div class="ttdeci">Block * getTestBlock(int x, int y)</div><div class="ttdoc">Returns a Block given coordinates. </div><div class="ttdef"><b>Definition:</b> world.cpp:114</div></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_world.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_world.html">World</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//Just a placeholder for the world</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//This is a test</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_block.html">Block</a> ***testWorld;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> worldsize;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> Blocksize;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_character.html">Character</a> *player1;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_character.html">Character</a> *player2;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_world.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_world.html#a8c73fba541a5817fff65147ba47cd827">~World</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_world.html#a83f49e35b8f8b33f14198e87b2fa7312">keyHandler</a>(<span class="keywordtype">int</span> k);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_world.html#a08d405bfe0cef56b06f731addeb22bcf">drawWorld</a>(QPainter *painter);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_world.html#ab44648ec788ea8dfe063a1fce7f86026">getBlocksize</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f">getWorldsize</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_character.html">Character</a> * <a class="code" href="class_world.html#accd8de11e5d40fd7cf0f5a71661157b2">getPlayer1</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_character.html">Character</a> * <a class="code" href="class_world.html#acadaeafe61a7f42cb3fc1bd25d646816">getPlayer2</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_block.html">Block</a> *<a class="code" href="class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55">getTestBlock</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // WORLD_H</span></div>
+<div class="ttc" id="class_world_html_a24f0eab80a2a3b6bc983f58fa2adaa55"><div class="ttname"><a href="class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55">World::getTestBlock</a></div><div class="ttdeci">Block * getTestBlock(int x, int y)</div><div class="ttdoc">Returns a Block given coordinates. </div><div class="ttdef"><b>Definition:</b> world.cpp:138</div></div>
 <div class="ttc" id="character_8h_html"><div class="ttname"><a href="character_8h.html">character.h</a></div></div>
-<div class="ttc" id="class_world_html_a8c73fba541a5817fff65147ba47cd827"><div class="ttname"><a href="class_world.html#a8c73fba541a5817fff65147ba47cd827">World::~World</a></div><div class="ttdeci">~World()</div><div class="ttdoc">The World destructor Removes an world block by block and prints to console whenever that happens...</div><div class="ttdef"><b>Definition:</b> world.cpp:42</div></div>
-<div class="ttc" id="class_world_html_ab44648ec788ea8dfe063a1fce7f86026"><div class="ttname"><a href="class_world.html#ab44648ec788ea8dfe063a1fce7f86026">World::getBlocksize</a></div><div class="ttdeci">int getBlocksize()</div><div class="ttdef"><b>Definition:</b> world.cpp:66</div></div>
-<div class="ttc" id="class_world_html"><div class="ttname"><a href="class_world.html">World</a></div><div class="ttdef"><b>Definition:</b> world.h:19</div></div>
-<div class="ttc" id="class_world_html_a43fe0009fa77b79202cd3ef7e8e7af5f"><div class="ttname"><a href="class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f">World::getWorldsize</a></div><div class="ttdeci">int getWorldsize()</div><div class="ttdef"><b>Definition:</b> world.cpp:71</div></div>
-<div class="ttc" id="class_world_html_a08d405bfe0cef56b06f731addeb22bcf"><div class="ttname"><a href="class_world.html#a08d405bfe0cef56b06f731addeb22bcf">World::drawWorld</a></div><div class="ttdeci">void drawWorld(QPainter *painter)</div><div class="ttdef"><b>Definition:</b> world.cpp:60</div></div>
+<div class="ttc" id="class_world_html_a8c73fba541a5817fff65147ba47cd827"><div class="ttname"><a href="class_world.html#a8c73fba541a5817fff65147ba47cd827">World::~World</a></div><div class="ttdeci">~World()</div><div class="ttdoc">The World destructor Removes an world block by block and prints to console whenever that happens...</div><div class="ttdef"><b>Definition:</b> world.cpp:43</div></div>
+<div class="ttc" id="class_world_html_ab44648ec788ea8dfe063a1fce7f86026"><div class="ttname"><a href="class_world.html#ab44648ec788ea8dfe063a1fce7f86026">World::getBlocksize</a></div><div class="ttdeci">int getBlocksize()</div><div class="ttdef"><b>Definition:</b> world.cpp:67</div></div>
+<div class="ttc" id="class_world_html"><div class="ttname"><a href="class_world.html">World</a></div><div class="ttdoc">The World class of Bombster used to create a new game world. </div><div class="ttdef"><b>Definition:</b> world.h:23</div></div>
+<div class="ttc" id="class_world_html_a43fe0009fa77b79202cd3ef7e8e7af5f"><div class="ttname"><a href="class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f">World::getWorldsize</a></div><div class="ttdeci">int getWorldsize()</div><div class="ttdef"><b>Definition:</b> world.cpp:72</div></div>
+<div class="ttc" id="class_world_html_a08d405bfe0cef56b06f731addeb22bcf"><div class="ttname"><a href="class_world.html#a08d405bfe0cef56b06f731addeb22bcf">World::drawWorld</a></div><div class="ttdeci">void drawWorld(QPainter *painter)</div><div class="ttdef"><b>Definition:</b> world.cpp:61</div></div>
 <div class="ttc" id="class_world_html_afa39d4e6f714a7a3691ac0c656f5e8a8"><div class="ttname"><a href="class_world.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World::World</a></div><div class="ttdeci">World()</div><div class="ttdoc">The World class Creates a World, sets the block size to 30*30, creates the world to be 19*19 blocks...</div><div class="ttdef"><b>Definition:</b> world.cpp:5</div></div>
-<div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>Definition:</b> block.h:6</div></div>
-<div class="ttc" id="class_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdef"><b>Definition:</b> character.h:12</div></div>
-<div class="ttc" id="class_world_html_a83f49e35b8f8b33f14198e87b2fa7312"><div class="ttname"><a href="class_world.html#a83f49e35b8f8b33f14198e87b2fa7312">World::keyHandler</a></div><div class="ttdeci">void keyHandler(int k)</div><div class="ttdoc">Handles keyboard input. </div><div class="ttdef"><b>Definition:</b> world.cpp:79</div></div>
+<div class="ttc" id="class_world_html_accd8de11e5d40fd7cf0f5a71661157b2"><div class="ttname"><a href="class_world.html#accd8de11e5d40fd7cf0f5a71661157b2">World::getPlayer1</a></div><div class="ttdeci">Character * getPlayer1()</div><div class="ttdoc">Returns a Player. </div><div class="ttdef"><b>Definition:</b> world.cpp:124</div></div>
+<div class="ttc" id="class_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdoc">The Block class of Bombster used as a base for the game grid. </div><div class="ttdef"><b>Definition:</b> block.h:12</div></div>
+<div class="ttc" id="class_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdoc">The Character class of Bombster used to create a movable player in the world. </div><div class="ttdef"><b>Definition:</b> character.h:20</div></div>
+<div class="ttc" id="class_world_html_a83f49e35b8f8b33f14198e87b2fa7312"><div class="ttname"><a href="class_world.html#a83f49e35b8f8b33f14198e87b2fa7312">World::keyHandler</a></div><div class="ttdeci">void keyHandler(int k)</div><div class="ttdoc">Handles keyboard input. </div><div class="ttdef"><b>Definition:</b> world.cpp:80</div></div>
 <div class="ttc" id="dwall_8h_html"><div class="ttname"><a href="dwall_8h.html">dwall.h</a></div></div>
-<div class="ttc" id="class_world_html_a66856566fadcf64eba71f5e3ccc790df"><div class="ttname"><a href="class_world.html#a66856566fadcf64eba71f5e3ccc790df">World::getPlayer</a></div><div class="ttdeci">Character * getPlayer()</div><div class="ttdoc">Returns a Player. </div><div class="ttdef"><b>Definition:</b> world.cpp:105</div></div>
 <div class="ttc" id="bomb_8h_html"><div class="ttname"><a href="bomb_8h.html">bomb.h</a></div></div>
 <div class="ttc" id="block_8h_html"><div class="ttname"><a href="block_8h.html">block.h</a></div></div>
+<div class="ttc" id="class_world_html_acadaeafe61a7f42cb3fc1bd25d646816"><div class="ttname"><a href="class_world.html#acadaeafe61a7f42cb3fc1bd25d646816">World::getPlayer2</a></div><div class="ttdeci">Character * getPlayer2()</div><div class="ttdef"><b>Definition:</b> world.cpp:129</div></div>
 <div class="ttc" id="wall_8h_html"><div class="ttname"><a href="wall_8h.html">wall.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 22 2013 10:57:04 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 2 2013 10:15:41 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

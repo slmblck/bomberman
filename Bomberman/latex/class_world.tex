@@ -3,6 +3,11 @@
 }
 
 
+The \hyperlink{class_world}{World} class of Bombster used to create a new game world.  
+
+
+
+
 {\ttfamily \#include $<$world.\-h$>$}
 
 \subsection*{Public Member Functions}
@@ -20,10 +25,17 @@ int \hyperlink{class_world_ab44648ec788ea8dfe063a1fce7f86026}{get\-Blocksize} ()
 \item 
 int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
 \item 
-\hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_a66856566fadcf64eba71f5e3ccc790df}{get\-Player} ()
+\hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_accd8de11e5d40fd7cf0f5a71661157b2}{get\-Player1} ()
 \begin{DoxyCompactList}\small\item\em Returns a Player. \end{DoxyCompactList}\item 
+\hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_acadaeafe61a7f42cb3fc1bd25d646816}{get\-Player2} ()
+\item 
 \hyperlink{class_block}{Block} $\ast$ \hyperlink{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{get\-Test\-Block} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Returns a \hyperlink{class_block}{Block} given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_world}{World} class of Bombster used to create a new game world. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -66,13 +78,13 @@ The \hyperlink{class_world}{World} destructor Removes an world block by block an
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_ab44648ec788ea8dfe063a1fce7f86026}
-\hypertarget{class_world_a66856566fadcf64eba71f5e3ccc790df}{\index{World@{World}!get\-Player@{get\-Player}}
-\index{get\-Player@{get\-Player}!World@{World}}
-\subsubsection[{get\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} $\ast$ World\-::get\-Player (
+\hypertarget{class_world_accd8de11e5d40fd7cf0f5a71661157b2}{\index{World@{World}!get\-Player1@{get\-Player1}}
+\index{get\-Player1@{get\-Player1}!World@{World}}
+\subsubsection[{get\-Player1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} $\ast$ World\-::get\-Player1 (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_world_a66856566fadcf64eba71f5e3ccc790df}
+)}}\label{class_world_accd8de11e5d40fd7cf0f5a71661157b2}
 
 
 Returns a Player. 
@@ -80,6 +92,13 @@ Returns a Player.
 \begin{DoxyReturn}{Returns}
 Returns the Player 
 \end{DoxyReturn}
+\hypertarget{class_world_acadaeafe61a7f42cb3fc1bd25d646816}{\index{World@{World}!get\-Player2@{get\-Player2}}
+\index{get\-Player2@{get\-Player2}!World@{World}}
+\subsubsection[{get\-Player2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} $\ast$ World\-::get\-Player2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_acadaeafe61a7f42cb3fc1bd25d646816}
 \hypertarget{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{\index{World@{World}!get\-Test\-Block@{get\-Test\-Block}}
 \index{get\-Test\-Block@{get\-Test\-Block}!World@{World}}
 \subsubsection[{get\-Test\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} $\ast$ World\-::get\-Test\-Block (
