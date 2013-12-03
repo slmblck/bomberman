@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>408</width>
+    <height>314</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="gameButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>210</y>
+      <x>160</x>
+      <y>150</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="infoButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>210</y>
+      <x>160</x>
+      <y>190</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -40,46 +40,26 @@
      <string>Info</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_title">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>120</y>
-      <width>181</width>
-      <height>151</height>
+      <y>0</y>
+      <width>411</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="textFormat">
-     <enum>Qt::RichText</enum>
-    </property>
     <property name="pixmap">
-     <pixmap>../resources/New folder/Bomberman_title3.png</pixmap>
+     <pixmap>../resources/New folder/bomberman-background2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="background">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>401</width>
-      <height>261</height>
-     </rect>
-    </property>
-    <property name="pixmap">
-     <pixmap>../resources/New folder/bomberman-generation.jpg</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <zorder>background</zorder>
-   <zorder>label_title</zorder>
+   <zorder>label</zorder>
    <zorder>gameButton</zorder>
    <zorder>infoButton</zorder>
   </widget>
@@ -88,7 +68,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>408</width>
      <height>21</height>
     </rect>
    </property>
