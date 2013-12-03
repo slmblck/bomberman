@@ -235,7 +235,7 @@ int Character::getPlayerID()
 
 void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::red);
+    painter->setBrush(Qt::blue);
     painter->drawRect(xPos, yPos, 30, 30);
 }
 
