@@ -31,7 +31,7 @@ public:
     QPushButton *gameButton;
     QPushButton *infoButton;
     QLabel *label_title;
-    QLabel *Bomb_logo;
+    QLabel *background;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -45,22 +45,26 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gameButton = new QPushButton(centralWidget);
         gameButton->setObjectName(QStringLiteral("gameButton"));
-        gameButton->setGeometry(QRect(50, 140, 81, 71));
+        gameButton->setGeometry(QRect(10, 210, 71, 31));
         infoButton = new QPushButton(centralWidget);
         infoButton->setObjectName(QStringLiteral("infoButton"));
-        infoButton->setGeometry(QRect(250, 140, 81, 71));
+        infoButton->setGeometry(QRect(90, 210, 71, 31));
         label_title = new QLabel(centralWidget);
         label_title->setObjectName(QStringLiteral("label_title"));
-        label_title->setGeometry(QRect(80, 10, 231, 121));
+        label_title->setGeometry(QRect(0, 120, 181, 151));
         label_title->setTextFormat(Qt::RichText);
-        label_title->setPixmap(QPixmap(QString::fromUtf8("../resources/New folder/Bomberman_title.png")));
+        label_title->setPixmap(QPixmap(QString::fromUtf8("../resources/New folder/Bomberman_title3.png")));
         label_title->setScaledContents(true);
-        Bomb_logo = new QLabel(centralWidget);
-        Bomb_logo->setObjectName(QStringLiteral("Bomb_logo"));
-        Bomb_logo->setGeometry(QRect(150, 140, 81, 71));
-        Bomb_logo->setPixmap(QPixmap(QString::fromUtf8("../resources/bomb_unexploded_pixel.png")));
-        Bomb_logo->setScaledContents(true);
+        background = new QLabel(centralWidget);
+        background->setObjectName(QStringLiteral("background"));
+        background->setGeometry(QRect(0, 0, 401, 261));
+        background->setPixmap(QPixmap(QString::fromUtf8("../resources/New folder/bomberman-generation.jpg")));
+        background->setScaledContents(true);
         MainWindow->setCentralWidget(centralWidget);
+        background->raise();
+        label_title->raise();
+        gameButton->raise();
+        infoButton->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 400, 21));
@@ -83,7 +87,6 @@ public:
         gameButton->setText(QApplication::translate("MainWindow", "Play Game!", 0));
         infoButton->setText(QApplication::translate("MainWindow", "Info", 0));
         label_title->setText(QString());
-        Bomb_logo->setText(QString());
     } // retranslateUi
 
 };
