@@ -16,6 +16,7 @@ Bomb::Bomb(int x, int y, int explosionSize)
 
     explosion *center = new explosion(x,y,QPixmap(":/Explosion_Center_Small.png"));
     explosionVector.push_back(center);
+
     for(int i = 1; i <= explosionSize; i++)
     {
         explosion *left = new explosion(x - (i*30),y, QPixmap(":/Explosion_Horizontal_Small.png"));
