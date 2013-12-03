@@ -35,7 +35,6 @@ GameScreen::GameScreen(QWidget *parent) :
     w = new World();
 
 
-
     Character *player1 = w->getPlayer1();
     Character *player2 = w->getPlayer2();
     Block* currentblock;
@@ -92,10 +91,11 @@ void GameScreen::paintEvent(QPaintEvent *event)
 void GameScreen::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
-    w->keyHandler(event->key());
+    //w->keyHandler(event->key());
 }
 
 void GameScreen::keyReleaseEvent(QKeyEvent *event)
 {
-    //std::cout << event->key() << std::endl;
+    std::cout << event->key() << std::endl;
+    w->keyHandler(event->key());
 }

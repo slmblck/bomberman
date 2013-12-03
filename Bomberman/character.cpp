@@ -216,7 +216,7 @@ void Character::dropBomb()
 
     if(this->numBombs != 0)
     {
-        Bomb *b = new Bomb(this->x() + 30,this->y() + 30,this->explosionsize);
+        Bomb *b = new Bomb((this->x() + 30),(this->y() + 30),(this->explosionsize));
         scene->addItem(b);
         this->numBombs -= 1;
 
