@@ -29,7 +29,7 @@ private:
     int explosionsize; //5 squares is max
     QPixmap charImage;
 public:
-    Character(int x = 0, int y = 0, int numBombs = 3, int player = -1);
+    Character(int x = 0, int y = 0, int numBombs = 3, int player = -1,QPixmap image = QPixmap(0,0));
     ~Character();
     void moveUp();
     void moveDown();

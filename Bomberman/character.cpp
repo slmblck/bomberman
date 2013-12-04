@@ -9,13 +9,14 @@
  *  \param The playerID.
  *  this constructor creates a character given a position in the world,
  *the amount of bombs the character can have, and the playerID */
-Character::Character(int x, int y, int numBombs, int player)
+Character::Character(int x, int y, int numBombs, int player, QPixmap image)
 {
     Character::xPos = x;
     Character::yPos = y;
     Character::numBombs = numBombs;
     Character::playerID = player;
     Character::explosionsize = 2;
+    Character::charImage = image;
 }
 
 /*! \brief The Character destructor
@@ -66,6 +67,8 @@ void Character::moveUp()
             */
         }
     }
+    //this->xPos = this->x();
+    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character down a 1/2 block.
@@ -109,6 +112,8 @@ void Character::moveDown()
     }
     //yPos = yPos + 15;
     //this->moveBy(0, -15);
+    //this->xPos = this->x();
+    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character Left a 1/2 block.
@@ -150,6 +155,8 @@ void Character::moveLeft()
             */
         }
     }
+    //this->xPos = this->x();
+    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character Right a 1/2 block.
@@ -192,6 +199,8 @@ void Character::moveRight()
             */
         }
     }
+    //this->xPos = this->x();
+    //this->yPos = this->y();
 }
 
 void Character::pickedUp(int item)
@@ -204,19 +213,18 @@ void Character::pickedUp(int item)
 void Character::dropBomb()
 {
     QGraphicsScene *scene = this->scene();
-
-    //scene->addItem(b);
-
-    //QTimer *timer = new QTimer(this);
-    //connect(timer, SIGNAL(timeout()), b, SLOT(explode()));
-
-    //timer->start(1000);
-
-    //QTimer::singleShot(1000,Qt::CoarseTimer,b,SLOT(explode()));
-
+    Bomb *b;
     if(this->numBombs != 0)
     {
-        Bomb *b = new Bomb((this->x() + 30),(this->y() + 30),(this->explosionsize));
+        if(this->playerID == 1)
+        {
+            b = new Bomb((this->x() + 30),(this->y() + 30),(this->explosionsize));
+        }
+        else if(this->playerID == 2)
+        {
+            b = new Bomb((this->x() + 510),(this->y() + 510),(this->explosionsize));
+        }
+        //Bomb *b = new Bomb(this->xPos,this->yPos,(this->explosionsize));
         scene->addItem(b);
         this->numBombs -= 1;
 
@@ -235,8 +243,7 @@ int Character::getPlayerID()
 
 void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::blue);
-    painter->drawRect(xPos, yPos, 30, 30);
+    painter->drawPixmap(this->xPos, this->yPos, 30, 30, this->charImage);
 }
 
 QRectF Character::boundingRect() const

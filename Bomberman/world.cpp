@@ -4,8 +4,8 @@
  * Creates a World, sets the block size to 30*30, creates the world to be 19*19 blocks, and randomly generates destructable walls */
 World::World()
 {
-    World::player1 = new Character(30,30,3,1);
-    World::player2 = new Character(510,510,3,1);
+    World::player1 = new Character(30,30,3,1,QPixmap(":/Player1_Down.png"));
+    World::player2 = new Character(510,510,3,2,QPixmap(":/Player2_Down.png"));
     World::Blocksize = 30;
     World::worldsize = 19;
 

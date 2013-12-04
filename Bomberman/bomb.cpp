@@ -75,7 +75,7 @@ void Bomb::explode2()
 
     for(unsigned int i = 0; i < explosionVector.size(); i++){
         QList<QGraphicsItem*> collisions = scene->collidingItems(explosionVector[i]);
-        for(unsigned int j = 0; j < collisions.size(); j++){
+        for(int j = 0; j < collisions.size(); j++){
         if(explosionVector[i]->collidesWithItem(collisions.value(j)))
         {
             std::cout << "Got Here!" << std::endl;
@@ -83,7 +83,11 @@ void Bomb::explode2()
             QGraphicsObject *item = collisions.value(j)->toGraphicsObject();
             if(item->type() == 5){
                 scene->removeItem(item);
-            }
+            }/*
+            if(item->type() == 2)
+            {
+                ((Bomb*)item)->explode();
+            }*/
         }
         }
     }
