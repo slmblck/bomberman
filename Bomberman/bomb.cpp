@@ -83,11 +83,11 @@ void Bomb::explode2()
             QGraphicsObject *item = collisions.value(j)->toGraphicsObject();
             if(item->type() == 5){
                 scene->removeItem(item);
-            }/*
+            }
             if(item->type() == 2)
             {
                 ((Bomb*)item)->explode();
-            }*/
+            }
         }
         }
     }
