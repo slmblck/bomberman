@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     backgroundMusicMain->setPlaylist(mainList);
     backgroundMusicMain->play();
     gameVol = 100;
+    sfxSound = true;
 }
 
 /*! \brief A MainWindow Destructor
@@ -70,10 +71,22 @@ void MainWindow::on_actionMusic_triggered()
 
 void MainWindow::on_actionSFX_triggered()
 {
-
+    if (sfxSound == true)
+    {
+        sfxSound=false;
+    }
+    else
+    {
+        sfxSound=true;
+    }
 }
 
 void MainWindow::on_quitButton_clicked()
 {
     exit(0);
+}
+
+bool MainWindow::getSFXSound()
+{
+    return sfxSound;
 }

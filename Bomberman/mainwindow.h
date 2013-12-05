@@ -24,12 +24,14 @@ class MainWindow : public QMainWindow
     QMediaPlayer *backgroundMusicMain;
     QMediaPlaylist *mainList;
     int gameVol;
+    bool sfxSound;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     void playAgain();
     ~MainWindow();
     friend class GameScreen;
+    bool getSFXSound();
 
 private slots:
     void on_gameButton_clicked();

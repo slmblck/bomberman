@@ -1,4 +1,5 @@
 #include "bomb.h"
+#include "mainwindow.h"
 #include <iostream>
 #include <vector>
 #include <QTimer>
@@ -40,7 +41,7 @@ Bomb::~Bomb()
 }
 
 /*! \brief Creates a bomb area
- * Bounds a bomb to a size of 30*30 pixels */
+ * Bounds a bombpiece to a size of 30*30 pixels */
 QRectF Bomb::boundingRect() const
 {
     return QRectF(this->xPos, this->yPos, 30, 30);
@@ -56,9 +57,13 @@ void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
  * Prints to console and removes bomb image with an explosion for a predetermined time */
 void Bomb::explode()
 {
+    bool sound=true;
+    //sound = ((MainWindow*)this->parent())->getSFXSound();
     std::cout <<"Boom!" << std::endl;
     QGraphicsScene *scene = this->scene();
-    QSound::play("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
+    if(sound){
+        QSound::play("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
+    }
 
     for(unsigned int i = 0; i < explosionVector.size(); i++)
     {
