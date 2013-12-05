@@ -36,6 +36,7 @@ public:
     void paintEvent(QPaintEvent *event);
     void closeEvent(QCloseEvent *);
     QGraphicsScene *scene;
+    void setVol(int vol);
 
 
 private:

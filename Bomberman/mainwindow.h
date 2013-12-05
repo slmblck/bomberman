@@ -23,6 +23,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     QMediaPlayer *backgroundMusicMain;
     QMediaPlaylist *mainList;
+    int gameVol;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -34,6 +35,12 @@ private slots:
     void on_gameButton_clicked();
 
     void on_infoButton_clicked();
+
+    void on_actionMusic_triggered();
+
+    void on_actionSFX_triggered();
+
+    void on_quitButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -9,11 +9,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     mainList= new QMediaPlaylist;
-    mainList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
+    mainList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
     mainList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicMain = new QMediaPlayer(this);
     backgroundMusicMain->setPlaylist(mainList);
     backgroundMusicMain->play();
+    gameVol = 100;
 }
 
 /*! \brief A MainWindow Destructor
@@ -31,6 +32,7 @@ void MainWindow::on_gameButton_clicked()
 {
 
     gameScreen = new GameScreen(this);
+    gameScreen->setVol(gameVol);
     backgroundMusicMain->stop();
     gameScreen->setVisible(true);
     gameScreen->show();
@@ -50,4 +52,28 @@ void MainWindow::on_infoButton_clicked()
 void MainWindow::playAgain()
 {
     backgroundMusicMain->play();
+}
+
+void MainWindow::on_actionMusic_triggered()
+{
+    if(backgroundMusicMain->volume()!=0)
+    {
+            backgroundMusicMain->setVolume(0);
+            gameVol = 0;
+    }
+    else
+    {
+        backgroundMusicMain->setVolume(100);
+        gameVol = 100;
+    }
+}
+
+void MainWindow::on_actionSFX_triggered()
+{
+
+}
+
+void MainWindow::on_quitButton_clicked()
+{
+    exit(0);
 }

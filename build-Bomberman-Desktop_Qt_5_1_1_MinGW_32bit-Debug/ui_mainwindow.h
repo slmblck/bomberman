@@ -16,10 +16,10 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,12 +27,15 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionMusic;
+    QAction *actionSFX;
     QWidget *centralWidget;
     QPushButton *gameButton;
     QPushButton *infoButton;
     QLabel *label;
+    QPushButton *quitButton;
     QMenuBar *menuBar;
-    QToolBar *mainToolBar;
+    QMenu *menuOptions;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -40,6 +43,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(408, 314);
+        actionMusic = new QAction(MainWindow);
+        actionMusic->setObjectName(QStringLiteral("actionMusic"));
+        actionMusic->setCheckable(true);
+        actionMusic->setChecked(true);
+        actionSFX = new QAction(MainWindow);
+        actionSFX->setObjectName(QStringLiteral("actionSFX"));
+        actionSFX->setCheckable(true);
+        actionSFX->setChecked(true);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gameButton = new QPushButton(centralWidget);
@@ -53,20 +64,27 @@ public:
         label->setGeometry(QRect(0, 0, 411, 291));
         label->setPixmap(QPixmap(QString::fromUtf8("../resources/New folder/bomberman-background2.png")));
         label->setScaledContents(true);
+        quitButton = new QPushButton(centralWidget);
+        quitButton->setObjectName(QStringLiteral("quitButton"));
+        quitButton->setGeometry(QRect(160, 230, 75, 31));
         MainWindow->setCentralWidget(centralWidget);
         label->raise();
         gameButton->raise();
         infoButton->raise();
+        quitButton->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 408, 21));
+        menuOptions = new QMenu(menuBar);
+        menuOptions->setObjectName(QStringLiteral("menuOptions"));
         MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
+
+        menuBar->addAction(menuOptions->menuAction());
+        menuOptions->addAction(actionMusic);
+        menuOptions->addAction(actionSFX);
 
         retranslateUi(MainWindow);
 
@@ -76,9 +94,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        actionMusic->setText(QApplication::translate("MainWindow", "Music", 0));
+        actionSFX->setText(QApplication::translate("MainWindow", "SFX", 0));
         gameButton->setText(QApplication::translate("MainWindow", "Play Game!", 0));
         infoButton->setText(QApplication::translate("MainWindow", "Info", 0));
         label->setText(QString());
+        quitButton->setText(QApplication::translate("MainWindow", "Quit", 0));
+        menuOptions->setTitle(QApplication::translate("MainWindow", "Options", 0));
     } // retranslateUi
 
 };
