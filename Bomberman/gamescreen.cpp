@@ -15,7 +15,7 @@ GameScreen::GameScreen(QWidget *parent) :
     ui->setupUi(this);
 
     gameList= new QMediaPlaylist;
-    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
     gameList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicGame = new QMediaPlayer(this);
     backgroundMusicGame->setPlaylist(gameList);

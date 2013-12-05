@@ -29,178 +29,233 @@ Character::~Character()
 /// \brief moves a character Up a 1/2 block.
 void Character::moveUp()
 {
-    //update();
-    this->moveBy(0, -15);
-    //yPos = yPos - 15;
-    //this->moveBy(0, 15);
     QGraphicsScene *scene = this->scene();
-    QList<QGraphicsItem*> collisions = scene->collidingItems(this);
-    for(int i = 0; i < collisions.size(); i++)
-    {
-        if(this->collidesWithItem(collisions.value(i)))
-        {
-
-            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+    QList<QGraphicsItem*> collisions;
+    collisions = scene->collidingItems(this);
+    if(collisions.size() > 0){
+        for(int i = 0; i < collisions.size(); i++){
+            QGraphicsObject *item;
+            item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                continue;
-                //if(this->isObscuredBy(item)){
-                //    continue;
-                //}
-            }
-
-            this->moveBy(0, 15);
-            /*
-            QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
-            for(int j = 0; j < collisions1.size(); j++)
-            {
-                if(this->collidesWithItem(collisions1.value(j)))
+                std::cout << "Here Here" << std::cout;
+                this->moveBy(0, -15);
+                collisions = scene->collidingItems(this);
+                for(int i = 0; i < collisions.size(); i++)
                 {
+                    std::cout << "Here" << std::endl;
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        item = collisions.value(i)->toGraphicsObject();
+                        if(item->type() == 2){
+                            continue;
+                        } else {
 
-                    item = collisions.value(j)->toGraphicsObject();
-                    if(item->type() == 2){
-                        break;
+                            this->moveBy(0, 15);
+                        }
                     }
+                }
+            } else {
 
-                    this->moveBy(0, 7.5);
+                this->moveBy(0, -15);
+                collisions = scene->collidingItems(this);
+
+                for(int i = 0; i < collisions.size(); i++)
+                {
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        this->moveBy(0, 15);
+                    }
                 }
             }
-            */
+
+        }
+    } else {
+
+        this->moveBy(0, -15);
+        collisions = scene->collidingItems(this);
+
+        for(int i = 0; i < collisions.size(); i++)
+        {
+            if(this->collidesWithItem(collisions.value(i)))
+            {
+                this->moveBy(0, 15);
+            }
         }
     }
-    //this->xPos = this->x();
-    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character down a 1/2 block.
 void Character::moveDown()
 {
-
-    this->moveBy(0, 15);
     QGraphicsScene *scene = this->scene();
-    QList<QGraphicsItem*> collisions = scene->collidingItems(this);
-    for(int i = 0; i < collisions.size(); i++)
-    {
-        if(this->collidesWithItem(collisions.value(i)))
-        {
-
-            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+    QList<QGraphicsItem*> collisions;
+    collisions = scene->collidingItems(this);
+    if(collisions.size() > 0){
+        for(int i = 0; i < collisions.size(); i++){
+            QGraphicsObject *item;
+            item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                continue;
-            }
-
-            //QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
-
-            //this->setVisible(false);
-            this->moveBy(0, -15);
-            /*
-            QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
-            for(int j = 0; j < collisions1.size(); j++)
-            {
-                if(this->collidesWithItem(collisions1.value(j)))
+                std::cout << "Here Here" << std::cout;
+                this->moveBy(0, 15);
+                collisions = scene->collidingItems(this);
+                for(int i = 0; i < collisions.size(); i++)
                 {
+                    std::cout << "Here" << std::endl;
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        item = collisions.value(i)->toGraphicsObject();
+                        if(item->type() == 2){
+                            continue;
+                        } else {
 
-                    item = collisions.value(j)->toGraphicsObject();
-                    if(item->type() == 2){
-                        break;
+                            this->moveBy(0, -15);
+                        }
                     }
+                }
+            } else {
 
-                    this->moveBy(0, -7.5);
+                this->moveBy(0, 15);
+                collisions = scene->collidingItems(this);
+
+                for(int i = 0; i < collisions.size(); i++)
+                {
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        this->moveBy(0, -15);
+                    }
                 }
             }
-            */
+
+        }
+    } else {
+
+        this->moveBy(0, 15);
+        collisions = scene->collidingItems(this);
+
+        for(int i = 0; i < collisions.size(); i++)
+        {
+            if(this->collidesWithItem(collisions.value(i)))
+            {
+                this->moveBy(0, -15);
+            }
         }
     }
-    //yPos = yPos + 15;
-    //this->moveBy(0, -15);
-    //this->xPos = this->x();
-    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character Left a 1/2 block.
 void Character::moveLeft()
 {
-    //update();
-    this->moveBy(-15, 0);
-    //xPos = xPos - 15;
-    //this->moveBy(15, 0);
     QGraphicsScene *scene = this->scene();
-    QList<QGraphicsItem*> collisions = scene->collidingItems(this);
-    for(int i = 0; i < collisions.size(); i++)
-    {
-        if(this->collidesWithItem(collisions.value(i)))
-        {
-
-            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
+    QList<QGraphicsItem*> collisions;
+    collisions = scene->collidingItems(this);
+    if(collisions.size() > 0){
+        for(int i = 0; i < collisions.size(); i++){
+            QGraphicsObject *item;
+            item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                continue;
-            }
-
-            //this->setVisible(false);
-            this->moveBy(15, 0);
-            /*
-            QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
-            for(int j = 0; j < collisions1.size(); j++)
-            {
-                if(this->collidesWithItem(collisions1.value(j)))
+                std::cout << "Here Here" << std::cout;
+                this->moveBy(-15, 0);
+                collisions = scene->collidingItems(this);
+                for(int i = 0; i < collisions.size(); i++)
                 {
+                    std::cout << "Here" << std::endl;
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        item = collisions.value(i)->toGraphicsObject();
+                        if(item->type() == 2){
+                            continue;
+                        } else {
 
-                    item = collisions.value(j)->toGraphicsObject();
-                    if(item->type() == 2){
-                        break;
+                            this->moveBy(15, 0);
+                        }
                     }
+                }
+            } else {
 
-                    this->moveBy(7.5, 0);
+                this->moveBy(-15, 0);
+                collisions = scene->collidingItems(this);
+
+                for(int i = 0; i < collisions.size(); i++)
+                {
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        this->moveBy(15, 0);
+                    }
                 }
             }
-            */
+
+        }
+    } else {
+
+        this->moveBy(-15, 0);
+        collisions = scene->collidingItems(this);
+
+        for(int i = 0; i < collisions.size(); i++)
+        {
+            if(this->collidesWithItem(collisions.value(i)))
+            {
+                this->moveBy(15, 0);
+            }
         }
     }
-    //this->xPos = this->x();
-    //this->yPos = this->y();
 }
 
 /// \brief Moves a Character Right a 1/2 block.
 void Character::moveRight()
 {
-    //update();
-    this->moveBy(15, 0);
-    //xPos = xPos + 15;
-    //this->moveBy(-15, 0);
     QGraphicsScene *scene = this->scene();
-    QList<QGraphicsItem*> collisions = scene->collidingItems(this);
-    for(int i = 0; i < collisions.size(); i++)
-    {
-        if(this->collidesWithItem(collisions.value(i)))
-        {
-
-            QGraphicsObject *item = collisions.value(i)->toGraphicsObject();
-
+    QList<QGraphicsItem*> collisions;
+    collisions = scene->collidingItems(this);
+    if(collisions.size() > 0){
+        for(int i = 0; i < collisions.size(); i++){
+            QGraphicsObject *item;
+            item = collisions.value(i)->toGraphicsObject();
             if(item->type() == 2){
-                continue;
-            }
-
-            //this->setVisible(false);
-            this->moveBy(-15, 0);
-            /*
-            QList<QGraphicsItem*> collisions1 = scene->collidingItems(this);
-            for(int j = 0; j < collisions1.size(); j++)
-            {
-                if(this->collidesWithItem(collisions1.value(j)))
+                std::cout << "Here Here" << std::cout;
+                this->moveBy(15, 0);
+                collisions = scene->collidingItems(this);
+                for(int i = 0; i < collisions.size(); i++)
                 {
+                    std::cout << "Here" << std::endl;
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        item = collisions.value(i)->toGraphicsObject();
+                        if(item->type() == 2){
+                            continue;
+                        } else {
 
-                    item = collisions.value(j)->toGraphicsObject();
-                    if(item->type() == 2){
-                        break;
+                            this->moveBy(-15, 0);
+                        }
                     }
+                }
+            } else {
 
-                    this->moveBy(-7.5, 0);
+                this->moveBy(15, 0);
+                collisions = scene->collidingItems(this);
+
+                for(int i = 0; i < collisions.size(); i++)
+                {
+                    if(this->collidesWithItem(collisions.value(i)))
+                    {
+                        this->moveBy(-15, 0);
+                    }
                 }
             }
-            */
+
+        }
+    } else {
+
+        this->moveBy(15, 0);
+        collisions = scene->collidingItems(this);
+
+        for(int i = 0; i < collisions.size(); i++)
+        {
+            if(this->collidesWithItem(collisions.value(i)))
+            {
+                this->moveBy(-15, 0);
+            }
         }
     }
-    //this->xPos = this->x();
-    //this->yPos = this->y();
 }
 
 void Character::pickedUp(int item)
@@ -219,6 +274,7 @@ void Character::dropBomb()
         if(this->playerID == 1)
         {
             b = new Bomb((this->x() + 30),(this->y() + 30),(this->explosionsize));
+            //b->setParent(this);
         }
         else if(this->playerID == 2)
         {
