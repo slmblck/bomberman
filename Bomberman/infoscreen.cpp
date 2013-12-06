@@ -1,6 +1,8 @@
 #include "infoscreen.h"
 #include "ui_infoscreen.h"
 
+/*! \brief The InfoScreen constructor
+ * Creates the InfoScreen UI*/
 InfoScreen::InfoScreen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::InfoScreen)

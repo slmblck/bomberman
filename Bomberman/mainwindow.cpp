@@ -55,6 +55,8 @@ void MainWindow::playAgain()
     backgroundMusicMain->play();
 }
 
+/// \brief logic for Background music checkbox in option menu
+/// logic for menu and game combined
 void MainWindow::on_actionMusic_triggered()
 {
     if(backgroundMusicMain->volume()!=0)
@@ -69,6 +71,7 @@ void MainWindow::on_actionMusic_triggered()
     }
 }
 
+/// \brief logic for Sound effects checkbox in option menu
 void MainWindow::on_actionSFX_triggered()
 {
     if (sfxSound == true)
@@ -81,11 +84,14 @@ void MainWindow::on_actionSFX_triggered()
     }
 }
 
+/// \brief Quits the game
 void MainWindow::on_quitButton_clicked()
 {
     exit(0);
 }
 
+/// \brief Gets whether or not Soundeffects will be played in game
+/// \return bool sfxSound
 bool MainWindow::getSFXSound()
 {
     return sfxSound;

@@ -106,9 +106,9 @@ Inheritance diagram for Character:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ade1bb6dc548f73fb814702776457a1f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ade1bb6dc548f73fb814702776457a1f3">Character</a> (int x=0, int y=0, int numBombs=3, int player=-1)</td></tr>
-<tr class="memdesc:ade1bb6dc548f73fb814702776457a1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> constructer.  <a href="#ade1bb6dc548f73fb814702776457a1f3">More...</a><br/></td></tr>
-<tr class="separator:ade1bb6dc548f73fb814702776457a1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a4fabd534a280ff4b7fc6ad18c152e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a61a4fabd534a280ff4b7fc6ad18c152e">Character</a> (int x=0, int y=0, int numBombs=3, int player=-1, QPixmap image=QPixmap(0, 0))</td></tr>
+<tr class="memdesc:a61a4fabd534a280ff4b7fc6ad18c152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> constructer.  <a href="#a61a4fabd534a280ff4b7fc6ad18c152e">More...</a><br/></td></tr>
+<tr class="separator:a61a4fabd534a280ff4b7fc6ad18c152e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9be564d05ded80962b2045aa70b3fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a9e9be564d05ded80962b2045aa70b3fc">~Character</a> ()</td></tr>
 <tr class="memdesc:a9e9be564d05ded80962b2045aa70b3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> destructor Removes a <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> and prints to console whenever that happens.  <a href="#a9e9be564d05ded80962b2045aa70b3fc">More...</a><br/></td></tr>
 <tr class="separator:a9e9be564d05ded80962b2045aa70b3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacb2a15ce71f1165daceb29cf481a4cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aacb2a15ce71f1165daceb29cf481a4cb">getPlayerID</a> ()</td></tr>
 <tr class="memdesc:aacb2a15ce71f1165daceb29cf481a4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets a Player ID  <a href="#aacb2a15ce71f1165daceb29cf481a4cb">More...</a><br/></td></tr>
 <tr class="separator:aacb2a15ce71f1165daceb29cf481a4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6789fcbdc901b0871a20f21b43ea5d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a6789fcbdc901b0871a20f21b43ea5d32">incNumDeaths</a> ()</td></tr>
+<tr class="separator:a6789fcbdc901b0871a20f21b43ea5d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099916c7331625461d7cd976ec4b0498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a099916c7331625461d7cd976ec4b0498">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr class="memdesc:a099916c7331625461d7cd976ec4b0498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a character onscreen.  <a href="#a099916c7331625461d7cd976ec4b0498">More...</a><br/></td></tr>
 <tr class="separator:a099916c7331625461d7cd976ec4b0498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3bf8c7fe7ddbad47b54193374d25ee2"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#af3bf8c7fe7ddbad47b54193374d25ee2">boundingRect</a> () const </td></tr>
 <tr class="separator:af3bf8c7fe7ddbad47b54193374d25ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> class of Bombster used to create a movable player in the world. </p>
 <p>Inherits QGraphicsObject from Qt </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ade1bb6dc548f73fb814702776457a1f3"></a>
+<a class="anchor" id="a61a4fabd534a280ff4b7fc6ad18c152e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -169,7 +172,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>player</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>player</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPixmap&#160;</td>
+          <td class="paramname"><em>image</em> = <code>QPixmap(0,0)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -257,6 +266,21 @@ Public Member Functions</h2></td></tr>
 
 <p>gets a Player ID </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns the <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a>'s playerID </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6789fcbdc901b0871a20f21b43ea5d32"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Character::incNumDeaths </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -358,6 +382,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Displays a character onscreen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>pointer </td></tr>
+    <tr><td class="paramname">constant</td><td>QStyleOptionGraphicsItem option pointer </td></tr>
+    <tr><td class="paramname">QWidget</td><td>pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="acb99685904de8dce448ad8a51efed7cb"></a>
@@ -398,7 +432,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 2 2013 10:15:42 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 6 2013 14:04:53 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

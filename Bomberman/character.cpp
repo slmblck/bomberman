@@ -304,6 +304,10 @@ void Character::incNumDeaths()
     std::cout << "numDeaths = " << numDeaths << std::endl;
 }
 
+/*! \brief Displays a character onscreen
+ *  \param painter pointer
+ *  \param constant QStyleOptionGraphicsItem option pointer
+ *  \param QWidget pointer */
 void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(this->xPos, this->yPos, 30, 30, this->charImage);

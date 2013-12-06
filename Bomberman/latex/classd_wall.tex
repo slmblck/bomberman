@@ -24,11 +24,11 @@ Inheritance diagram for d\-Wall\-:\begin{figure}[H]
 \hyperlink{classd_wall_ae3e072cee7b80cf20387c3d634cb994a}{$\sim$d\-Wall} ()
 \begin{DoxyCompactList}\small\item\em The Destructable \hyperlink{class_wall}{Wall} destructor Removes a Destructable \hyperlink{class_wall}{Wall} from the game and prints to console whenever that happens. \end{DoxyCompactList}\item 
 void \hyperlink{classd_wall_aeaec158ea8576bfe6d40d8197ffceaf6}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays a destructable wall onscreen. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{classd_wall_a84d4bba890333394f10c5497379d894c}{bounding\-Rect} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em returns a 30px $\ast$ 30px bound \end{DoxyCompactList}\item 
 int \hyperlink{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}{type} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -80,6 +80,10 @@ The Destructable \hyperlink{class_wall}{Wall} destructor Removes a Destructable 
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classd_wall_a84d4bba890333394f10c5497379d894c}
 
 
+returns a 30px $\ast$ 30px bound 
+
+
+
 Reimplemented from \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{Block}.
 
 \hypertarget{classd_wall_aeaec158ea8576bfe6d40d8197ffceaf6}{\index{d\-Wall@{d\-Wall}!paint@{paint}}
@@ -93,6 +97,19 @@ Reimplemented from \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{Blo
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classd_wall_aeaec158ea8576bfe6d40d8197ffceaf6}
 
 
+Displays a destructable wall onscreen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & pointer \\
+\hline
+{\em constant} & Q\-Style\-Option\-Graphics\-Item option pointer \\
+\hline
+{\em Q\-Widget} & pointer \\
+\hline
+\end{DoxyParams}
+
+
 Reimplemented from \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{Block}.
 
 \hypertarget{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}{\index{d\-Wall@{d\-Wall}!type@{type}}
@@ -102,6 +119,10 @@ Reimplemented from \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{Blo
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}
+
+
+returns 1 
+
 
 
 Reimplemented from \hyperlink{class_block_a915a8196ec94388fb2aae7788af88705}{Block}.

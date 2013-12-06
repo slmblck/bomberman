@@ -20,15 +20,15 @@ Inheritance diagram for Wall\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_wall_a23004a32bc2720e18793d6db6a5f0fd5}{Wall} (int x=0, int y=0)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_wall}{Wall} Constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_wall_a9a2992f2b533e1c160513d1e719f920c}{$\sim$\-Wall} ()
-\item 
+\begin{DoxyCompactList}\small\item\em wall destructor prints \char`\"{}\-Wall has been destroyed\char`\"{} to console \end{DoxyCompactList}\item 
 void \hyperlink{class_wall_aae57ed47f7d5d58b513d2ebd8feb8057}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays a nondestructable wall onscreen. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{class_wall_aae7888200bcd5afb12b24110886366a0}{bounding\-Rect} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Bounds a nondesructable wall to 30px $\ast$ 30px space. \end{DoxyCompactList}\item 
 int \hyperlink{class_wall_ab31daa81d4977819c8e231621c7573d7}{type} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the wall type constant. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -46,6 +46,17 @@ Inherits \hyperlink{class_block}{Block}
 \item[{int}]{y = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}\label{class_wall_a23004a32bc2720e18793d6db6a5f0fd5}
+
+
+\hyperlink{class_wall}{Wall} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pos} & \\
+\hline
+{\em Y\-Pos} & contains x\-Pos, Ypos of the non destructable walls prints \char`\"{}\-Wall has been created\char`\"{} to console \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_wall_a9a2992f2b533e1c160513d1e719f920c}{\index{Wall@{Wall}!$\sim$\-Wall@{$\sim$\-Wall}}
 \index{$\sim$\-Wall@{$\sim$\-Wall}!Wall@{Wall}}
 \subsubsection[{$\sim$\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}Wall\-::$\sim$\-Wall (
@@ -53,6 +64,10 @@ Inherits \hyperlink{class_block}{Block}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_wall_a9a2992f2b533e1c160513d1e719f920c}
+
+
+wall destructor prints \char`\"{}\-Wall has been destroyed\char`\"{} to console 
+
 
 
 \subsection{Member Function Documentation}
@@ -63,6 +78,10 @@ Inherits \hyperlink{class_block}{Block}
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_wall_aae7888200bcd5afb12b24110886366a0}
+
+
+Bounds a nondesructable wall to 30px $\ast$ 30px space. 
+
 
 
 Reimplemented from \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{Block}.
@@ -78,6 +97,19 @@ Reimplemented from \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{Blo
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_wall_aae57ed47f7d5d58b513d2ebd8feb8057}
 
 
+Displays a nondestructable wall onscreen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q\-Painter} & pointer \\
+\hline
+{\em constant} & Q\-Style\-Option\-Graphics\-Item pointer \\
+\hline
+{\em Q\-Widget} & pointer \\
+\hline
+\end{DoxyParams}
+
+
 Reimplemented from \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{Block}.
 
 \hypertarget{class_wall_ab31daa81d4977819c8e231621c7573d7}{\index{Wall@{Wall}!type@{type}}
@@ -87,6 +119,13 @@ Reimplemented from \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{Blo
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_wall_ab31daa81d4977819c8e231621c7573d7}
+
+
+Returns the wall type constant. 
+
+\begin{DoxyReturn}{Returns}
+int 7 
+\end{DoxyReturn}
 
 
 Reimplemented from \hyperlink{class_block_a915a8196ec94388fb2aae7788af88705}{Block}.

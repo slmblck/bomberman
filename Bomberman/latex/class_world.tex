@@ -20,15 +20,15 @@ The \hyperlink{class_world}{World} class of Bombster used to create a new game w
 void \hyperlink{class_world_a83f49e35b8f8b33f14198e87b2fa7312}{key\-Handler} (int k)
 \begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
 void \hyperlink{class_world_a08d405bfe0cef56b06f731addeb22bcf}{draw\-World} (Q\-Painter $\ast$painter)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a blue world. \end{DoxyCompactList}\item 
 int \hyperlink{class_world_ab44648ec788ea8dfe063a1fce7f86026}{get\-Blocksize} ()
-\item 
+\begin{DoxyCompactList}\small\item\em fetches the Size of the created \hyperlink{class_block}{Block} \end{DoxyCompactList}\item 
 int \hyperlink{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}{get\-Worldsize} ()
-\item 
+\begin{DoxyCompactList}\small\item\em fetches the Size of the created \hyperlink{class_world}{World} \end{DoxyCompactList}\item 
 \hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_accd8de11e5d40fd7cf0f5a71661157b2}{get\-Player1} ()
-\begin{DoxyCompactList}\small\item\em Returns a Player. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns Player1. \end{DoxyCompactList}\item 
 \hyperlink{class_character}{Character} $\ast$ \hyperlink{class_world_acadaeafe61a7f42cb3fc1bd25d646816}{get\-Player2} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns Player2. \end{DoxyCompactList}\item 
 \hyperlink{class_block}{Block} $\ast$ \hyperlink{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{get\-Test\-Block} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Returns a \hyperlink{class_block}{Block} given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -71,6 +71,15 @@ The \hyperlink{class_world}{World} destructor Removes an world block by block an
 \item[{Q\-Painter $\ast$}]{painter}
 \end{DoxyParamCaption}
 )}}\label{class_world_a08d405bfe0cef56b06f731addeb22bcf}
+
+
+Creates a blue world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Qpainter} & pointer \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_world_ab44648ec788ea8dfe063a1fce7f86026}{\index{World@{World}!get\-Blocksize@{get\-Blocksize}}
 \index{get\-Blocksize@{get\-Blocksize}!World@{World}}
 \subsubsection[{get\-Blocksize}]{\setlength{\rightskip}{0pt plus 5cm}int World\-::get\-Blocksize (
@@ -78,6 +87,13 @@ The \hyperlink{class_world}{World} destructor Removes an world block by block an
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_ab44648ec788ea8dfe063a1fce7f86026}
+
+
+fetches the Size of the created \hyperlink{class_block}{Block} 
+
+\begin{DoxyReturn}{Returns}
+returns the Blocksize 
+\end{DoxyReturn}
 \hypertarget{class_world_accd8de11e5d40fd7cf0f5a71661157b2}{\index{World@{World}!get\-Player1@{get\-Player1}}
 \index{get\-Player1@{get\-Player1}!World@{World}}
 \subsubsection[{get\-Player1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} $\ast$ World\-::get\-Player1 (
@@ -87,7 +103,7 @@ The \hyperlink{class_world}{World} destructor Removes an world block by block an
 )}}\label{class_world_accd8de11e5d40fd7cf0f5a71661157b2}
 
 
-Returns a Player. 
+Returns Player1. 
 
 \begin{DoxyReturn}{Returns}
 Returns the Player 
@@ -99,6 +115,13 @@ Returns the Player
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_acadaeafe61a7f42cb3fc1bd25d646816}
+
+
+Returns Player2. 
+
+\begin{DoxyReturn}{Returns}
+Returns the Player 
+\end{DoxyReturn}
 \hypertarget{class_world_a24f0eab80a2a3b6bc983f58fa2adaa55}{\index{World@{World}!get\-Test\-Block@{get\-Test\-Block}}
 \index{get\-Test\-Block@{get\-Test\-Block}!World@{World}}
 \subsubsection[{get\-Test\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} $\ast$ World\-::get\-Test\-Block (
@@ -128,6 +151,13 @@ Returns the block given the position in the world
 {}
 \end{DoxyParamCaption}
 )}}\label{class_world_a43fe0009fa77b79202cd3ef7e8e7af5f}
+
+
+fetches the Size of the created \hyperlink{class_world}{World} 
+
+\begin{DoxyReturn}{Returns}
+returns the World\-Size 
+\end{DoxyReturn}
 \hypertarget{class_world_a83f49e35b8f8b33f14198e87b2fa7312}{\index{World@{World}!key\-Handler@{key\-Handler}}
 \index{key\-Handler@{key\-Handler}!World@{World}}
 \subsubsection[{key\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void World\-::key\-Handler (

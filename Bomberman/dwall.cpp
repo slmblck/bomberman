@@ -20,6 +20,10 @@ dWall::~dWall()
       std::cout << "Destructable wall has been destroyed" << std::endl;
 }
 
+/*! \brief Displays a destructable wall onscreen
+ *  \param painter pointer
+ *  \param constant QStyleOptionGraphicsItem option pointer
+ *  \param QWidget pointer */
 void dWall::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Wall_Destructable_Small.png"));

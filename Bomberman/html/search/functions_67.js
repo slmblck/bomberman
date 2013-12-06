@@ -5,6 +5,7 @@ var searchData=
   ['getplayer1',['getPlayer1',['../class_world.html#accd8de11e5d40fd7cf0f5a71661157b2',1,'World']]],
   ['getplayer2',['getPlayer2',['../class_world.html#acadaeafe61a7f42cb3fc1bd25d646816',1,'World']]],
   ['getplayerid',['getPlayerID',['../class_character.html#aacb2a15ce71f1165daceb29cf481a4cb',1,'Character']]],
+  ['getsfxsound',['getSFXSound',['../class_main_window.html#a3935a5aee4fcdbc9568995da6ceed437',1,'MainWindow']]],
   ['gettestblock',['getTestBlock',['../class_world.html#a24f0eab80a2a3b6bc983f58fa2adaa55',1,'World']]],
   ['getworldsize',['getWorldsize',['../class_world.html#a43fe0009fa77b79202cd3ef7e8e7af5f',1,'World']]],
   ['getx',['getX',['../class_block.html#a527c8f990b4b99dda6f4ca225ee32c14',1,'Block']]],

@@ -19,7 +19,7 @@ Inheritance diagram for Character\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_character_ade1bb6dc548f73fb814702776457a1f3}{Character} (int x=0, int y=0, int num\-Bombs=3, int player=-\/1)
+\hyperlink{class_character_a61a4fabd534a280ff4b7fc6ad18c152e}{Character} (int x=0, int y=0, int num\-Bombs=3, int player=-\/1, Q\-Pixmap image=Q\-Pixmap(0, 0))
 \begin{DoxyCompactList}\small\item\em The \hyperlink{class_character}{Character} constructer. \end{DoxyCompactList}\item 
 \hyperlink{class_character_a9e9be564d05ded80962b2045aa70b3fc}{$\sim$\-Character} ()
 \begin{DoxyCompactList}\small\item\em The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class_character}{Character} and prints to console whenever that happens. \end{DoxyCompactList}\item 
@@ -37,8 +37,10 @@ void \hyperlink{class_character_acb99685904de8dce448ad8a51efed7cb}{picked\-Up} (
 \item 
 int \hyperlink{class_character_aacb2a15ce71f1165daceb29cf481a4cb}{get\-Player\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em gets a Player I\-D \end{DoxyCompactList}\item 
-void \hyperlink{class_character_a099916c7331625461d7cd976ec4b0498}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
+void \hyperlink{class_character_a6789fcbdc901b0871a20f21b43ea5d32}{inc\-Num\-Deaths} ()
 \item 
+void \hyperlink{class_character_a099916c7331625461d7cd976ec4b0498}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Displays a character onscreen. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{class_character_af3bf8c7fe7ddbad47b54193374d25ee2}{bounding\-Rect} () const 
 \item 
 int \hyperlink{class_character_aba58d60bcfe61c1807e1a9e9439b56f0}{type} () const 
@@ -51,16 +53,17 @@ The \hyperlink{class_character}{Character} class of Bombster used to create a mo
 Inherits Q\-Graphics\-Object from Qt 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_character_ade1bb6dc548f73fb814702776457a1f3}{\index{Character@{Character}!Character@{Character}}
+\hypertarget{class_character_a61a4fabd534a280ff4b7fc6ad18c152e}{\index{Character@{Character}!Character@{Character}}
 \index{Character@{Character}!Character@{Character}}
 \subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}Character\-::\-Character (
 \begin{DoxyParamCaption}
 \item[{int}]{x = {\ttfamily 0}, }
 \item[{int}]{y = {\ttfamily 0}, }
 \item[{int}]{num\-Bombs = {\ttfamily 3}, }
-\item[{int}]{player = {\ttfamily -\/1}}
+\item[{int}]{player = {\ttfamily -\/1}, }
+\item[{Q\-Pixmap}]{image = {\ttfamily QPixmap(0,0)}}
 \end{DoxyParamCaption}
-)}}\label{class_character_ade1bb6dc548f73fb814702776457a1f3}
+)}}\label{class_character_a61a4fabd534a280ff4b7fc6ad18c152e}
 
 
 The \hyperlink{class_character}{Character} constructer. 
@@ -122,6 +125,13 @@ gets a Player I\-D
 \begin{DoxyReturn}{Returns}
 Returns the \hyperlink{class_character}{Character}'s player\-I\-D 
 \end{DoxyReturn}
+\hypertarget{class_character_a6789fcbdc901b0871a20f21b43ea5d32}{\index{Character@{Character}!inc\-Num\-Deaths@{inc\-Num\-Deaths}}
+\index{inc\-Num\-Deaths@{inc\-Num\-Deaths}!Character@{Character}}
+\subsubsection[{inc\-Num\-Deaths}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::inc\-Num\-Deaths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_character_a6789fcbdc901b0871a20f21b43ea5d32}
 \hypertarget{class_character_afa7763e81bca6a0b9b0c044f39c429f0}{\index{Character@{Character}!move\-Down@{move\-Down}}
 \index{move\-Down@{move\-Down}!Character@{Character}}
 \subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Down (
@@ -175,6 +185,19 @@ moves a character Up a 1/2 block.
 \item[{Q\-Widget $\ast$}]{widget}
 \end{DoxyParamCaption}
 )}}\label{class_character_a099916c7331625461d7cd976ec4b0498}
+
+
+Displays a character onscreen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & pointer \\
+\hline
+{\em constant} & Q\-Style\-Option\-Graphics\-Item option pointer \\
+\hline
+{\em Q\-Widget} & pointer \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_character_acb99685904de8dce448ad8a51efed7cb}{\index{Character@{Character}!picked\-Up@{picked\-Up}}
 \index{picked\-Up@{picked\-Up}!Character@{Character}}
 \subsubsection[{picked\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::picked\-Up (

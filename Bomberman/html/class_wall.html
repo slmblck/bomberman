@@ -108,14 +108,19 @@ Inheritance diagram for Wall:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a23004a32bc2720e18793d6db6a5f0fd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wall.html#a23004a32bc2720e18793d6db6a5f0fd5">Wall</a> (int x=0, int y=0)</td></tr>
+<tr class="memdesc:a23004a32bc2720e18793d6db6a5f0fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_wall.html" title="The Wall class of Bombster used to create and destroy non-destructable walls in the game...">Wall</a> Constructor.  <a href="#a23004a32bc2720e18793d6db6a5f0fd5">More...</a><br/></td></tr>
 <tr class="separator:a23004a32bc2720e18793d6db6a5f0fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a2992f2b533e1c160513d1e719f920c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">~Wall</a> ()</td></tr>
+<tr class="memdesc:a9a2992f2b533e1c160513d1e719f920c"><td class="mdescLeft">&#160;</td><td class="mdescRight">wall destructor prints "Wall has been destroyed" to console  <a href="#a9a2992f2b533e1c160513d1e719f920c">More...</a><br/></td></tr>
 <tr class="separator:a9a2992f2b533e1c160513d1e719f920c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae57ed47f7d5d58b513d2ebd8feb8057"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wall.html#aae57ed47f7d5d58b513d2ebd8feb8057">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
+<tr class="memdesc:aae57ed47f7d5d58b513d2ebd8feb8057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a nondestructable wall onscreen.  <a href="#aae57ed47f7d5d58b513d2ebd8feb8057">More...</a><br/></td></tr>
 <tr class="separator:aae57ed47f7d5d58b513d2ebd8feb8057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7888200bcd5afb12b24110886366a0"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wall.html#aae7888200bcd5afb12b24110886366a0">boundingRect</a> () const </td></tr>
+<tr class="memdesc:aae7888200bcd5afb12b24110886366a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds a nondesructable wall to 30px * 30px space.  <a href="#aae7888200bcd5afb12b24110886366a0">More...</a><br/></td></tr>
 <tr class="separator:aae7888200bcd5afb12b24110886366a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31daa81d4977819c8e231621c7573d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wall.html#ab31daa81d4977819c8e231621c7573d7">type</a> () const </td></tr>
+<tr class="memdesc:ab31daa81d4977819c8e231621c7573d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the wall type constant.  <a href="#ab31daa81d4977819c8e231621c7573d7">More...</a><br/></td></tr>
 <tr class="separator:ab31daa81d4977819c8e231621c7573d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_block"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_block')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_block.html">Block</a></td></tr>
 <tr class="memitem:aada344df339d2124eeaa726367ae27fe inherit pub_methods_class_block"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#aada344df339d2124eeaa726367ae27fe">Block</a> (int x=0, int y=0)</td></tr>
@@ -176,6 +181,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_wall.html" title="The Wall class of Bombster used to create and destroy non-destructable walls in the game...">Wall</a> Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPos</td><td></td></tr>
+    <tr><td class="paramname">YPos</td><td>contains xPos, Ypos of the non destructable walls prints "Wall has been created" to console </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a9a2992f2b533e1c160513d1e719f920c"></a>
@@ -190,6 +204,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>wall destructor prints "Wall has been destroyed" to console </p>
 
 </div>
 </div>
@@ -214,6 +230,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Bounds a nondesructable wall to 30px * 30px space. </p>
 
 <p>Reimplemented from <a class="el" href="class_block.html#aee4444b92a82f5a8080e9019ef1e554d">Block</a>.</p>
 
@@ -257,6 +275,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Displays a nondestructable wall onscreen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QPainter</td><td>pointer </td></tr>
+    <tr><td class="paramname">constant</td><td>QStyleOptionGraphicsItem pointer </td></tr>
+    <tr><td class="paramname">QWidget</td><td>pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="class_block.html#a8f526f6d76bf11afae85d8b23239cce2">Block</a>.</p>
 
 </div>
@@ -282,6 +310,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the wall type constant. </p>
+<dl class="section return"><dt>Returns</dt><dd>int 7 </dd></dl>
+
 <p>Reimplemented from <a class="el" href="class_block.html#a915a8196ec94388fb2aae7788af88705">Block</a>.</p>
 
 </div>
@@ -293,7 +324,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 2 2013 10:15:42 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 6 2013 14:04:54 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

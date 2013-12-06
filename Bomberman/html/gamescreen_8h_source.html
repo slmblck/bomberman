@@ -118,28 +118,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_screen.html#ab954f12aa342e80cb55dd4e2b8d3afeb">paintEvent</a>(QPaintEvent *event);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_screen.html#af2a5d4c707d0d0f47201eec498b77bd6">closeEvent</a>(QCloseEvent *);</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_game_screen.html#af1416b1a2647d06d0777b863be9c090e">   38</a></span>&#160;    QGraphicsScene *<a class="code" href="class_game_screen.html#af1416b1a2647d06d0777b863be9c090e">scene</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_screen.html#aeb56964e385b3f4b0fb8cdab4b943303">setVol</a>(<span class="keywordtype">int</span> vol);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Ui::GameScreen *ui;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_world.html">World</a> *w;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *k);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> keyReleaseEvent(QKeyEvent *k);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // GAMESCREEN_H</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Ui::GameScreen *ui;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_world.html">World</a> *w;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *k);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> keyReleaseEvent(QKeyEvent *k);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // GAMESCREEN_H</span></div>
 <div class="ttc" id="class_world_html"><div class="ttname"><a href="class_world.html">World</a></div><div class="ttdoc">The World class of Bombster used to create a new game world. </div><div class="ttdef"><b>Definition:</b> world.h:23</div></div>
 <div class="ttc" id="world_8h_html"><div class="ttname"><a href="world_8h.html">world.h</a></div></div>
 <div class="ttc" id="class_game_screen_html"><div class="ttname"><a href="class_game_screen.html">GameScreen</a></div><div class="ttdoc">The Gamescreen class of Bombster used to create a new game. </div><div class="ttdef"><b>Definition:</b> gamescreen.h:23</div></div>
-<div class="ttc" id="class_game_screen_html_af2a5d4c707d0d0f47201eec498b77bd6"><div class="ttname"><a href="class_game_screen.html#af2a5d4c707d0d0f47201eec498b77bd6">GameScreen::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *)</div><div class="ttdoc">Closing window event. </div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:63</div></div>
+<div class="ttc" id="class_game_screen_html_aeb56964e385b3f4b0fb8cdab4b943303"><div class="ttname"><a href="class_game_screen.html#aeb56964e385b3f4b0fb8cdab4b943303">GameScreen::setVol</a></div><div class="ttdeci">void setVol(int vol)</div><div class="ttdoc">Sets the volume in Game. </div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:104</div></div>
+<div class="ttc" id="class_game_screen_html_af2a5d4c707d0d0f47201eec498b77bd6"><div class="ttname"><a href="class_game_screen.html#af2a5d4c707d0d0f47201eec498b77bd6">GameScreen::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *)</div><div class="ttdoc">Closing window event. </div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:61</div></div>
 <div class="ttc" id="class_game_screen_html_af1416b1a2647d06d0777b863be9c090e"><div class="ttname"><a href="class_game_screen.html#af1416b1a2647d06d0777b863be9c090e">GameScreen::scene</a></div><div class="ttdeci">QGraphicsScene * scene</div><div class="ttdef"><b>Definition:</b> gamescreen.h:38</div></div>
-<div class="ttc" id="class_game_screen_html_ab954f12aa342e80cb55dd4e2b8d3afeb"><div class="ttname"><a href="class_game_screen.html#ab954f12aa342e80cb55dd4e2b8d3afeb">GameScreen::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event)</div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:81</div></div>
-<div class="ttc" id="class_game_screen_html_a0d25dfce42d72954aab40dbccbf1a0b1"><div class="ttname"><a href="class_game_screen.html#a0d25dfce42d72954aab40dbccbf1a0b1">GameScreen::~GameScreen</a></div><div class="ttdeci">~GameScreen()</div><div class="ttdoc">A Gamescreen Destructor Destroys the UI and Removes the music player and music list for the game...</div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:75</div></div>
+<div class="ttc" id="class_game_screen_html_ab954f12aa342e80cb55dd4e2b8d3afeb"><div class="ttname"><a href="class_game_screen.html#ab954f12aa342e80cb55dd4e2b8d3afeb">GameScreen::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event)</div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:79</div></div>
+<div class="ttc" id="class_game_screen_html_a0d25dfce42d72954aab40dbccbf1a0b1"><div class="ttname"><a href="class_game_screen.html#a0d25dfce42d72954aab40dbccbf1a0b1">GameScreen::~GameScreen</a></div><div class="ttdeci">~GameScreen()</div><div class="ttdoc">A Gamescreen Destructor Destroys the UI and Removes the music player and music list for the game...</div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:73</div></div>
 <div class="ttc" id="class_game_screen_html_a61ac084a564d45be53337cc364214a60"><div class="ttname"><a href="class_game_screen.html#a61ac084a564d45be53337cc364214a60">GameScreen::GameScreen</a></div><div class="ttdeci">GameScreen(QWidget *parent=0)</div><div class="ttdoc">A Gamescreen Object This class creates the game UI and sets up background music. </div><div class="ttdef"><b>Definition:</b> gamescreen.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 2 2013 10:15:41 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 6 2013 14:04:52 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

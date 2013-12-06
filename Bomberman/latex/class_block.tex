@@ -28,7 +28,7 @@ virtual void \hyperlink{class_block_aa374e103c2ba9e060c4689f4da21a9ff}{update} (
 virtual void \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \item 
 virtual Q\-Rect\-F \hyperlink{class_block_aee4444b92a82f5a8080e9019ef1e554d}{bounding\-Rect} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em returns a 30px $\ast$ 30px bound \end{DoxyCompactList}\item 
 int \hyperlink{class_block_a527c8f990b4b99dda6f4ca225ee32c14}{get\-X} ()
 \begin{DoxyCompactList}\small\item\em Return the X Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\item 
 int \hyperlink{class_block_a2501c303a7975db005ddc49d9551a51b}{get\-Y} ()
@@ -38,7 +38,7 @@ void \hyperlink{class_block_ab9ac08d83a0e4ff7acb78029df4cc9e2}{set\-X} (int x)
 void \hyperlink{class_block_a57c1fcfd7d7cda4b9e21d69a25896c17}{set\-Y} (int y)
 \begin{DoxyCompactList}\small\item\em Set the Y Position of a \hyperlink{class_block}{Block}. \end{DoxyCompactList}\item 
 virtual int \hyperlink{class_block_a915a8196ec94388fb2aae7788af88705}{type} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -87,6 +87,10 @@ The \hyperlink{class_block}{Block} destructor Removes a block and prints to cons
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_aee4444b92a82f5a8080e9019ef1e554d}
+
+
+returns a 30px $\ast$ 30px bound 
+
 
 
 Reimplemented in \hyperlink{classboxes_a4855400f92db9ebe776a79c79bac1d50}{boxes}, \hyperlink{class_wall_aae7888200bcd5afb12b24110886366a0}{Wall}, and \hyperlink{classd_wall_a84d4bba890333394f10c5497379d894c}{d\-Wall}.
@@ -171,6 +175,10 @@ Set the Y Position of a \hyperlink{class_block}{Block}.
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_block_a915a8196ec94388fb2aae7788af88705}
+
+
+returns 1 
+
 
 
 Reimplemented in \hyperlink{classboxes_abc3e99501e6d9108c0fa115214b0e14e}{boxes}, \hyperlink{class_wall_ab31daa81d4977819c8e231621c7573d7}{Wall}, and \hyperlink{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}{d\-Wall}.

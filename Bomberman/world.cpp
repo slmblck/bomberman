@@ -57,18 +57,23 @@ World::~World()
 
 }
 
-
+/*! \brief Creates a blue world
+ *  \param Qpainter pointer */
 void World::drawWorld(QPainter *painter)
 {
     painter->setBrush(Qt::blue);
     painter->drawRect(0,0,600,600);
 }
 
+/*! \brief fetches the Size of the created Block
+ *  \return returns the Blocksize */
 int World::getBlocksize()
 {
     return this->Blocksize;
 }
 
+/*! \brief fetches the Size of the created World
+ *  \return returns the WorldSize */
 int World::getWorldsize()
 {
     return this->worldsize;
@@ -119,13 +124,15 @@ void World::keyHandler(int k)
     }
 }
 
-/*! \brief Returns a Player
+/*! \brief Returns Player1
  *  \return Returns the Player */
 Character * World::getPlayer1()
 {
     return this->player1;
 }
 
+/*! \brief Returns Player2
+ *  \return Returns the Player */
 Character * World::getPlayer2()
 {
     return this->player2;

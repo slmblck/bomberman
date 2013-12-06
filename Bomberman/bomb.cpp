@@ -47,7 +47,10 @@ QRectF Bomb::boundingRect() const
     return QRectF(this->xPos, this->yPos, 30, 30);
 }
 
-/// \brief
+/*! \brief Displays a bomb onscreen
+ *  \param painter pointer
+ *  \param constant QStyleOptionGraphicsItem option pointer
+ *  \param QWidget pointer */
 void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
    painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/bomb_unexploded_transparent.png"));
@@ -73,6 +76,8 @@ void Bomb::explode()
     QTimer::singleShot(1000,this,SLOT(explode2()));
 }
 
+/*! \brief 2nd part of Explosion
+ * Is called by the explode() class in order to remove the blocks and bomb */
 void Bomb::explode2()
 {
     QGraphicsScene *scene;
@@ -107,6 +112,7 @@ void Bomb::explode2()
     erase();
 }
 
+/*! \brief Deletes the bomb */
 void Bomb::erase()
 {
     QGraphicsScene *scene = this->scene();
@@ -114,6 +120,7 @@ void Bomb::erase()
     delete this;
 }
 
+/*! \brief returns 2 */
 int Bomb::type() const
 {
     return 2;

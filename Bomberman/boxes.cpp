@@ -19,6 +19,10 @@ boxes::~boxes()
     std::cout << "box has been deleted" << std::endl;
 }
 
+/*! \brief Displays a box onscreen
+ *  \param painter pointer
+ *  \param constant QStyleOptionGraphicsItem option pointer
+ *  \param QWidget pointer */
 void boxes::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Crate_Small.png"));

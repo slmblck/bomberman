@@ -55,11 +55,13 @@ void Block::setY(int y)
     this->yPos = y;
 }
 
+/// \brief returns 1
 int Block::type() const
 {
     return 1;
 }
 
+/// \brief returns a 30px * 30px bound
 QRectF Block::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);

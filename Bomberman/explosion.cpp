@@ -20,6 +20,10 @@ QRectF explosion::boundingRect() const
     return QRectF(xPos, yPos, 30, 30);
 }
 
+/*! \brief Displays an explosion image onscreen
+ *  \param painter pointer
+ *  \param constant QStyleOptionGraphicsItem option pointer
+ *  \param QWidget pointer */
 void explosion::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(xPos, yPos, 30, 30, explosionImage);

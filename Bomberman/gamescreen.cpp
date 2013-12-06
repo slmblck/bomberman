@@ -99,6 +99,8 @@ void GameScreen::keyReleaseEvent(QKeyEvent *event)
     w->keyHandler(event->key());
 }
 
+/*! \brief Sets the volume in Game
+ *  \param int volume*/
 void GameScreen::setVol(int vol)
 {
     backgroundMusicGame->setVolume(vol);
