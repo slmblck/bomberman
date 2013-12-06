@@ -26,6 +26,9 @@ private:
     //movespeed is 1/2 of Blockize
     int numBombs;
     int playerID;
+    int numDeaths;
+    //int player1points;
+    //int player2points;
     int explosionsize; //5 squares is max
     QPixmap charImage;
 public:
@@ -38,6 +41,7 @@ public:
     void dropBomb();
     void pickedUp(int item);
     int getPlayerID();
+    void incNumDeaths();
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     int type() const;

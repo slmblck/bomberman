@@ -9,13 +9,12 @@
  * This class creates the game UI and sets up background music */
 GameScreen::GameScreen(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::GameScreen)
-{
+    ui(new Ui::GameScreen){
 
     ui->setupUi(this);
 
     gameList= new QMediaPlaylist;
-    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\D\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
     gameList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicGame = new QMediaPlayer(this);
     backgroundMusicGame->setPlaylist(gameList);

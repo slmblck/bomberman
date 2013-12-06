@@ -17,6 +17,7 @@ Character::Character(int x, int y, int numBombs, int player, QPixmap image)
     Character::playerID = player;
     Character::explosionsize = 2;
     Character::charImage = image;
+    Character::numDeaths = 0;
 }
 
 /*! \brief The Character destructor
@@ -295,6 +296,12 @@ void Character::dropBomb()
 int Character::getPlayerID()
 {
     return this->playerID;
+}
+
+void Character::incNumDeaths()
+{
+    this->numDeaths = this->numDeaths + 1;
+    std::cout << "numDeaths = " << numDeaths << std::endl;
 }
 
 void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
