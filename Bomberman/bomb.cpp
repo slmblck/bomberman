@@ -57,7 +57,9 @@ void Bomb::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
 }
 
 /*! \brief The Bomb explodes
- * Prints to console and removes bomb image with an explosion for a predetermined time */
+ * Prints to console and removes bomb image with an explosion for a predetermined time
+ * \bug cannot connect to options SFX in main menu, currently always on
+ * \bug Due to Limitations in QT, user must change the filepath of Boom.wav in the function*/
 void Bomb::explode()
 {
     bool sound=true;
