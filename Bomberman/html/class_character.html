@@ -132,14 +132,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacb2a15ce71f1165daceb29cf481a4cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aacb2a15ce71f1165daceb29cf481a4cb">getPlayerID</a> ()</td></tr>
 <tr class="memdesc:aacb2a15ce71f1165daceb29cf481a4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets a Player ID  <a href="#aacb2a15ce71f1165daceb29cf481a4cb">More...</a><br/></td></tr>
 <tr class="separator:aacb2a15ce71f1165daceb29cf481a4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6789fcbdc901b0871a20f21b43ea5d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a6789fcbdc901b0871a20f21b43ea5d32">incNumDeaths</a> ()</td></tr>
-<tr class="separator:a6789fcbdc901b0871a20f21b43ea5d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49f985b1b05751b2d4b3de74b4acc8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aa49f985b1b05751b2d4b3de74b4acc8c">isAlive</a> ()</td></tr>
+<tr class="memdesc:aa49f985b1b05751b2d4b3de74b4acc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks to see if character is alive  <a href="#aa49f985b1b05751b2d4b3de74b4acc8c">More...</a><br/></td></tr>
+<tr class="separator:aa49f985b1b05751b2d4b3de74b4acc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b2dbfe674fa8d1b99c84a265afb3e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a86b2dbfe674fa8d1b99c84a265afb3e2">setAlive</a> (bool)</td></tr>
+<tr class="memdesc:a86b2dbfe674fa8d1b99c84a265afb3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets character to be alive or dead  <a href="#a86b2dbfe674fa8d1b99c84a265afb3e2">More...</a><br/></td></tr>
+<tr class="separator:a86b2dbfe674fa8d1b99c84a265afb3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099916c7331625461d7cd976ec4b0498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a099916c7331625461d7cd976ec4b0498">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</td></tr>
 <tr class="memdesc:a099916c7331625461d7cd976ec4b0498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a character onscreen.  <a href="#a099916c7331625461d7cd976ec4b0498">More...</a><br/></td></tr>
 <tr class="separator:a099916c7331625461d7cd976ec4b0498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3bf8c7fe7ddbad47b54193374d25ee2"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#af3bf8c7fe7ddbad47b54193374d25ee2">boundingRect</a> () const </td></tr>
+<tr class="memdesc:af3bf8c7fe7ddbad47b54193374d25ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounds <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> to 30 px* 30px space  <a href="#af3bf8c7fe7ddbad47b54193374d25ee2">More...</a><br/></td></tr>
 <tr class="separator:af3bf8c7fe7ddbad47b54193374d25ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba58d60bcfe61c1807e1a9e9439b56f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aba58d60bcfe61c1807e1a9e9439b56f0">type</a> () const </td></tr>
+<tr class="memdesc:aba58d60bcfe61c1807e1a9e9439b56f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns int type of <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a>.  <a href="#aba58d60bcfe61c1807e1a9e9439b56f0">More...</a><br/></td></tr>
 <tr class="separator:aba58d60bcfe61c1807e1a9e9439b56f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -232,6 +238,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>bounds <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a> to 30 px* 30px space </p>
+
 </div>
 </div>
 <a class="anchor" id="a38747fb2a1e186e6cc871f0836eb83e8"></a>
@@ -269,18 +277,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6789fcbdc901b0871a20f21b43ea5d32"></a>
+<a class="anchor" id="aa49f985b1b05751b2d4b3de74b4acc8c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Character::incNumDeaths </td>
+          <td class="memname">bool Character::isAlive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>checks to see if character is alive </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns bool Alive </dd></dl>
 
 </div>
 </div>
@@ -410,6 +421,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a86b2dbfe674fa8d1b99c84a265afb3e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Character::setAlive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets character to be alive or dead </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>alive </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aba58d60bcfe61c1807e1a9e9439b56f0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -423,6 +458,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns int type of <a class="el" href="class_character.html" title="The Character class of Bombster used to create a movable player in the world. ">Character</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns 4 </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -432,7 +470,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2013 14:04:53 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 6 2013 20:24:19 for Bombster by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -2,7 +2,8 @@
 #include "ui_mainwindow.h"
 
 /*! \brief A MainWindow Object
- * This class creates the Menu UI and sets up background music */
+ * This class creates the Menu UI and sets up background music
+ * \bug Tester needs to put in full file path of FifteenFifty.mp3 into class due to QT's limitations */
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -54,7 +55,6 @@ void MainWindow::on_infoButton_clicked()
 }
 
 /*! \brief Restarts the menu music
- *  \bug this is currently not being called
  * Starts up the main menu music. This is to be used after Game music is stopped.  */
 void MainWindow::playAgain()
 {

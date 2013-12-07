@@ -26,9 +26,9 @@ Inheritance diagram for d\-Wall\-:\begin{figure}[H]
 void \hyperlink{classd_wall_aeaec158ea8576bfe6d40d8197ffceaf6}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \begin{DoxyCompactList}\small\item\em Displays a destructable wall onscreen. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{classd_wall_a84d4bba890333394f10c5497379d894c}{bounding\-Rect} () const 
-\begin{DoxyCompactList}\small\item\em returns a 30px $\ast$ 30px bound \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em bounds destructable wall to 30 px$\ast$ 30px space \end{DoxyCompactList}\item 
 int \hyperlink{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}{type} () const 
-\begin{DoxyCompactList}\small\item\em returns 1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns int type of \hyperlink{classd_wall}{d\-Wall}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -80,7 +80,7 @@ The Destructable \hyperlink{class_wall}{Wall} destructor Removes a Destructable 
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classd_wall_a84d4bba890333394f10c5497379d894c}
 
 
-returns a 30px $\ast$ 30px bound 
+bounds destructable wall to 30 px$\ast$ 30px space 
 
 
 
@@ -121,8 +121,11 @@ Reimplemented from \hyperlink{class_block_a8f526f6d76bf11afae85d8b23239cce2}{Blo
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classd_wall_a487ce8ea99822ad1e182e8319db62f9c}
 
 
-returns 1 
+Returns int type of \hyperlink{classd_wall}{d\-Wall}. 
 
+\begin{DoxyReturn}{Returns}
+Returns 5 
+\end{DoxyReturn}
 
 
 Reimplemented from \hyperlink{class_block_a915a8196ec94388fb2aae7788af88705}{Block}.

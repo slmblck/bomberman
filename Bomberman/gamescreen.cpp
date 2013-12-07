@@ -6,7 +6,8 @@
 #include <QGraphicsScene>
 
 /*! \brief A Gamescreen Object
- * This class creates the game UI and sets up background music */
+ * This class creates the game UI and sets up background music  
+ * \bug Tester needs to put in full file path of Lindstrom.mp3 into class due to QT's limitations */
 GameScreen::GameScreen(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GameScreen){
@@ -45,7 +46,6 @@ GameScreen::GameScreen(QWidget *parent) :
 
 /*! \brief Closing window event
  *  \param Takes in a QCloseEvent AKA window close;
- *  \bug cannot restart main menu music
  * Closes the current Game and stops music from playing */
 void GameScreen::closeEvent(QCloseEvent *bar)
 {
@@ -65,6 +65,7 @@ GameScreen::~GameScreen()
     delete ui;
 }
 
+/// \brief Overrides paintEvent
 void GameScreen::paintEvent(QPaintEvent *event)
 {
     QPainter p;
@@ -73,6 +74,7 @@ void GameScreen::paintEvent(QPaintEvent *event)
     p.end();
 }
 
+/// \brief death checker to see score and winner
 void GameScreen::checkDeaths()
 {
     Character *player1 = w->getPlayer1();
@@ -98,6 +100,7 @@ void GameScreen::checkDeaths()
 
 }
 
+/// \brief creates players and starts game
 void GameScreen::gameStart()
 {
     int i = 0;
@@ -124,20 +127,22 @@ void GameScreen::gameStart()
     player2->grabKeyboard();
 }
 
+/// \brief ends a game
 void GameScreen::gameEnd()
 {
     delete w;
 }
 
-/*! \brief Keyhandler
- *  \param Takes in a keystroke
- * Uses the keyHandler to interpret what should happen in the UI  */
+/// deteriorated code
 void GameScreen::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << event->key() << std::endl;
     //w->keyHandler(event->key());
 }
 
+/*! \brief Keyhandler
+ *  \param Takes in a keystroke
+ * Uses the keyHandler to interpret what should happen in the UI  */
 void GameScreen::keyReleaseEvent(QKeyEvent *event)
 {
     std::cout << event->key() << std::endl;

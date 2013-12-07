@@ -37,14 +37,16 @@ void \hyperlink{class_character_acb99685904de8dce448ad8a51efed7cb}{picked\-Up} (
 \item 
 int \hyperlink{class_character_aacb2a15ce71f1165daceb29cf481a4cb}{get\-Player\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em gets a Player I\-D \end{DoxyCompactList}\item 
-void \hyperlink{class_character_a6789fcbdc901b0871a20f21b43ea5d32}{inc\-Num\-Deaths} ()
-\item 
+bool \hyperlink{class_character_aa49f985b1b05751b2d4b3de74b4acc8c}{is\-Alive} ()
+\begin{DoxyCompactList}\small\item\em checks to see if character is alive \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a86b2dbfe674fa8d1b99c84a265afb3e2}{set\-Alive} (bool)
+\begin{DoxyCompactList}\small\item\em sets character to be alive or dead \end{DoxyCompactList}\item 
 void \hyperlink{class_character_a099916c7331625461d7cd976ec4b0498}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \begin{DoxyCompactList}\small\item\em Displays a character onscreen. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{class_character_af3bf8c7fe7ddbad47b54193374d25ee2}{bounding\-Rect} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em bounds \hyperlink{class_character}{Character} to 30 px$\ast$ 30px space \end{DoxyCompactList}\item 
 int \hyperlink{class_character_aba58d60bcfe61c1807e1a9e9439b56f0}{type} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns int type of \hyperlink{class_character}{Character}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -100,6 +102,10 @@ The \hyperlink{class_character}{Character} destructor Removes a \hyperlink{class
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_character_af3bf8c7fe7ddbad47b54193374d25ee2}
+
+
+bounds \hyperlink{class_character}{Character} to 30 px$\ast$ 30px space 
+
 \hypertarget{class_character_a38747fb2a1e186e6cc871f0836eb83e8}{\index{Character@{Character}!drop\-Bomb@{drop\-Bomb}}
 \index{drop\-Bomb@{drop\-Bomb}!Character@{Character}}
 \subsubsection[{drop\-Bomb}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::drop\-Bomb (
@@ -125,13 +131,20 @@ gets a Player I\-D
 \begin{DoxyReturn}{Returns}
 Returns the \hyperlink{class_character}{Character}'s player\-I\-D 
 \end{DoxyReturn}
-\hypertarget{class_character_a6789fcbdc901b0871a20f21b43ea5d32}{\index{Character@{Character}!inc\-Num\-Deaths@{inc\-Num\-Deaths}}
-\index{inc\-Num\-Deaths@{inc\-Num\-Deaths}!Character@{Character}}
-\subsubsection[{inc\-Num\-Deaths}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::inc\-Num\-Deaths (
+\hypertarget{class_character_aa49f985b1b05751b2d4b3de74b4acc8c}{\index{Character@{Character}!is\-Alive@{is\-Alive}}
+\index{is\-Alive@{is\-Alive}!Character@{Character}}
+\subsubsection[{is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool Character\-::is\-Alive (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_character_a6789fcbdc901b0871a20f21b43ea5d32}
+)}}\label{class_character_aa49f985b1b05751b2d4b3de74b4acc8c}
+
+
+checks to see if character is alive 
+
+\begin{DoxyReturn}{Returns}
+Returns bool Alive 
+\end{DoxyReturn}
 \hypertarget{class_character_afa7763e81bca6a0b9b0c044f39c429f0}{\index{Character@{Character}!move\-Down@{move\-Down}}
 \index{move\-Down@{move\-Down}!Character@{Character}}
 \subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::move\-Down (
@@ -205,6 +218,22 @@ Displays a character onscreen.
 \item[{int}]{item}
 \end{DoxyParamCaption}
 )}}\label{class_character_acb99685904de8dce448ad8a51efed7cb}
+\hypertarget{class_character_a86b2dbfe674fa8d1b99c84a265afb3e2}{\index{Character@{Character}!set\-Alive@{set\-Alive}}
+\index{set\-Alive@{set\-Alive}!Character@{Character}}
+\subsubsection[{set\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}void Character\-::set\-Alive (
+\begin{DoxyParamCaption}
+\item[{bool}]{l}
+\end{DoxyParamCaption}
+)}}\label{class_character_a86b2dbfe674fa8d1b99c84a265afb3e2}
+
+
+sets character to be alive or dead 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & alive \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_character_aba58d60bcfe61c1807e1a9e9439b56f0}{\index{Character@{Character}!type@{type}}
 \index{type@{type}!Character@{Character}}
 \subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int Character\-::type (
@@ -212,6 +241,13 @@ Displays a character onscreen.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_character_aba58d60bcfe61c1807e1a9e9439b56f0}
+
+
+Returns int type of \hyperlink{class_character}{Character}. 
+
+\begin{DoxyReturn}{Returns}
+Returns 4 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

@@ -20,15 +20,15 @@ Inheritance diagram for explosion\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classexplosion_a792865d6d3230927b5a85c72c9867555}{explosion} (int x=0, int y=0, Q\-Pixmap image=Q\-Pixmap(0, 0))
-\item 
+\begin{DoxyCompactList}\small\item\em The explosion constructer. \end{DoxyCompactList}\item 
 \hyperlink{classexplosion_a3fc08d8c702d74ee3164825c975f8230}{$\sim$explosion} ()
 \begin{DoxyCompactList}\small\item\em The Explosion destructor Removes an explosion and prints to console whenever that happens. \end{DoxyCompactList}\item 
 Q\-Rect\-F \hyperlink{classexplosion_adc8680178e9e7d4e388d8850a2c03125}{bounding\-Rect} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em bounds explosion block to 30 px$\ast$ 30px space \end{DoxyCompactList}\item 
 void \hyperlink{classexplosion_a401d7dbebfc4a92bcc408172df67c782}{paint} (Q\-Painter $\ast$painter, const Q\-Style\-Option\-Graphics\-Item $\ast$option, Q\-Widget $\ast$widget)
 \begin{DoxyCompactList}\small\item\em Displays an explosion image onscreen. \end{DoxyCompactList}\item 
 int \hyperlink{classexplosion_a1f660a5ee0c892cdd4edba1d00df87a7}{type} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns int type of explosion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -46,6 +46,19 @@ Inherits Q\-Graphics\-Object from Qt
 \item[{Q\-Pixmap}]{image = {\ttfamily QPixmap(0,0)}}
 \end{DoxyParamCaption}
 )}}\label{classexplosion_a792865d6d3230927b5a85c72c9867555}
+
+
+The explosion constructer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & x coordinate of where the explosion starts. \\
+\hline
+{\em The} & y coordinate of where the explosion starts. \\
+\hline
+{\em The} & explosion image. this constructor creates an explosion piece \\
+\hline
+\end{DoxyParams}
 \hypertarget{classexplosion_a3fc08d8c702d74ee3164825c975f8230}{\index{explosion@{explosion}!$\sim$explosion@{$\sim$explosion}}
 \index{$\sim$explosion@{$\sim$explosion}!explosion@{explosion}}
 \subsubsection[{$\sim$explosion}]{\setlength{\rightskip}{0pt plus 5cm}explosion\-::$\sim$explosion (
@@ -67,6 +80,10 @@ The Explosion destructor Removes an explosion and prints to console whenever tha
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classexplosion_adc8680178e9e7d4e388d8850a2c03125}
+
+
+bounds explosion block to 30 px$\ast$ 30px space 
+
 \hypertarget{classexplosion_a401d7dbebfc4a92bcc408172df67c782}{\index{explosion@{explosion}!paint@{paint}}
 \index{paint@{paint}!explosion@{explosion}}
 \subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}void explosion\-::paint (
@@ -96,6 +113,13 @@ Displays an explosion image onscreen.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classexplosion_a1f660a5ee0c892cdd4edba1d00df87a7}
+
+
+Returns int type of explosion. 
+
+\begin{DoxyReturn}{Returns}
+Returns 6 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
