@@ -55,10 +55,10 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gameButton = new QPushButton(centralWidget);
         gameButton->setObjectName(QStringLiteral("gameButton"));
-        gameButton->setGeometry(QRect(160, 150, 71, 31));
+        gameButton->setGeometry(QRect(170, 150, 71, 31));
         infoButton = new QPushButton(centralWidget);
         infoButton->setObjectName(QStringLiteral("infoButton"));
-        infoButton->setGeometry(QRect(160, 190, 71, 31));
+        infoButton->setGeometry(QRect(170, 190, 71, 31));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(0, 0, 411, 291));
@@ -66,7 +66,7 @@ public:
         label->setScaledContents(true);
         quitButton = new QPushButton(centralWidget);
         quitButton->setObjectName(QStringLiteral("quitButton"));
-        quitButton->setGeometry(QRect(160, 230, 75, 31));
+        quitButton->setGeometry(QRect(170, 230, 71, 31));
         MainWindow->setCentralWidget(centralWidget);
         label->raise();
         gameButton->raise();

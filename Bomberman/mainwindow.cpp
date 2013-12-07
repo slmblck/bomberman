@@ -8,6 +8,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QPixmap originalPixmap = QPixmap(":/mainwindow.png");
+    QPalette palette;
+    palette.setBrush((this)->backgroundRole(), QBrush(originalPixmap));
+    (this)->setPalette(palette);
+
     mainList= new QMediaPlaylist;
     mainList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
     mainList->setPlaybackMode(QMediaPlaylist::Loop);

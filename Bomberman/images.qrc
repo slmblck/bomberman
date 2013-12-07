@@ -17,5 +17,6 @@
         <file>Player2_Left.png</file>
         <file>Player2_Right.png</file>
         <file>Player2_Up.png</file>
+        <file>mainwindow.png</file>
     </qresource>
 </RCC>
