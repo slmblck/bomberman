@@ -65,7 +65,7 @@ void Bomb::explode()
     std::cout <<"Boom!" << std::endl;
     QGraphicsScene *scene = this->scene();
     if(sound){
-        QSound::play("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
+        QSound::play("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Boom.wav");
     }
 
     for(unsigned int i = 0; i < explosionVector.size(); i++)
@@ -98,7 +98,8 @@ void Bomb::explode2()
             }
             if(item->type() == 4){
                 Character* character = qobject_cast<Character*>(item);
-                character->incNumDeaths();
+                std::cout << "Player" << character->getPlayerID() << " has died!" << std::endl;
+                character->setAlive(false);
             }
         }
         }

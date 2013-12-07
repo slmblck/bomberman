@@ -19,6 +19,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -31,10 +32,10 @@ public:
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
-    QLabel *label_4;
     QLabel *label_5;
     QLabel *label_6;
-    QLabel *label_7;
+    QTextBrowser *textBrowser;
+    QTextBrowser *textBrowser_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,6 +44,11 @@ public:
         if (GameScreen->objectName().isEmpty())
             GameScreen->setObjectName(QStringLiteral("GameScreen"));
         GameScreen->resize(800, 600);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(GameScreen->sizePolicy().hasHeightForWidth());
+        GameScreen->setSizePolicy(sizePolicy);
         QFont font;
         font.setPointSize(10);
         GameScreen->setFont(font);
@@ -68,21 +74,33 @@ public:
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(610, 80, 61, 16));
         label_3->setFont(font);
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(610, 100, 71, 16));
-        label_4->setFont(font);
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(600, 180, 61, 16));
         label_5->setFont(font);
         label_6 = new QLabel(centralwidget);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(610, 210, 46, 13));
+        label_6->setGeometry(QRect(610, 210, 61, 16));
         label_6->setFont(font);
-        label_7 = new QLabel(centralwidget);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(610, 230, 81, 16));
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(660, 80, 61, 21));
+        sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy);
+        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser->setTextInteractionFlags(Qt::NoTextInteraction);
+        textBrowser->setOpenLinks(false);
+        textBrowser->setProperty("p", QVariant(0));
+        textBrowser_2 = new QTextBrowser(centralwidget);
+        textBrowser_2->setObjectName(QStringLiteral("textBrowser_2"));
+        textBrowser_2->setGeometry(QRect(660, 210, 61, 21));
+        sizePolicy.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
+        textBrowser_2->setSizePolicy(sizePolicy);
+        textBrowser_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_2->setTextInteractionFlags(Qt::NoTextInteraction);
+        textBrowser_2->setOpenLinks(false);
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -102,11 +120,9 @@ public:
         GameScreen->setWindowTitle(QApplication::translate("GameScreen", "MainWindow", 0));
         label->setText(QApplication::translate("GameScreen", "Bombster", 0));
         label_2->setText(QApplication::translate("GameScreen", "Player 1:", 0));
-        label_3->setText(QApplication::translate("GameScreen", "Kills: 0", 0));
-        label_4->setText(QApplication::translate("GameScreen", "Deaths: 0", 0));
+        label_3->setText(QApplication::translate("GameScreen", "Points:", 0));
         label_5->setText(QApplication::translate("GameScreen", "Player 2:", 0));
-        label_6->setText(QApplication::translate("GameScreen", "Kills: 0", 0));
-        label_7->setText(QApplication::translate("GameScreen", "Deaths: 0", 0));
+        label_6->setText(QApplication::translate("GameScreen", "Points:", 0));
     } // retranslateUi
 
 };

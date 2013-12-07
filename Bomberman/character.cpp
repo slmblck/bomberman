@@ -17,7 +17,7 @@ Character::Character(int x, int y, int numBombs, int player, QPixmap image)
     Character::playerID = player;
     Character::explosionsize = 2;
     Character::charImage = image;
-    Character::numDeaths = 0;
+    Character::alive = true;
 }
 
 /*! \brief The Character destructor
@@ -298,12 +298,6 @@ int Character::getPlayerID()
     return this->playerID;
 }
 
-void Character::incNumDeaths()
-{
-    this->numDeaths = this->numDeaths + 1;
-    std::cout << "numDeaths = " << numDeaths << std::endl;
-}
-
 /*! \brief Displays a character onscreen
  *  \param painter pointer
  *  \param constant QStyleOptionGraphicsItem option pointer
@@ -311,6 +305,16 @@ void Character::incNumDeaths()
 void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->drawPixmap(this->xPos, this->yPos, 30, 30, this->charImage);
+}
+
+bool Character::isAlive()
+{
+    return this->alive;
+}
+
+void Character::setAlive(bool l)
+{
+    this->alive = l;
 }
 
 QRectF Character::boundingRect() const
