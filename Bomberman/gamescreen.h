@@ -30,6 +30,7 @@ class GameScreen : public QMainWindow
 
 public slots:
     void checkDeaths();
+    void gameStart();
 
 public:
     explicit GameScreen(QWidget *parent = 0);
@@ -38,7 +39,6 @@ public:
     void closeEvent(QCloseEvent *);
     QGraphicsScene *scene;
     void setVol(int vol);
-    void gameStart();
     void gameEnd();
 
 private:
