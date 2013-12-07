@@ -121,7 +121,8 @@ void Bomb::erase()
     delete this;
 }
 
-/*! \brief returns 2 */
+/*! \brief Returns int type of Bomb
+ *  \return Returns 2*/
 int Bomb::type() const
 {
     return 2;

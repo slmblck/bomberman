@@ -28,11 +28,14 @@ void boxes::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Crate_Small.png"));
 }
 
+/// \brief  bounds boxes to 30 px* 30px space
 QRectF boxes::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);
 }
 
+/*! \brief Returns int type of Boxes
+ *  \return Returns 3*/
 int boxes::type() const
 {
     return 3;

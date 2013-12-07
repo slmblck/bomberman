@@ -29,11 +29,14 @@ void dWall::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     painter->drawPixmap(xPos, yPos, 30, 30, QPixmap(":/Wall_Destructable_Small.png"));
 }
 
+/// \brief  bounds destructable wall to 30 px* 30px space
 QRectF dWall::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);
 }
 
+/*! \brief Returns int type of dWall
+ *  \return Returns 5*/
 int dWall::type() const
 {
     return 5;

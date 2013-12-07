@@ -307,21 +307,28 @@ void Character::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     painter->drawPixmap(this->xPos, this->yPos, 30, 30, this->charImage);
 }
 
+/// \brief checks to see if character is alive
+/// \return Returns bool Alive
 bool Character::isAlive()
 {
     return this->alive;
 }
 
+/// \brief sets character to be alive or dead
+/// \param bool alive
 void Character::setAlive(bool l)
 {
     this->alive = l;
 }
 
+/// \brief  bounds Character to 30 px* 30px space
 QRectF Character::boundingRect() const
 {
     return QRectF(xPos, yPos, 30, 30);
 }
 
+/*! \brief Returns int type of Character
+ *  \return Returns 4*/
 int Character::type() const
 {
     return 4;
