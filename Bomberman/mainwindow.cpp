@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     (this)->setPalette(palette);
 
     mainList= new QMediaPlaylist;
-    mainList->addMedia(QUrl::fromLocalFile("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
+    mainList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\FifteenFifty.mp3"));
     mainList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicMain = new QMediaPlayer(this);
     backgroundMusicMain->setPlaylist(mainList);

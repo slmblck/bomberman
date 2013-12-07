@@ -19,7 +19,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,8 +33,8 @@ public:
     QLabel *label_3;
     QLabel *label_5;
     QLabel *label_6;
-    QTextBrowser *textBrowser;
-    QTextBrowser *textBrowser_2;
+    QLabel *player1points;
+    QLabel *player2points;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -82,25 +81,12 @@ public:
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setGeometry(QRect(610, 210, 61, 16));
         label_6->setFont(font);
-        textBrowser = new QTextBrowser(centralwidget);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(660, 80, 61, 21));
-        sizePolicy.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
-        textBrowser->setSizePolicy(sizePolicy);
-        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser->setTextInteractionFlags(Qt::NoTextInteraction);
-        textBrowser->setOpenLinks(false);
-        textBrowser->setProperty("p", QVariant(0));
-        textBrowser_2 = new QTextBrowser(centralwidget);
-        textBrowser_2->setObjectName(QStringLiteral("textBrowser_2"));
-        textBrowser_2->setGeometry(QRect(660, 210, 61, 21));
-        sizePolicy.setHeightForWidth(textBrowser_2->sizePolicy().hasHeightForWidth());
-        textBrowser_2->setSizePolicy(sizePolicy);
-        textBrowser_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_2->setTextInteractionFlags(Qt::NoTextInteraction);
-        textBrowser_2->setOpenLinks(false);
+        player1points = new QLabel(centralwidget);
+        player1points->setObjectName(QStringLiteral("player1points"));
+        player1points->setGeometry(QRect(670, 80, 46, 13));
+        player2points = new QLabel(centralwidget);
+        player2points->setObjectName(QStringLiteral("player2points"));
+        player2points->setGeometry(QRect(670, 210, 46, 13));
         GameScreen->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GameScreen);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -123,6 +109,8 @@ public:
         label_3->setText(QApplication::translate("GameScreen", "Points:", 0));
         label_5->setText(QApplication::translate("GameScreen", "Player 2:", 0));
         label_6->setText(QApplication::translate("GameScreen", "Points:", 0));
+        player1points->setText(QApplication::translate("GameScreen", "0", 0));
+        player2points->setText(QApplication::translate("GameScreen", "0", 0));
     } // retranslateUi
 
 };

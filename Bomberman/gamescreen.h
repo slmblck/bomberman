@@ -46,8 +46,9 @@ private:
     World *w;
     int p1Points;
     int p2Points;
-    QString s;
-    QString s2;
+    QString *s;
+    QString *s2;
+    QTimer* timer;
     void keyPressEvent(QKeyEvent *k);
     void keyReleaseEvent(QKeyEvent *k);
 };
