@@ -25,7 +25,7 @@ QT_BEGIN_NAMESPACE
 class Ui_InfoScreen
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLabel *label;
     QLabel *label_13;
@@ -49,13 +49,13 @@ public:
         if (InfoScreen->objectName().isEmpty())
             InfoScreen->setObjectName(QStringLiteral("InfoScreen"));
         InfoScreen->resize(400, 369);
-        widget = new QWidget(InfoScreen);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(30, 30, 338, 301));
-        gridLayout = new QGridLayout(widget);
+        layoutWidget = new QWidget(InfoScreen);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 30, 338, 301));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
         QFont font;
         font.setPointSize(12);
@@ -65,19 +65,19 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 1, Qt::AlignHCenter);
 
-        label_13 = new QLabel(widget);
+        label_13 = new QLabel(layoutWidget);
         label_13->setObjectName(QStringLiteral("label_13"));
 
         gridLayout->addWidget(label_13, 3, 0, 1, 1, Qt::AlignHCenter);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
 
         verticalLayout->addWidget(label_3);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
 
         verticalLayout->addWidget(label_4);
@@ -87,18 +87,18 @@ public:
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        label_9 = new QLabel(widget);
+        label_9 = new QLabel(layoutWidget);
         label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setIndent(10);
 
         verticalLayout_3->addWidget(label_9, 0, Qt::AlignLeft);
 
-        label_10 = new QLabel(widget);
+        label_10 = new QLabel(layoutWidget);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         verticalLayout_3->addWidget(label_10, 0, Qt::AlignHCenter);
 
-        label_11 = new QLabel(widget);
+        label_11 = new QLabel(layoutWidget);
         label_11->setObjectName(QStringLiteral("label_11"));
 
         verticalLayout_3->addWidget(label_11, 0, Qt::AlignHCenter);
@@ -108,12 +108,12 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label_7 = new QLabel(widget);
+        label_7 = new QLabel(layoutWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
 
         verticalLayout_2->addWidget(label_7, 0, Qt::AlignHCenter);
 
-        label_8 = new QLabel(widget);
+        label_8 = new QLabel(layoutWidget);
         label_8->setObjectName(QStringLiteral("label_8"));
 
         verticalLayout_2->addWidget(label_8, 0, Qt::AlignHCenter);
@@ -121,22 +121,22 @@ public:
 
         gridLayout->addLayout(verticalLayout_2, 6, 0, 1, 1);
 
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
 
         gridLayout->addWidget(label_5, 4, 0, 1, 1);
 
-        label_12 = new QLabel(widget);
+        label_12 = new QLabel(layoutWidget);
         label_12->setObjectName(QStringLiteral("label_12"));
 
         gridLayout->addWidget(label_12, 1, 0, 1, 1);
 
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
 
         gridLayout->addWidget(label_2, 8, 0, 1, 1);
 
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setIndent(10);
 
@@ -157,9 +157,9 @@ public:
         label_4->setText(QApplication::translate("InfoScreen", "Game Music: Lindstr\303\270m - Vos-sako-rv  (Fred Falke Remix)", 0));
         label_9->setText(QApplication::translate("InfoScreen", "Player 2:", 0));
         label_10->setText(QApplication::translate("InfoScreen", "Character is moved by the arrow keys", 0));
-        label_11->setText(QApplication::translate("InfoScreen", "Bombs are dropped using the '0' key ", 0));
+        label_11->setText(QApplication::translate("InfoScreen", "Bombs are dropped using the '/' key ", 0));
         label_7->setText(QApplication::translate("InfoScreen", "Character is moved by the 'W', 'A', 'S', 'D' keys", 0));
-        label_8->setText(QApplication::translate("InfoScreen", "Bombs are dropped using the 'K' key", 0));
+        label_8->setText(QApplication::translate("InfoScreen", "Bombs are dropped using the 'H' key", 0));
         label_5->setText(QApplication::translate("InfoScreen", "How to play:", 0));
         label_12->setText(QApplication::translate("InfoScreen", "Game Goal:", 0));
         label_2->setText(QApplication::translate("InfoScreen", "Created by: Dariusz Jedralski, Roberto Torres, Piotr Gorski, Wen Zhao", 0));

@@ -7,6 +7,7 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QCloseEvent>
+#include <QTextBrowser>
 
 namespace Ui {
 class GameScreen;
@@ -28,7 +29,7 @@ class GameScreen : public QMainWindow
     QMediaPlaylist *gameList;
 
 public slots:
-
+    void checkDeaths();
 
 public:
     explicit GameScreen(QWidget *parent = 0);
@@ -37,11 +38,16 @@ public:
     void closeEvent(QCloseEvent *);
     QGraphicsScene *scene;
     void setVol(int vol);
-
+    void gameStart();
+    void gameEnd();
 
 private:
     Ui::GameScreen *ui;
     World *w;
+    int p1Points;
+    int p2Points;
+    QString s;
+    QString s2;
     void keyPressEvent(QKeyEvent *k);
     void keyReleaseEvent(QKeyEvent *k);
 };

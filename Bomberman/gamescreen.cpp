@@ -14,7 +14,7 @@ GameScreen::GameScreen(QWidget *parent) :
     ui->setupUi(this);
 
     gameList= new QMediaPlaylist;
-    gameList->addMedia(QUrl::fromLocalFile("D:\\Users\\Piotr\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
+    gameList->addMedia(QUrl::fromLocalFile("C:\\Users\\R\\Documents\\GitHub\\bomberman\\Bomberman\\Lindstrom.mp3"));
     gameList->setPlaybackMode(QMediaPlaylist::Loop);
     backgroundMusicGame = new QMediaPlayer(this);
     backgroundMusicGame->setPlaylist(gameList);
@@ -26,13 +26,76 @@ GameScreen::GameScreen(QWidget *parent) :
 
     //QPixmap *background = new QPixmap(":/Floor_Small.png");
     scene->setBackgroundBrush(Qt::gray);
-    //scene->setBackgroundBrush(background->);
+    setWindowTitle(tr("Bombster"));
+    gameStart();
+    p1Points = 0;
+    p2Points = 0;
+    s.setNum(p1Points);
+    s2.setNum(p2Points);
+    ui->textBrowser->setText(s);
+    ui->textBrowser_2->setText(s2);
+    QTimer* timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(checkDeaths()));
+    timer->start(60);
+}
 
+/*! \brief Closing window event
+ *  \param Takes in a QCloseEvent AKA window close;
+ *  \bug cannot restart main menu music
+ * Closes the current Game and stops music from playing */
+void GameScreen::closeEvent(QCloseEvent *bar)
+{
+    backgroundMusicGame->stop();
+    ((MainWindow*)this->parent())->playAgain();
+    bar->accept();
+    delete gameList;
+    delete backgroundMusicGame;
+    gameEnd();
+}
 
+/*! \brief A Gamescreen Destructor
+ * Destroys the UI and Removes the music player and music list for the game. */
+GameScreen::~GameScreen()
+{
+    delete ui;
+}
+
+void GameScreen::paintEvent(QPaintEvent *event)
+{
+    QPainter p;
+    p.begin(this);
+
+    p.end();
+}
+
+void GameScreen::checkDeaths()
+{
+    Character *player1 = w->getPlayer1();
+    Character *player2 = w->getPlayer2();
+
+    if(player1->isAlive() == false)
+    {
+        this->p2Points +=1;
+        s2.setNum(p2Points);
+        ui->textBrowser_2->setText(s2);
+        player1->setAlive(true);
+
+    }
+    if(player2->isAlive() == false)
+    {
+        this->p1Points +=1;
+        s.setNum(p1Points);
+        ui->textBrowser->setText(s);
+        player2->setAlive(true);
+    }
+
+}
+
+void GameScreen::gameStart()
+{
     int i = 0;
     int j =0;
     w = new World();
-
 
     Character *player1 = w->getPlayer1();
     Character *player2 = w->getPlayer2();
@@ -54,34 +117,9 @@ GameScreen::GameScreen(QWidget *parent) :
     player2->grabKeyboard();
 }
 
-/*! \brief Closing window event
- *  \param Takes in a QCloseEvent AKA window close;
- *  \bug cannot restart main menu music
- * Closes the current Game and stops music from playing */
-void GameScreen::closeEvent(QCloseEvent *bar)
+void GameScreen::gameEnd()
 {
-    backgroundMusicGame->stop();
-    ((MainWindow*)this->parent())->playAgain();
-    bar->accept();
-    delete gameList;
-    delete backgroundMusicGame;
     delete w;
-}
-
-/*! \brief A Gamescreen Destructor
- * Destroys the UI and Removes the music player and music list for the game. */
-GameScreen::~GameScreen()
-{
-    delete ui;
-}
-
-
-void GameScreen::paintEvent(QPaintEvent *event)
-{
-    QPainter p;
-    p.begin(this);
-
-    p.end();
 }
 
 /*! \brief Keyhandler
